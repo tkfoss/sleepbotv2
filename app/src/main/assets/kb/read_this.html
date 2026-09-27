@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+<link href="file:///android_asset/resources.css" type="text/css" rel="stylesheet" />
+
+	<p class="heading"><strong>Read Something</strong></p><hr>
+
+	<p class="style1">Can&rsquo;t fall asleep
+		Read one of these (relaxing and somewhat monotonous) articles-- We&rsquo;ve curated them  just for this purpose.<br>
+		<br>
+		Who knows, they might even make some useful small talk one day...
+		<br>
+</p>
+
+	<p class="style1"><a href="javascript:void(0)" target="iframe_a" onClick="sleeplink();" >New Article</a> (requires internet connection)</p>
+	<iframe src="http://en.mobile.wikipedia.org/wiki/Lullaby"  style="border: 0; width: 100%; height: 100%" id="content"></iframe>
+
+	<script>
+
+	var urlPrefix="http://en.mobile.wikipedia.org/wiki/";
+	var sleeplinks=["History_of_origami","Pacific_ocean","Bread","Eiffel_tower","Android_(operating_system)","User_experience","Stock","Flow_(psychology)","Money_management","Mona_lisa","Financial_Crisis_2008","Bubble_tea","Water_bottle","Financial_crisis_of_2007%E2%80%932008","Saturn","Flatiron_building","Penguins","Amazon_jungle","The_beatles","Nostalgia","Lucid_dreaming","Great_Pacific_Garbage_Patch","Cradle_to_cradle","Cousin_chart","United_nations","Monet","Santorini","Fuzzy_concept","Madeline","Circadian_rhythm_sleep_disorder","Philip_Johnson","Friends","Keytar","Hope","Love","Pomegranates","Greek_mythology","Twelve_Olympians","Michelin_Guide","Eternal_September"];
+
+	function sleeplink(){
+		document.getElementById("content").src=urlPrefix+sleeplinks[Math.floor(Math.random()*sleeplinks.length)];
+	}
+
+	</script>
+</body>

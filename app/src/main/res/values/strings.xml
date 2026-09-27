@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SleepBot</string>
+    <string name="hour_n">%d hour</string>
+    <string name="hours_n">%d hours</string>
+    <string name="minute_n">%d minute</string>
+    <string name="minutes_n">%d minutes</string>
+    <string name="day_n">%d day</string>
+    <string name="days_n">%d days</string>
+    <string name="alarm_has_occurred">Alarm has occurred</string>
+    <string name="punched_in_since">Punched in since %s</string>
+    <string name="status_set_sleep">Status set to sleep</string>
+    <string name="status_set_wake">Status set to wake up</string>
+    <string name="not_punched_in">Not punched in</string>
+
+    <!-- Home -->
+    <string name="todays_sleep">TODAY\'S SLEEP</string>
+    <string name="current_debt">CURRENT DEBT</string>
+    <string name="wake_up">Wake up:</string>
+    <string name="smart_alarm">Smart Alarm</string>
+    <string name="track_motion">Track Motion</string>
+    <string name="record_sound">Record Sound</string>
+    <string name="cannot_change_settings_after_punchin">You cannot modify the settings after you have punched in already.</string>
+    <string name="no_alarm_set_warning">You don\'t have any alarms that rings within the next day set yet! Smart alarm will wake you at the optimal time within the selected range of your earliest alarm.</string>
+    <string name="auto_alarm_prompt">You don\'t have any alarms within the next day. Do you want to punch in now to turn on auto-alarm and smart alarm?</string>
+    <string name="mode_smart">Smart Alarm mode. Motion tracking starts at selected time range before first alarm.</string>
+    <string name="mode_smart_motion">Movement Tracking on all night + SleepBot will wake you at the optimal time.</string>
+    <string name="mode_complete">Complete mode. SleepBot will track your movements and sounds, and wake you up at the optimal time within selected time range before your first alarm.</string>
+    <string name="mode_motion">Motion Tracking mode.</string>
+    <string name="mode_motion_sound">SleepBot will track your movements and sounds throughout the night</string>
+    <string name="mode_classic">SleepBot Classic mode.</string>
+    <string name="mode_sound">Sound Tracking mode.</string>
+    <string name="entry_created_title">Sleep Entry Created!</string>
+    <string name="entry_created_msg">You have slept from:\n%1$s to %2$s\n(%3$s)</string>
+    <string name="future_title">Sleep time is in the future</string>
+    <string name="future_no_record">No Record</string>
+    <string name="future_zero_record">\'0\' Record</string>
+    <string name="future_no_offset">No Offset</string>
+    <string name="future_no_record_toast">Status changed to awake without inserting a new entry.</string>
+    <string name="current_session_title">Current Sleep Session</string>
+    <string name="current_session_msg">You punched in at %1$s, %2$s ago.</string>
+    <string name="awake_since">You have been awake since %1$d hours %2$d minutes ago.</string>
+    <string name="edit_data">Edit Data</string>
+    <string name="reset_debt_q">Do you want to reset your debt?</string>
+    <string name="reset_debt_title">Reset Debt</string>
+    <string name="reset_debt_msg">Resetting debt will clear your current sleep debt and restart calculation from today\'s date. \n\n*This will only change the date from when debt is calculated as displayed on the Home Tab - no entries will be modified. \n\n*Debt for today will still be calculated, equal to sleep today subtracted from the daily optimal hour value.</string>
+    <string name="reset_debt_done">Reset debt done! Next time the Home tab will show the new debt value.</string>
+
+    <!-- Common -->
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="view">View</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="note">Note:</string>
+
+    <!-- Entries -->
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="col_date">Date</string>
+    <string name="col_sleep">Sleep</string>
+    <string name="col_wake">Wake</string>
+    <string name="col_hours">Hours</string>
+    <string name="col_debt">Debt</string>
+    <string name="add_new_entry">ADD NEW ENTRY</string>
+    <string name="share_caps">SHARE</string>
+    <string name="delete_confirm_title">Delete Confirmation</string>
+    <string name="delete_confirm_msg">Are you sure you want to delete this entry?</string>
+    <string name="no_entry_hint">Hi there!\n\nCome back after tracking your sleep tonight, or create your first entry below!</string>
+    <string name="no_entry_found_hint">No entries were found that match your search criteria.</string>
+    <string name="first_entry_title">You\'ve created your first sleep entry!</string>
+    <string name="first_entry_msg">Press the row to view or edit.\n\n (Hint: try long-pressing too)</string>
+    <string name="period_stats">Period Statistics</string>
+    <string name="period_stats_note">Note: If no data is collected for a particular day, it is not included in the time period\'s statistical analysis. If you did not sleep at all that day, please insert a sleep record with a duration of 0 so that it will be included in the summary.</string>
+    <string name="export_title">Export Successful</string>
+    <string name="export_to">Export to</string>
+    <string name="export_subject">SleepBot: Sleep data exported at %s</string>
+
+    <!-- Editor -->
+    <string name="duration">Duration:</string>
+    <string name="sleep_time">Sleep Time :</string>
+    <string name="wake_time">Wake Time :</string>
+    <string name="invalid_time">Invalid time setting,sleep time must be before wake up time.</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="delete_caps">DELETE</string>
+    <string name="save_caps">SAVE</string>
+    <string name="share_entry">Share this entry</string>
+    <string name="movement">Movement</string>
+    <string name="sound">Sound</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+
+    <!-- Overview / graphs -->
+    <string name="current_trend">Current Trend</string>
+    <string name="current_sleep_records">Current Sleep Records</string>
+    <string name="avg_sleep_day">AVERAGE SLEEP/DAY</string>
+    <string name="trend">TREND</string>
+    <string name="length">LENGTH</string>
+    <string name="pattern">PATTERN</string>
+    <string name="sleep_caps">SLEEP</string>
+    <string name="wake_caps">WAKE</string>
+    <string name="ratings">Ratings</string>
+    <string name="title_trend">Sleep Duration Trend</string>
+    <string name="title_length">Duration Tally</string>
+    <string name="title_pattern">Sleep Time Distribution</string>
+    <string name="title_sleep">Sleep Time Tally</string>
+    <string name="title_wake">Wake Time Tally</string>
+    <string-array name="range_choices">
+        <item>All</item>
+        <item>10 days</item>
+        <item>30 days</item>
+        <item>60 days</item>
+        <item>180 days</item>
+        <item>360 days</item>
+    </string-array>
+</resources>
