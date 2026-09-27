@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Alarm clock (legacy angrydoughnuts strings) -->
+    <string name="alarm_clock_label">Alarm Clock</string>
+    <string name="alarms">Alarms</string>
+    <string name="add_alarm">ADD ALARM</string>
+    <string name="alarm_no_repeats">No repeats</string>
+    <string name="alarm_every_day">Every day</string>
+    <string name="alarm_weekdays">Weekdays</string>
+    <string name="alarm_weekends">Weekends</string>
+    <string name="alarm_status_title">SleepBot Alarm</string>
+    <string name="alarm_status_text">Next alarm: %1$s (%2$s)</string>
+    <string name="auto_alarm_set">Alarm set: %1$s, %2$s</string>
+    <string name="auto_alarm_disabled">Auto alarm disabled</string>
+    <string name="alarm_scheduled">Alarm scheduled: %1$s (%2$s)</string>
+    <string name="dismiss_slider">SWIPE TO DISMISS</string>
+    <string name="alarm_time_out">Alarm time out</string>
+    <string name="time_out_error">WARNING: This alarm has timed out waiting for an acknowledgment.</string>
+    <string name="minus_five">-5</string>
+    <string name="plus_five">+5</string>
+    <string name="snooze">SNOOZE</string>
+    <string name="snooze_n_minutes">SNOOZE\n%d minutes</string>
+    <string name="alarm_edit">Edit</string>
+    <string name="alarm_delete_ellipsis">Delete…</string>
+    <string name="alarm_delete_all">Delete All…</string>
+    <string name="alarm_default_settings">Default Alarm Settings…</string>
+    <string name="alarm_confirm_delete">Confirm delete?</string>
+    <string name="alarm_settings_header">Settings</string>
+    <string name="alarm_default_settings_header">Default Alarm Settings</string>
+    <string name="alarm_row_time">Time</string>
+    <string name="alarm_row_label">Label</string>
+    <string name="alarm_row_repeat">Repeat</string>
+    <string name="alarm_row_tone">Tone</string>
+    <string name="alarm_row_snooze">Snooze (minutes)</string>
+    <string name="alarm_row_vibrate">Vibrate</string>
+    <string name="alarm_row_fade">Alarm volume fade</string>
+    <string name="alarm_label_none">None</string>
+    <string name="alarm_label_title">Alarm label</string>
+    <string name="alarm_enabled">Enabled</string>
+    <string name="alarm_disabled">Disabled</string>
+    <string name="alarm_fade_summary">From %1$d%% to %2$d%% over %3$d seconds.</string>
+    <string name="alarm_fade_start">Start volume (percent)</string>
+    <string name="alarm_fade_end">End volume (percent)</string>
+    <string name="alarm_fade_time">Fade duration (seconds)</string>
+    <string name="alarm_scheduled_days">Scheduled days</string>
+    <string name="alarm_pick_system_tone">Pick from alarm sounds</string>
+    <string name="alarm_pick_file">Pick an audio file</string>
+    <string name="alarm_unknown_name">Unknown name</string>
+    <string name="alarm_file_not_chosen">File not chosen</string>
+    <string name="alarm_ok">OK</string>
+    <string name="alarm_cancel">Cancel</string>
+    <string name="alarm_default_tone">Default</string>
+    <string name="alarm_exact_permission">SleepBot needs permission to schedule exact alarms so your alarms ring on time.</string>
+    <string name="alarm_fsi_permission">Allow SleepBot to show full-screen alarms so the alarm screen appears when your phone is locked.</string>
+    <string name="alarm_grant">Grant</string>
+</resources>

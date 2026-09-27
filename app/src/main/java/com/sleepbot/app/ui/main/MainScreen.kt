@@ -19,6 +19,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,7 +37,9 @@ import com.sleepbot.app.app
 import com.sleepbot.app.help.HelpTab
 import com.sleepbot.app.help.TutorialOverlay
 import com.sleepbot.app.ui.entries.EntriesTab
+import com.sleepbot.app.ui.common.drawableBackground
 import com.sleepbot.app.ui.home.HomeTab
+import com.sleepbot.app.ui.home.WakeDialog
 import com.sleepbot.app.ui.overview.OverviewTab
 import com.sleepbot.app.ui.theme.SB
 import kotlinx.coroutines.launch
@@ -83,6 +87,12 @@ fun MainScreen(
                 }
             }
         }
+        val wakeId by LocalContext.current.app.session.pendingWakeDialog.collectAsState()
+        wakeId?.let { id ->
+            LaunchedEffect(id) { pager.scrollToPage(0) }
+            val session = LocalContext.current.app.session
+            WakeDialog(id, onDismiss = { session.pendingWakeDialog.value = null }, onEdit = onOpenEntry)
+        }
         if (showTutorial) TutorialOverlay(onFinish = { prefs.tutorialSeen = true; showTutorial = false })
     }
 }
@@ -90,7 +100,7 @@ fun MainScreen(
 @Composable
 private fun Header(onOpenAlarms: () -> Unit, onOpenSettings: () -> Unit) {
     Box(Modifier.fillMaxWidth().height(48.dp)) {
-        Image(painterResource(R.drawable.namebar), null, Modifier.fillMaxSize(), contentScale = ContentScale.FillBounds)
+        Box(Modifier.fillMaxSize().drawableBackground(R.drawable.namebar))
         Image(painterResource(R.drawable.sleepbot_logo), "SleepBot", Modifier.align(Alignment.Center).height(48.dp))
         PressableImage(R.drawable.alarm_unselected, R.drawable.alarm_selected, "Alarms", onOpenAlarms,
             Modifier.align(Alignment.CenterStart).width(56.dp).height(48.dp))

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Help tab (resources_new.xml) -->
+    <string name="help_section_sleepbot">Using SleepBot</string>
+    <string name="help_section_sleep">Help me sleep…</string>
+    <string name="help_section_wake">Help me stay awake!</string>
+    <string name="help_section_learn">Learn about sleep</string>
+    <string name="help_instructions">Instructions</string>
+    <string name="help_entries_and_graphs">Entries &amp; Graph Tabs</string>
+    <string name="help_support">Support</string>
+    <string name="help_eat_this">Eat this!</string>
+    <string name="help_read_this">Read this!</string>
+    <string name="help_quick_strategies">Quick Strategies</string>
+    <string name="help_prepare_bedroom">Prepare your bedroom</string>
+    <string name="help_caffeine_chart">Caffeine chart</string>
+    <string name="help_do_this">Do this!</string>
+    <string name="help_sleep_debt">What is Sleep Debt</string>
+    <string name="help_health_problems">Potential Health Problems</string>
+    <string name="help_sleep_disorders">Types of Sleep Disorders</string>
+
+    <!-- Tutorial overlay -->
+    <string name="tutorial_title_1">Welcome to the\nall new SleepBot!</string>
+    <string name="tutorial_1_1">SleepBot is a beautiful sleep tracker &amp;\nsmart alarm that helps you wake up better!</string>
+    <string name="tutorial_1_2">First, set your alarm(s)</string>
+    <string name="tutorial_2_1">Choose your tracking options, then\ntap \'go to sleep\'</string>
+    <string name="tutorial_3_1">Place your phone next to you on the bed:</string>
+    <string name="tutorial_3_2">Wake up: 8:00 AM ~ 8:30 AM</string>
+    <string name="tutorial_3_3">The smart alarm will wake you up within 30min (or your selected range) before your first alarm during lightest sleep.\n\n\n(e.g. this is for an 8:30 AM smart alarm!)</string>
+    <string name="tutorial_4_1">View your sleep entries &amp; sleep trends\nhere or @ mysleepbot.com:</string>
+    <string name="tutorial_4_2">**Tip: tap on sound graphs to play sounds!</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Widget / integration API -->
+    <string name="widget_label">SleepBot Widget</string>
+    <string name="intent_error_invalid">Invalid key secret pair passed.</string>
+    <string name="intent_error_reject">User has disabled third party integration.</string>
+</resources>

@@ -35,6 +35,9 @@ class SleepSession(private val context: Context) {
     /** True while punched in. */
     val asleep: StateFlow<Boolean> = _asleep.asStateFlow()
 
+    /** Entry id whose "Sleep Entry Created!" dialog should be shown by the home tab. */
+    val pendingWakeDialog = MutableStateFlow<Long?>(null)
+
     /** Legacy punch-in time (ms) while asleep, else 0. */
     val sleepStart: Long get() = prefs.sleepState.coerceAtLeast(0)
 

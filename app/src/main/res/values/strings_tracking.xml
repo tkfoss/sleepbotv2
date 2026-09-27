@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tracking service -->
+    <string name="trk_notification_title">Sleep tracking</string>
+    <string name="trk_notification_motion">Tracking your movements</string>
+    <string name="trk_notification_sound">Listening for sounds</string>
+    <string name="trk_notification_both">Tracking your movements and sounds</string>
+
+    <!-- Night screen (SensorsActivity) -->
+    <string name="trk_no_alarm_set">No alarm set</string>
+    <string name="trk_phone_is_not_plugged">Please leave your phone on charger to avoid battery discharge.</string>
+    <string name="trk_screen_dim_soon">Beginning sleep tracking: Screen will dim in 15 seconds…</string>
+    <string name="trk_screen_already_dimmed">Press back button to turn on screen. Do not press power button. Good night!</string>
+    <string name="trk_screen_off_toast">SleepBot will track your sleep, you can turn off your screen or doing other things, but try not to use any memory intensive applications.</string>
+    <string name="trk_waking_up">waking up!</string>
+    <string name="trk_am">AM</string>
+    <string name="trk_pm">PM</string>
+
+    <!-- Graphs -->
+    <string name="trk_accel_graph_title">Movement</string>
+    <string name="trk_sound_graph_title">Sound</string>
+    <string name="trk_label_high">High</string>
+    <string name="trk_label_medium">Medium</string>
+    <string name="trk_label_low">Low</string>
+    <string name="trk_no_sensor_data">No sensor data recorded for this entry.</string>
+
+    <!-- Bedtime reminders -->
+    <string name="trk_sleep_reminder_title">Bedtime Reminder</string>
+    <string name="trk_sleep_reminder_toast">Go to sleep soon to wake up on time!</string>
+    <string name="trk_remind_later">Remind Later</string>
+    <string name="trk_choose_time">Choose a time</string>
+    <string name="trk_remind_with_sleep_cycle">If you don\'t go to sleep now, you can be reminded later in the following sleep cycles.\n\nThe times will be calculated to be 90 minutes apart starting with the next alarm time with 30 min subtracted for you to prepare and fall asleep.</string>
+    <string name="trk_you_should_really_go_to_sleep">You should really go to sleep or take a power nap now. It will boost your productivity!</string>
+</resources>
