@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hour_n">%d 小时</string>
+    <string name="hours_n">%d 小时</string>
+    <string name="minute_n">%d 分钟</string>
+    <string name="minutes_n">%d 分钟</string>
+    <string name="day_n">%d 天</string>
+    <string name="days_n">%d 天</string>
+    <string name="alarm_has_occurred">闹铃已经响过了</string>
+    <string name="punched_in_since">睡觉时间： %s</string>
+    <string name="status_set_sleep">修改为睡眠状态</string>
+    <string name="status_set_wake">修改为清醒状态</string>
+    <string name="not_punched_in">SleepBot - 还没有清醒状态</string>
+    <string name="todays_sleep">今日睡眠</string>
+    <string name="current_debt">睡眠负债</string>
+    <string name="wake_up">起床：</string>
+    <string name="smart_alarm">智能闹钟</string>
+    <string name="track_motion">记录身体移动</string>
+    <string name="record_sound">录音</string>
+    <string name="cannot_change_settings_after_punchin">您不能在进入睡眠状态以后修改这个设置。</string>
+    <string name="no_alarm_set_warning">接下来的一天内您必须开启一个闹钟以便让智能闹钟能在合适的时间开一个启用了的闹钟。</string>
+    <string name="auto_alarm_prompt">接下来的一天内没有开启了的闹钟。你想现在睡眠来打开自动闹钟和智能闹钟吗？</string>
+    <string name="mode_smart">智能闹钟模式，移动监测将在第一个闹钟前的选择时段内开启。</string>
+    <string name="mode_smart_motion">移动监测整晚开启＋睡眠宝宝将在最佳时间吵醒你。</string>
+    <string name="mode_complete">完整模式。睡眠宝宝将纪录运动，声音，并在第一个闹钟选择的时间阶段之前闹醒你。</string>
+    <string name="mode_motion">移动跟踪模式。</string>
+    <string name="mode_motion_sound">睡眠宝宝将监测并纪录您睡觉时的移动和声音信息。</string>
+    <string name="mode_classic">睡眠宝宝经典模式。</string>
+    <string name="mode_sound">录音模式。</string>
+    <string name="entry_created_title">记录成功！</string>
+    <string name="entry_created_msg">睡眠起始：\n%1$s – %2$s\n(%3$s)</string>
+    <string name="future_title">睡觉时间大于起床时间</string>
+    <string name="future_no_record">没有记录</string>
+    <string name="future_zero_record">\'0\'记录</string>
+    <string name="future_no_offset">无偏移量</string>
+    <string name="future_no_record_toast">状态已改变，但没有添加新记录</string>
+    <string name="current_session_title">当前睡眠阶段</string>
+    <string name="awake_since">你已经醒了%1$d小时%2$d分钟。</string>
+    <string name="reset_debt_q">你确定你要重置你的睡债吗？</string>
+    <string name="reset_debt_title">重置睡债</string>
+    <string name="reset_debt_msg">重置睡债将把当前睡债的起始计算时间调整到今天，没有记录将被改变，这仅仅会调整这个数字的计算方法而已。</string>
+    <string name="reset_debt_done">重置睡债成功！</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="reset">重置</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除…</string>
+    <string name="save">保存</string>
+    <string name="share">分享</string>
+    <string name="view">查看</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="ok">好</string>
+    <string name="note">笔记：</string>
+    <string name="from">从：</string>
+    <string name="to">睡到</string>
+    <string name="col_date">日期</string>
+    <string name="col_sleep">睡觉</string>
+    <string name="col_wake">醒来</string>
+    <string name="col_hours">小时</string>
+    <string name="col_debt">睡债</string>
+    <string name="add_new_entry">添加新记录</string>
+    <string name="share_caps">分享</string>
+    <string name="delete_confirm_title">删除确认</string>
+    <string name="delete_confirm_msg">你确定你要删除这条记录吗？</string>
+    <string name="no_entry_hint">嘿！\n\n纪录一个晚上的睡眠后回来，或者点击下面的添加按钮来建立你的第一个睡眠纪录。</string>
+    <string name="no_entry_found_hint">没有找到任何符合条件的纪录。</string>
+    <string name="first_entry_title">您刚刚创建了你的第一个睡眠记录！</string>
+    <string name="first_entry_msg">点击单行记录来查看详细信息。\n\n（提示：长按现实更多菜单）</string>
+    <string name="period_stats">阶段数据</string>
+    <string name="period_stats_note">注: 没有记录的日子将不被纳入到统计，如果你哪天一天都没睡的话请输入一个0分钟的空记录来表示。</string>
+    <string name="export_title">导出成功</string>
+    <string name="export_to">导出到</string>
+    <string name="export_subject">SleepBot: 睡眠数据导出 %s</string>
+    <string name="duration">时长：</string>
+    <string name="sleep_time">睡觉时间：</string>
+    <string name="wake_time">起床时间：</string>
+    <string name="invalid_time">睡觉时间必须在起床时间之前。</string>
+    <string name="cancel_caps">取消</string>
+    <string name="delete_caps">删除…</string>
+    <string name="save_caps">保存</string>
+    <string name="share_entry">分享这个记录</string>
+    <string name="movement">移动</string>
+    <string name="sound">声音</string>
+    <string name="high">高</string>
+    <string name="medium">中</string>
+    <string name="low">低</string>
+    <string name="current_trend">趋势</string>
+    <string name="current_sleep_records">现阶段记录</string>
+    <string name="avg_sleep_day">每天平均睡眠</string>
+    <string name="trend">趋势</string>
+    <string name="length">时长</string>
+    <string name="pattern">分布</string>
+    <string name="sleep_caps">睡觉</string>
+    <string name="wake_caps">醒来</string>
+    <string name="ratings">打分</string>
+    <string name="title_trend">睡眠时长趋势图</string>
+    <string name="title_length">时长计数表</string>
+    <string name="title_pattern">睡眠时间分布图</string>
+    <string name="title_sleep">睡觉钟点计数表</string>
+    <string name="title_wake">起床钟点计数</string>
+    <string name="alarm_clock_label">Klock闹钟</string>
+    <string name="alarms">闹钟</string>
+    <string name="add_alarm">添加闹钟…</string>
+    <string name="alarm_no_repeats">不重复</string>
+    <string name="alarm_every_day">每天</string>
+    <string name="alarm_weekdays">工作日</string>
+    <string name="alarm_weekends">周末</string>
+    <string name="alarm_status_text">下一次闹铃： %1$s (%2$s)</string>
+    <string name="auto_alarm_set">闹钟已设定： %1$s, %2$s</string>
+    <string name="auto_alarm_disabled">自动闹钟已取消</string>
+    <string name="alarm_scheduled">闹钟已开启: %1$s (%2$s)</string>
+    <string name="dismiss_slider">起床</string>
+    <string name="alarm_time_out">闹铃超时</string>
+    <string name="time_out_error">警告：这个闹铃已超时。</string>
+    <string name="snooze">打盹</string>
+    <string name="snooze_n_minutes">打盹\n%d 分钟</string>
+    <string name="alarm_edit">编辑</string>
+    <string name="alarm_delete_ellipsis">删除…</string>
+    <string name="alarm_delete_all">全部删除…</string>
+    <string name="alarm_default_settings">修改默认设置…</string>
+    <string name="alarm_confirm_delete">确定删除？</string>
+    <string name="alarm_settings_header">设置</string>
+    <string name="alarm_default_settings_header">修改默认设置…</string>
+    <string name="alarm_row_time">时间</string>
+    <string name="alarm_row_label">标记</string>
+    <string name="alarm_row_repeat">重复</string>
+    <string name="alarm_row_tone">铃声</string>
+    <string name="alarm_row_snooze">打盹 （分钟）</string>
+    <string name="alarm_row_vibrate">震动</string>
+    <string name="alarm_row_fade">音量渐入</string>
+    <string name="alarm_label_none">无</string>
+    <string name="alarm_label_title">闹钟标记</string>
+    <string name="alarm_enabled">开启了</string>
+    <string name="alarm_disabled">关闭了</string>
+    <string name="alarm_fade_summary">从 %1$d%% 到 %2$d%% 在 %3$d 秒内.</string>
+    <string name="alarm_fade_start">开始音量 （百分比）</string>
+    <string name="alarm_fade_end">最终音量 （百分比）</string>
+    <string name="alarm_fade_time">渐入时间 （秒）</string>
+    <string name="alarm_scheduled_days">计划天数</string>
+    <string name="alarm_unknown_name">未知名</string>
+    <string name="alarm_ok">好</string>
+    <string name="alarm_cancel">取消</string>
+    <string name="alarm_default_tone">默认</string>
+    <string name="help_section_sleepbot">睡眠宝宝使用说明</string>
+    <string name="help_section_sleep">睡不着，帮我…</string>
+    <string name="help_section_wake">快睡着了，让我醒醒！</string>
+    <string name="help_section_learn">了解睡眠方面的知识</string>
+    <string name="help_instructions">说明</string>
+    <string name="help_entries_and_graphs">记录和图表</string>
+    <string name="help_support">技术支持</string>
+    <string name="help_eat_this">吃这些！</string>
+    <string name="help_read_this">读这些！</string>
+    <string name="help_quick_strategies">简单策略</string>
+    <string name="help_prepare_bedroom">布置卧室</string>
+    <string name="help_sleep_debt">什么是睡眠负债</string>
+    <string name="help_health_problems">可能造成的健康问题</string>
+    <string name="help_sleep_disorders">睡眠障碍的类型</string>
+    <string name="tutorial_title_1">欢迎下载\n全新的睡眠宝宝！</string>
+    <string name="tutorial_1_1">睡眠宝宝(SleepBot)是一个能让你早上\n起来更舒服的精致睡眠日记和智能闹钟！</string>
+    <string name="tutorial_1_2">首先，设置一些闹钟</string>
+    <string name="tutorial_2_1">选择记录模式，然后点击\n\'go to sleep\'（去睡觉）</string>
+    <string name="tutorial_3_1">将手机放在床上：</string>
+    <string name="tutorial_3_2">起床： 8:00 早上~ 8:30 早上</string>
+    <string name="tutorial_3_3">智能闹钟将在第一个闹钟想起倩选择时段（默认30分钟）之内，在你最轻的睡眠状态时闹醒你。\n\n（例：这个智能闹钟会在8:30之前发生）</string>
+    <string name="tutorial_4_1">你可以在手机上查看你的睡眠纪录。</string>
+    <string name="tutorial_4_2">提示：点击声音图表来播放声音。</string>
+    <string name="get_started">开始</string>
+    <string name="intent_error_invalid">SleepBot API 呼叫失败，呼叫方没有给予正确的验证码。</string>
+    <string name="intent_error_reject">SleepBot API 呼叫失败，用户以屏蔽第三方软件。</string>
+    <string name="settings">设置</string>
+    <string name="setting_title_general">常规</string>
+    <string name="setting_title_app">程序</string>
+    <string name="about">关于</string>
+    <string name="agree">同意</string>
+    <string name="next">下一步</string>
+    <string name="done_label">完成</string>
+    <string name="error">错误</string>
+    <string name="please_wait">请等待…</string>
+    <string name="error_intent_empty_msg">没有程序可以执行这个命令</string>
+    <string name="options_hours_title">最佳长度</string>
+    <string name="options_hours_summary">最佳的睡觉时长是可以让你醒来后最舒服的时长</string>
+    <string name="options_delay_min_title">睡觉时间偏差</string>
+    <string name="options_delay_min_summary">可以让你更好的记录睡觉时间</string>
+    <string name="pref_sc_sleep_tracking">睡眠详细记录</string>
+    <string name="pref_sc_look_and_feel">外观</string>
+    <string name="pref_alarm_klock_settings_title">闹钟设置</string>
+    <string name="pref_cat_adv_data">备份与还原</string>
+    <string name="pref_adv_main_title">高级设置</string>
+    <string name="pref_view_update_notice">查看更新记录。</string>
+    <string name="rate_sleepbot">爱睡眠宝宝就给它打分！</string>
+    <string name="sleep_reminder">睡觉提醒</string>
+    <string name="sleep_reminder_title">打开睡觉提醒</string>
+    <string name="sleep_reminder_summary">睡眠提醒将根据你的下一个闹钟来提醒你睡觉的时间。</string>
+    <string name="times_before_offset">提醒拖后</string>
+    <string name="times_before_offset_summary">下一个闹钟世界 - 最佳起床睡觉 - 提醒拖后 = 提醒时间.</string>
+    <string name="sleep_reminder_title_2nd">打开第二个提醒</string>
+    <string name="sleep_reminder_summary_2nd">如果你还没睡觉，你可以打开第二个提醒.</string>
+    <string name="times_before_offset_2nd">第二提醒拖后</string>
+    <string name="times_before_offset_summary_2nd">下一个闹钟世界 - 最佳起床睡觉 - 提醒拖后 = 提醒时间.</string>
+    <string name="no_reminder_snooze">不让拖后提醒</string>
+    <string name="no_reminder_summary">不让拖后提醒</string>
+    <string name="reminder_mute_title">无提醒声音</string>
+    <string name="reminder_mute_summary">提醒的时候不要发出声音。</string>
+    <string name="options_soundmode_title">自动静音</string>
+    <string name="options_soundmode_summary">避免在睡觉时受来电打扰，并显示记录</string>
+    <string name="options_auto_alarm_title">开启自动闹铃</string>
+    <string name="options_auto_alarm_summary">在进入睡眠状态时创造一个会在”最佳睡眠小时“后响的闹钟。</string>
+    <string name="pref_cat_movement_tracking">移动跟踪</string>
+    <string name="pref_allow_screen_off_title">关闭屏幕记录</string>
+    <string name="pref_allow_screen_off_summary">有的手机支持在屏幕关闭时进行移动监测。</string>
+    <string name="pref_cat_smart_alarm">智能闹钟</string>
+    <string name="pref_time_alarm_range_title">闹钟范围</string>
+    <string name="pref_time_alarm_range_summary">第一个闹钟前闹醒的时段选择。</string>
+    <string name="pref_movement_sensitivity_title">移动灵敏度</string>
+    <string name="pref_movement_sensitivity_summary">根据您的手机和床来让智能闹钟发挥到最好。</string>
+    <string name="pref_cat_sound_recording">录音</string>
+    <string name="pref_sound_sensitivity_title">录音底线</string>
+    <string name="pref_sound_sensitivity_summary">声音纪录将在音量超过一定的限度时开始。</string>
+    <string name="pref_alternate_display_show_title">显示交替显示</string>
+    <string name="pref_alternate_display_show_summary">禁用这个选项如果你想不同时显示今日睡眠和睡债信息。</string>
+    <string name="pref_hour_format_title">记录表时间格式</string>
+    <string name="pref_hour_format_summary">如果您的手机屏幕很大，你可以使用其他的时间显示格式来显示总的睡眠时间和睡眠负债信息。</string>
+    <string name="pref_default_display_title">默认显示</string>
+    <string name="pref_default_display_summary">设置主要显示的数字（今日睡眠或者睡债）。</string>
+    <string name="options_default_graph_title">默认图表</string>
+    <string name="options_default_graph_summary">选择Tracker上默认的图</string>
+    <string name="pref_no_warning_title">屏幕关闭模式时不显示警告</string>
+    <string name="pref_no_warning_summary">屏幕关闭模式开启时不显示充电的警告。</string>
+    <string name="options_notification_sleep_title">睡前提醒</string>
+    <string name="options_notification_sleep_summary">按了睡觉按钮后提醒的文字</string>
+    <string name="options_notification_awake_title">起床提醒</string>
+    <string name="options_notification_awake_summary">按了起床按钮后提醒的文字</string>
+    <string name="pref_sleep_notification_default">点击成清醒模式。</string>
+    <string name="pref_awake_notification_default">点击成睡觉模式。</string>
+    <string name="pref_title_show_disconnected_lines">虚线</string>
+    <string name="pref_summary_show_disconnected_lines">在趋势图上使用虚线连接不连续的天数。</string>
+    <string name="pref_adv_backup_title">备份</string>
+    <string name="restore_backup_title">从备份文件还原</string>
+    <string name="restore_old_file_title">从导出文件还原</string>
+    <string name="restore_old_file_summary">从导出功能建立的文件还原。</string>
+    <string name="restore_old_file_body">由于导出功能建立的文件并不带有日期格式信息，请选择正确的日期格式以避免数据混乱。</string>
+    <string name="restore_confirm_title">确定你要还原吗？</string>
+    <string name="restore_warning_double">警告：回复可能会产生重复的记录（你可以在安卓系统设置里先清除现有的数据）。</string>
+    <string name="restore_progress_title">还原中…</string>
+    <string name="backup_progress_title">备份中…</string>
+    <string name="pref_adv_restore_title">还原</string>
+    <string name="error_restore_file_malformatted">还原文件已损坏，还原被中断。</string>
+    <string name="error_export_db_is_too_new">这个数据库比现在这个版本要新，新版本的数据库只能用新版的来恢复。</string>
+    <string name="pref_adv_cat_others">其他设置</string>
+    <string name="pref_adv_length_title">\"当前睡债\"天数</string>
+    <string name="pref_adv_length_summary">选择 7, 10, 或 14 天来作为\"Current Debt\"的计算范围。</string>
+    <string name="pref_adv_security_third_party_title">开启插件功能</string>
+    <string name="pref_adv_security_third_party_summary">允许第三方软件改变SleepBot的状态。</string>
+    <string name="pref_adv_variable_block_title">重复按键保护</string>
+    <string name="pref_adv_variable_block_summary">防止短时间内重复进入睡眠状态。</string>
+    <string name="notification_icon_title">显示通知图标</string>
+    <string name="notification_icon_on">如果有未响的闹铃则在通知区显示一个图标</string>
+    <string name="notification_icon_off">不在通知区显示图标</string>
+    <string name="time_out_summary">闹铃将在这么长时间内被自动解除</string>
+    <string name="summary_num_records">记录数:</string>
+    <string name="summary_num_days">天数:</string>
+    <string name="summary_total_sleep">总睡眠时间:</string>
+    <string name="summary_avg_daily">天平均:</string>
+    <string name="summary_avg_record">记录平均:</string>
+    <string name="summary_cum">累计睡债:</string>
+    <string name="hours_ori">小时</string>
+    <string name="channel_alarm_status">下一次闹铃：</string>
+    <string name="trk_no_alarm_set">没有开启的闹钟</string>
+    <string name="trk_phone_is_not_plugged">请将电话放到充电器上充电以避免电池在早上起来时没电。</string>
+    <string name="trk_screen_dim_soon">开始进入睡眠状态，屏幕将在15秒内变暗…</string>
+    <string name="trk_screen_already_dimmed">按下后退键打开屏幕，不要按下电源键。晚安！</string>
+    <string name="trk_screen_off_toast">睡眠宝宝将开始纪录您的睡眠，您可以关闭您的屏幕去做其他事情，只要不玩很占内存的游戏就可以了。</string>
+    <string name="trk_am">上午</string>
+    <string name="trk_pm">下午</string>
+    <string name="trk_accel_graph_title">移动</string>
+    <string name="trk_sound_graph_title">声音</string>
+    <string name="trk_label_high">高</string>
+    <string name="trk_label_medium">中</string>
+    <string name="trk_label_low">低</string>
+    <string name="trk_sleep_reminder_title">睡觉提醒</string>
+    <string name="trk_sleep_reminder_toast">赶快去睡觉以可以及时起来!</string>
+    <string name="trk_remind_later">以后提醒</string>
+    <string name="trk_choose_time">选择时间</string>
+    <string name="trk_remind_with_sleep_cycle">如果你现在不去睡觉，你会在下一个睡眠周期时被提醒。\n\n 这些时间将会间隔90分钟，而且会给你30分钟准备上床与入睡。</string>
+    <string name="trk_you_should_really_go_to_sleep">你真的需要现在去睡觉啦！这样明天才会有精神！</string>
+    <string-array name="range_choices">
+        <item>全部</item>
+        <item>过去10天</item>
+        <item>30天</item>
+        <item>60天</item>
+        <item>180天</item>
+        <item>360 天</item>
+    </string-array>
+    <string-array name="hour_entries">
+        <item>3 小时</item>
+        <item>3.5 小时</item>
+        <item>4 小时</item>
+        <item>4.5 小时</item>
+        <item>5 小时</item>
+        <item>5.5 小时</item>
+        <item>6 小时</item>
+        <item>6.5 小时</item>
+        <item>7 小时</item>
+        <item>7.5 小时</item>
+        <item>8 小时</item>
+        <item>8.5 小时</item>
+        <item>9 小时</item>
+        <item>9.5 小时</item>
+        <item>10 小时</item>
+        <item>10.5 小时</item>
+        <item>11 小时</item>
+    </string-array>
+    <string-array name="delay_min_entries">
+        <item>无弥补时间 (0)</item>
+        <item>+5 分钟</item>
+        <item>+10 分钟</item>
+        <item>+15 分钟</item>
+        <item>+30 分钟</item>
+        <item>+45 分钟</item>
+        <item>+1 小时</item>
+        <item>+1 小时 20 分钟</item>
+        <item>+1 小时 40 分钟</item>
+        <item>+2 小时</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets">
+        <item>15分钟前</item>
+        <item>30分钟前</item>
+        <item>45分钟前</item>
+        <item>1小时前</item>
+        <item>2小时前</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets_2nd">
+        <item>15分钟前r</item>
+        <item>30分钟前</item>
+        <item>45分钟后</item>
+        <item>1小时后</item>
+        <item>2小时后</item>
+    </string-array>
+    <string-array name="sound_mode">
+        <item>什么也不做</item>
+        <item>震动</item>
+        <item>静音</item>
+    </string-array>
+    <string-array name="alarm_range_entries">
+        <item>15分钟前</item>
+        <item>30分钟前</item>
+        <item>45分钟前</item>
+        <item>60分钟前</item>
+        <item>90分钟前</item>
+    </string-array>
+    <string-array name="movement_sensitivity_entries">
+        <item>非常低（适合软的床或者敏感的手机）</item>
+        <item>低</item>
+        <item>正常</item>
+        <item>高</item>
+        <item>非常高（适合非常硬的床）</item>
+    </string-array>
+    <string-array name="entry_list_hour_format_entries">
+        <item>小数点（3.5）</item>
+        <item>时间 (03:30)</item>
+    </string-array>
+    <string-array name="default_display_entries">
+        <item>今日睡眠</item>
+        <item>睡眠负债</item>
+    </string-array>
+    <string-array name="default_graph_entries">
+        <item>睡觉时间趋势图</item>
+        <item>睡眠时间分布图</item>
+    </string-array>
+    <string-array name="date_entries">
+        <item>月/日/年</item>
+        <item>日/月/年</item>
+        <item>年/月/日</item>
+    </string-array>
+</resources>

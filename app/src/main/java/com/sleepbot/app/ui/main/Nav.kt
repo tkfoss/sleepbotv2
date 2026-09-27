@@ -1,10 +1,9 @@
 package com.sleepbot.app.ui.main
 
-import android.app.Activity
 import android.content.pm.ActivityInfo
+import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -36,7 +35,7 @@ object Routes {
 /** Locks the host activity's orientation while this composable is on screen. */
 @Composable
 fun LockOrientation(orientation: Int = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE) {
-    val activity = LocalContext.current as? Activity ?: return
+    val activity = LocalActivity.current ?: return
     DisposableEffect(orientation) {
         val prev = activity.requestedOrientation
         activity.requestedOrientation = orientation

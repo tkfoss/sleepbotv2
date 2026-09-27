@@ -12,6 +12,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -24,6 +25,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -45,6 +47,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
@@ -164,8 +168,9 @@ fun HomeTab(onOpenAlarms: () -> Unit, onOpenEntry: (Long) -> Unit) {
             contentScale = ContentScale.Fit,
         )
 
-        Row(Modifier.padding(top = 10.dp), horizontalArrangement = Arrangement.Center) {
-            OptionToggle(R.string.smart_alarm, smart, Modifier.padding(end = 21.dp)) {
+        // Equal columns so longer translations wrap between words instead of squeezing the last label.
+        Row(Modifier.fillMaxWidth().padding(top = 10.dp, start = 4.dp, end = 4.dp), horizontalArrangement = Arrangement.Center) {
+            OptionToggle(R.string.smart_alarm, smart, Modifier.weight(1f)) {
                 if (asleep) return@OptionToggle toast(R.string.cannot_change_settings_after_punchin)
                 when {
                     canSmart -> { smart = !smart; prefs.smartAlarm = smart }
@@ -173,11 +178,11 @@ fun HomeTab(onOpenAlarms: () -> Unit, onOpenEntry: (Long) -> Unit) {
                     else -> { toast(R.string.no_alarm_set_warning); onOpenAlarms() }
                 }
             }
-            OptionToggle(R.string.track_motion, motion, Modifier.padding(end = 21.dp)) {
+            OptionToggle(R.string.track_motion, motion, Modifier.weight(1f)) {
                 if (asleep) return@OptionToggle toast(R.string.cannot_change_settings_after_punchin)
                 motion = !motion; prefs.trackMotion = motion
             }
-            OptionToggle(R.string.record_sound, sound) {
+            OptionToggle(R.string.record_sound, sound, Modifier.weight(1f)) {
                 if (asleep) return@OptionToggle toast(R.string.cannot_change_settings_after_punchin)
                 sound = !sound; prefs.recordSound = sound
             }
@@ -301,7 +306,20 @@ private fun OptionToggle(@StringRes label: Int, on: Boolean, modifier: Modifier 
     }
     Column(modifier.clickable(interactionSource = source, indication = null, onClick = onClick), horizontalAlignment = Alignment.CenterHorizontally) {
         Image(painterResource(img), null, Modifier.size(56.dp))
-        Text(stringResource(label), color = if (on) SB.GraphLine else Color.White, fontSize = 14.sp, fontFamily = RobotoRegular)
+        BoxWithConstraints(Modifier.fillMaxWidth()) {
+            val text = stringResource(label)
+            // Shrink (down to 10sp) until the longest word fits, so e.g. "Bewegungstracking" isn't split mid-word.
+            val measurer = rememberTextMeasurer()
+            val maxPx = constraints.maxWidth
+            val style = LocalTextStyle.current.copy(fontFamily = RobotoRegular, textAlign = TextAlign.Center)
+            val size = remember(text, maxPx, style) {
+                val words = text.split(' ', '\n')
+                (14 downTo 10).firstOrNull { sp ->
+                    words.all { measurer.measure(it, style.copy(fontSize = sp.sp)).size.width <= maxPx }
+                } ?: 10
+            }
+            Text(text, Modifier.fillMaxWidth(), color = if (on) SB.GraphLine else Color.White, style = style.copy(fontSize = size.sp))
+        }
     }
 }
 

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hour_n">%d timme</string>
+    <string name="hours_n">%d timmar</string>
+    <string name="minute_n">%d minut</string>
+    <string name="minutes_n">%d minuter</string>
+    <string name="day_n">%d dag</string>
+    <string name="days_n">%d dagar</string>
+    <string name="alarm_has_occurred">Alarmet har ringt</string>
+    <string name="punched_in_since">Instämplad sedan %s</string>
+    <string name="status_set_sleep">Status satt till att sova</string>
+    <string name="status_set_wake">Status satt till vaken</string>
+    <string name="not_punched_in">Inte stämplat in</string>
+    <string name="todays_sleep">DAGENS SÖMN</string>
+    <string name="current_debt">NUVARANDE SKULD</string>
+    <string name="wake_up">Vakna upp:</string>
+    <string name="smart_alarm">Intelligent alarm</string>
+    <string name="track_motion">Spåra rörelser</string>
+    <string name="record_sound">Spela in ljud</string>
+    <string name="cannot_change_settings_after_punchin">Du kan inte ändra inställningar efter du stämplat in.</string>
+    <string name="no_alarm_set_warning">Du har inga alarm som ringer nästa dag! Intelligent Alarm kommer väcka dig då du sovit det optimala antalet timmar innanför det valda intervallet för nästa alarm.</string>
+    <string name="auto_alarm_prompt">Du har inga alarm för nästa dygn. Vill du stämpla in nu för att sätta på auto-alarm och Intelligent Alarm?</string>
+    <string name="mode_smart">Intelligent Alarm-läge. Rörelsedetektering startar inom det valda tidsintervallet för ditt första alarm.</string>
+    <string name="mode_smart_motion">Rörelsespårning på hela natten + SleepBot kommer väcka dig vid en optimal tidpunkt.</string>
+    <string name="mode_complete">Fullständigt läge. SleepBot kommer spåra dina rörelser och ljud, samt väcka dig vid den bästa tidpunkten inom det valde tidsintervallet för ditt första alarm.</string>
+    <string name="mode_motion">Rörelsespårningsläge.</string>
+    <string name="mode_motion_sound">SleepBot kommer spåra dina rörelser och ljud under natten</string>
+    <string name="mode_classic">SleepBot klassiskt läge.</string>
+    <string name="mode_sound">Ljudspårningsläge.</string>
+    <string name="entry_created_title">Sömnpost skapad!</string>
+    <string name="entry_created_msg">Du har sovit från:\n%1$s – %2$s\n(%3$s)</string>
+    <string name="future_title">Sovtiden är i framtiden</string>
+    <string name="future_no_record">Ingen post</string>
+    <string name="future_zero_record">\'0\'-post</string>
+    <string name="future_no_offset">Ingen offset</string>
+    <string name="future_no_record_toast">Status ändrad till vaken utan att lagt till en post.</string>
+    <string name="current_session_title">Nuvarande sömnsession</string>
+    <string name="awake_since">Du har varit vaken i %1$d timmar och %2$d minuter.</string>
+    <string name="reset_debt_q">Vill du återställa din skuld?</string>
+    <string name="reset_debt_title">Återställ skuld</string>
+    <string name="reset_debt_msg">Att återställa skulden kommer att ta bort din nuvarande sömnskuld och starta om räkningen från och med dagens datum. \n\n*Detta kommer bara att ändra datumet från när skulden räknas på Startsidan – inga inlägg kommer att ändras.n\n*Detta kommer bara att ändra datumet från när skulden räknas på Startsidan – inga inlägg kommer att ändras. \n\n*Skuld för idag kommer fortfarande bli medräknad, som dagens sömn subtraherad från den optimala \n\n*Skuld för idag kommer fortfarande bli medräknad, som dagens sömn subtraherad från den optimala sömntiden.</string>
+    <string name="reset_debt_done">Skulden är nu återställd! Nästa gång du visar Startsidan kommer den visa den nya skulden.</string>
+    <string name="confirm">Bekräfta</string>
+    <string name="cancel">Avbryt</string>
+    <string name="reset">Återställ</string>
+    <string name="edit">Redigera</string>
+    <string name="delete">Ta bort…</string>
+    <string name="save">Spara</string>
+    <string name="share">Dela</string>
+    <string name="view">Visa</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
+    <string name="note">Anteckning:</string>
+    <string name="from">Från:</string>
+    <string name="to">till</string>
+    <string name="col_date">Datum</string>
+    <string name="col_sleep">SÖMN</string>
+    <string name="col_wake">VAKEN</string>
+    <string name="col_hours">timmar</string>
+    <string name="col_debt">Skuld</string>
+    <string name="add_new_entry">LÄGG TILL NY POST</string>
+    <string name="share_caps">DELA</string>
+    <string name="delete_confirm_title">Ta bort bekräftelse</string>
+    <string name="delete_confirm_msg">Är du säker att du vill ta bort denna post?</string>
+    <string name="no_entry_hint">Hej där!\n\nKom tillbaka efter du spårat din sömn inatt, eller skapa din första sömnpost nedan!</string>
+    <string name="no_entry_found_hint">Inga inlägg hittades som matchar dina sökkriterier.</string>
+    <string name="first_entry_title">Du har skapat din första sömnpost!</string>
+    <string name="first_entry_msg">Tryck på raden för att visa eller redigera.\n\n (Tips: Prova långtryckning också)</string>
+    <string name="period_stats">Periodstatistik</string>
+    <string name="period_stats_note">Notera: Om ingen data samlas en särskild dag, räknas den inte in i tidsperiodens statistik. Om du inte alls sovit något denna dag, var god mata in en post med sovlängd av \"0\" för att den ska räknas med.</string>
+    <string name="export_title">Export framgångsrik</string>
+    <string name="export_to">Exportera till</string>
+    <string name="export_subject">SleepBot: Sömndata exporterad vid %s</string>
+    <string name="duration">Längd:</string>
+    <string name="sleep_time">Sovtid :</string>
+    <string name="wake_time">Uppvakning :</string>
+    <string name="invalid_time">Ogiltig tidsinställning, sovtid måste vara före uppvakningstid.</string>
+    <string name="cancel_caps">Avbryt</string>
+    <string name="delete_caps">Ta bort…</string>
+    <string name="save_caps">Spara</string>
+    <string name="share_entry">Dela denna post</string>
+    <string name="movement">Rörelse</string>
+    <string name="sound">Ljud</string>
+    <string name="high">Hög</string>
+    <string name="medium">Mellan</string>
+    <string name="low">Låg</string>
+    <string name="current_trend">Nuvarande trend</string>
+    <string name="current_sleep_records">Nuvarande sovjournal</string>
+    <string name="avg_sleep_day">GENOMSNITTLIG SÖMN/DAG</string>
+    <string name="length">LÄNGD</string>
+    <string name="pattern">MÖNSTER</string>
+    <string name="sleep_caps">SÖMN</string>
+    <string name="wake_caps">VAKEN</string>
+    <string name="ratings">Betyg</string>
+    <string name="title_trend">Sovtidstrend</string>
+    <string name="title_length">Längdsumma</string>
+    <string name="title_pattern">Sovtidssumma</string>
+    <string name="title_sleep">Sovtidsssumma</string>
+    <string name="title_wake">Uppvakningssumma</string>
+    <string name="alarm_clock_label">Alarm</string>
+    <string name="alarms">Alarm</string>
+    <string name="add_alarm">LÄGG TILL ALARM</string>
+    <string name="alarm_no_repeats">Inga återkommande</string>
+    <string name="alarm_every_day">Varje dag</string>
+    <string name="alarm_weekdays">Veckodagar</string>
+    <string name="alarm_weekends">Helger</string>
+    <string name="alarm_status_text">Nästa alarm: %1$s (%2$s)</string>
+    <string name="auto_alarm_set">Alarm satt till: %1$s, %2$s</string>
+    <string name="auto_alarm_disabled">Autoalam avaktiverat</string>
+    <string name="alarm_scheduled">Alarm inställt: %1$s (%2$s)</string>
+    <string name="dismiss_slider">DRA FÖR ATT AVFÄRDA</string>
+    <string name="alarm_time_out">Väntetid på alarm</string>
+    <string name="time_out_error">VARNING: Detta alarm väntar på bekräftelse.</string>
+    <string name="snooze">SUSSA</string>
+    <string name="snooze_n_minutes">SUSSA\n%d minuter</string>
+    <string name="alarm_edit">Redigera</string>
+    <string name="alarm_delete_ellipsis">Ta bort…</string>
+    <string name="alarm_delete_all">Ta bort alla…</string>
+    <string name="alarm_default_settings">Inställningar för standardalarm…</string>
+    <string name="alarm_confirm_delete">Bekräfta borttagning?</string>
+    <string name="alarm_settings_header">Inställningar</string>
+    <string name="alarm_default_settings_header">Inställningar för standardalarm…</string>
+    <string name="alarm_row_time">Tid</string>
+    <string name="alarm_row_label">Etikett</string>
+    <string name="alarm_row_repeat">Repetera</string>
+    <string name="alarm_row_tone">Ton</string>
+    <string name="alarm_row_snooze">Sussa (minuter)</string>
+    <string name="alarm_row_vibrate">Vibrera</string>
+    <string name="alarm_row_fade">Alarmvolymsökning</string>
+    <string name="alarm_label_none">Ingen</string>
+    <string name="alarm_label_title">Etikett för alarm</string>
+    <string name="alarm_enabled">Aktiverad</string>
+    <string name="alarm_disabled">Inaktiverad</string>
+    <string name="alarm_fade_start">Startvolym (%)</string>
+    <string name="alarm_fade_end">Slutvolym (%)</string>
+    <string name="alarm_fade_time">Ökningstid (sekunder)</string>
+    <string name="alarm_scheduled_days">Planerade dagar</string>
+    <string name="alarm_unknown_name">Okänt namn</string>
+    <string name="alarm_cancel">Avbryt</string>
+    <string name="alarm_default_tone">Standard</string>
+    <string name="help_section_sleepbot">Användning</string>
+    <string name="help_section_sleep">Hjälp mig att sova…</string>
+    <string name="help_section_wake">Hjälp mig att stanna vaken!</string>
+    <string name="help_section_learn">Lär dig om sömn</string>
+    <string name="help_instructions">Instruktioner</string>
+    <string name="help_entries_and_graphs">Poster &amp; diagram</string>
+    <string name="help_support">Hjälp</string>
+    <string name="help_eat_this">Ät detta!</string>
+    <string name="help_read_this">Läs detta!</string>
+    <string name="help_quick_strategies">Snabba strategier</string>
+    <string name="help_prepare_bedroom">Förbered ditt sovrum</string>
+    <string name="help_sleep_debt">Vad är sömnskuld</string>
+    <string name="help_health_problems">Eventuella hälsoproblem</string>
+    <string name="help_sleep_disorders">Typer av sömnproblem</string>
+    <string name="tutorial_title_1">Välkommen till den\nhelt nya SleepBot!</string>
+    <string name="tutorial_1_1">SleepBot är en vacker sömnspårare &amp;\n med Intelligent Alarm som hjälper dig att vakna bättre!</string>
+    <string name="tutorial_1_2">Först, ställ in ditt/dina alarm</string>
+    <string name="tutorial_2_1">Välj dina spårningsinställningar och \nsedan tryck på \'gå och sov\'</string>
+    <string name="tutorial_3_1">Placera din telefon bredvid dig på sängen:</string>
+    <string name="tutorial_3_2">Uppvakning: 8:00 ~ 8:30</string>
+    <string name="tutorial_3_3">Det Intelligenta Alarmet kommer väcka dig inom 30 minuter innan den tid du satt, när du sover som lättast.\n\n\n(alltså om du har ställt in 8:30 som Intelligent Alarm)</string>
+    <string name="tutorial_4_1">Visa dina sömnposter &amp; sömntrender\nhär:</string>
+    <string name="tutorial_4_2">**Tips: tryck på ljuddiagrammen för att spela upp ljud!</string>
+    <string name="get_started">Kom igång</string>
+    <string name="intent_error_invalid">Ogiltigt nyckelpar för inloggning.</string>
+    <string name="intent_error_reject">Användaren har avaktiverat tredjeparts integrering.</string>
+    <string name="settings">Inställningar</string>
+    <string name="setting_title_general">GENERELLT</string>
+    <string name="setting_title_app">App</string>
+    <string name="about">Omkring</string>
+    <string name="agree">Acceptera</string>
+    <string name="next">Nästa</string>
+    <string name="done_label">Färdig</string>
+    <string name="error">Fel</string>
+    <string name="please_wait">Var god vänta…</string>
+    <string name="error_intent_empty_msg">Ingen aktivitet funnen för att slutföra denna funktion.</string>
+    <string name="options_hours_title">Optimal sovtid</string>
+    <string name="options_hours_summary">Ditt ideala antal sömntimmar</string>
+    <string name="options_delay_min_title">Instämplings-offset</string>
+    <string name="options_delay_min_summary">Låter dig stämpla in innan du somnar, med en fördröjning innan den räknar, för att skapa en mer korrekt sovtid.</string>
+    <string name="pref_sc_sleep_tracking">Sömnspårning</string>
+    <string name="pref_sc_look_and_feel">Utseende</string>
+    <string name="pref_alarm_klock_settings_title">Alarminställningar</string>
+    <string name="pref_cat_adv_data">Backup &amp; synkning</string>
+    <string name="pref_adv_main_title">Avancerade inställningar</string>
+    <string name="pref_view_update_notice">Visa uppdateringsbesked.</string>
+    <string name="rate_sleepbot">Bedöm SleepBot!</string>
+    <string name="sleep_reminder">Sovdagspåminnelse</string>
+    <string name="sleep_reminder_title">Aktivera sovdagspåminnelse</string>
+    <string name="sleep_reminder_summary">Sovdagspåminnelsen kommer påminna dig att gå och lägga dig baserat på dina alarminställningar, om du inte redan stämplat in.</string>
+    <string name="times_before_offset">Påminnelse-offset</string>
+    <string name="times_before_offset_summary">Nästa alarmtid - (optimala uppvakningstiden) - (påminnelse-offset) = påminnelsetiden.</string>
+    <string name="sleep_reminder_title_2nd">Aktivera 2:a påminnelse</string>
+    <string name="sleep_reminder_summary_2nd">Ha ytterligare en påminnelse om du ännu inte somnat.</string>
+    <string name="times_before_offset_2nd">Andra påminnelse-offseten</string>
+    <string name="times_before_offset_summary_2nd">Nästa alarmtid - (optimala uppvakningstiden) - (2:a påminnelse-offseten) = 2:a påminnelsetiden.</string>
+    <string name="no_reminder_snooze">Ingen påminnelse senare</string>
+    <string name="no_reminder_summary">Visa ingen påminnelsedialog senare.</string>
+    <string name="reminder_mute_title">Inget notifieringsljud</string>
+    <string name="reminder_mute_summary">Spela inte upp ett ljud med påminnelsen.</string>
+    <string name="options_soundmode_title">Automatisk tystnad</string>
+    <string name="options_soundmode_summary">Låt din telefon vara ljudlös under sömn</string>
+    <string name="options_auto_alarm_title">Automatiskt alarm på</string>
+    <string name="options_auto_alarm_summary">Skapar ett alarm som automatiskt ringer för \"optimala antalet sovtimmar\" (inklusive offset) efter du stämplat in.</string>
+    <string name="pref_cat_movement_tracking">Rörelsespårning</string>
+    <string name="pref_allow_screen_off_title">Spårning med avstängd skärm</string>
+    <string name="pref_allow_screen_off_summary">Visa telefoner kan stödja rörelsespårning med skärmen avstängd.</string>
+    <string name="pref_cat_smart_alarm">Intelligent alarm</string>
+    <string name="pref_time_alarm_range_title">Alarmintervall</string>
+    <string name="pref_time_alarm_range_summary">Tidsintervallet före ditt första alarm för bästa väckning.</string>
+    <string name="pref_movement_sensitivity_title">Rörelsesensitivitet</string>
+    <string name="pref_movement_sensitivity_summary">Justera för att optimera Intelligent Alarm för din säng och telefon.</string>
+    <string name="pref_cat_sound_recording">Ljudinspelning</string>
+    <string name="pref_sound_sensitivity_title">Inspelningsgräns</string>
+    <string name="pref_sound_sensitivity_summary">Ljudinspelning startar när volymen är högre än gränsen</string>
+    <string name="delete_older_sound_files">Ta bort gamla filer</string>
+    <string name="pref_alternate_display_show_title">Visa alternativ vy</string>
+    <string name="pref_alternate_display_show_summary">Avmarkera om du vill gömma alternativ information.</string>
+    <string name="pref_hour_format_title">Posters tidsformat</string>
+    <string name="pref_hour_format_summary">För telefoner med stora skärmar kan du använda ett icke-decimalsystem för att visa totala antalet timmar och skuldsiffror.</string>
+    <string name="pref_default_display_title">Standardvy</string>
+    <string name="pref_default_display_summary">Ställ in vad som ska visas på startsidans visningsnummer.</string>
+    <string name="options_default_graph_title">Standarddiagram</string>
+    <string name="options_default_graph_summary">Välj de diagram som visas som standard på spårningsfliken.</string>
+    <string name="pref_no_warning_title">Ingen varning i läge med avstängd skärm</string>
+    <string name="pref_no_warning_summary">Visa inte uppladdningsvarning om skärmläget av avstängt.</string>
+    <string name="options_notification_sleep_title">Text för sovpåminnelse</string>
+    <string name="options_notification_sleep_summary">Anpassa meddelandet som visas i notifikationer.</string>
+    <string name="options_notification_awake_title">Text för väckningspåminnelse</string>
+    <string name="options_notification_awake_summary">Anpassa väckningsmeddelandet som visas i notifikationer.</string>
+    <string name="pref_sleep_notification_default">Tryck för att stämpla ut.</string>
+    <string name="pref_awake_notification_default">Tryck för att stämpla in.</string>
+    <string name="pref_title_show_disconnected_lines">Punktlinjer</string>
+    <string name="pref_summary_show_disconnected_lines">Koppla ihop okopplade linjer genom att använda de prickade linjerna på trenddiagrammet.</string>
+    <string name="restore_backup_title">Återställa från backup-fil</string>
+    <string name="restore_old_file_title">Återställ från en exportfil</string>
+    <string name="restore_old_file_summary">Återställ poster från en fil skapad av Export-funktionen.</string>
+    <string name="restore_old_file_body">Eftersom exportfilerna inte är urspringligen skapade för backup- och återställningssyften, var god välj samma datumformat i nästa steg för att matcha den som används i texten. Var god välj samma datumformat som den när du exporterar filen för att all data importeras korrekt (Om en annan applikation på Market försöker importera SleepBot-data och inte frågar om datumformat, borde du verifiera att datan importerades korrekt).</string>
+    <string name="restore_confirm_title">Bekräfta för att återställa</string>
+    <string name="restore_warning_double">VIKTIGT: Återställningar kan skapa dubbletter av poster om du redan har poster i din logg (nollställ SleepBot-data i Android Applikationsinställningar om nödvändigt).</string>
+    <string name="restore_progress_title">Återställa SleepBot</string>
+    <string name="backup_progress_title">Säkerhetskopiera SleepBot</string>
+    <string name="pref_adv_restore_title">Återställa</string>
+    <string name="error_restore_file_malformatted">Återställningsfilen har inte korrekt format eller är trasig. Återställningen har avbrutits.</string>
+    <string name="error_export_db_is_too_new">Den angivna databasen är för ny för att bli återställd.</string>
+    <string name="pref_adv_cat_others">Andra inställningar</string>
+    <string name="pref_adv_length_title">Nuvarande skuldperiod</string>
+    <string name="pref_adv_length_summary">Välj 7, 10 eller 14 dagar för datumperiod för att räkna ut din \"Nuvarande skuld\" som visas på startsidan.</string>
+    <string name="pref_adv_security_third_party_title">Aktivera integrering</string>
+    <string name="pref_adv_security_third_party_summary">Tillåt tredjepartsappar att söva/vakna SleepBot.</string>
+    <string name="pref_adv_variable_block_title">Återinstämplingsskydd</string>
+    <string name="pref_adv_variable_block_summary">Motverka oavsiktliga instämplingar genom att blockera försök inom ett tidsspann.</string>
+    <string name="notification_icon_title">Visa notifieringsikon</string>
+    <string name="notification_icon_on">Visa ikon när det finns väntande alarm</string>
+    <string name="notification_icon_off">Visa inte ikon när det finns väntande alarm</string>
+    <string name="time_out_summary">Ett ringande alarm kommer automatiskt stängas av efter så här många minuter.</string>
+    <string name="summary_num_records">Antal poster:</string>
+    <string name="summary_num_days">Antal dagar:</string>
+    <string name="summary_total_sleep">Total sovtid:</string>
+    <string name="summary_avg_daily">Genomsnittlig daglig sömn:</string>
+    <string name="summary_avg_record">Genomsnittlig sömn/post:</string>
+    <string name="summary_cum">Ihopsamlad skuld:</string>
+    <string name="hours_ori">timmar</string>
+    <string name="channel_alarm_status">Nästa alarm:</string>
+    <string name="trk_no_alarm_set">Inget alarm inställt</string>
+    <string name="trk_phone_is_not_plugged">Var god lämna din telefon på laddning för att undvika urladdning.</string>
+    <string name="trk_screen_dim_soon">Börjar sömnspårning: Skärmen kommer släckas inom 15 sekunder…</string>
+    <string name="trk_screen_already_dimmed">Tryck på bakåt-knappen för att sätta igång skärmen, inte på strömknappen. God natt!</string>
+    <string name="trk_screen_off_toast">SleepBot kommer spåra din sömn, du kan stänga av skärmen eller göra andra saker, men försök att inte använda appar som kräver mycket minne.</string>
+    <string name="trk_am">FM</string>
+    <string name="trk_pm">EM</string>
+    <string name="trk_accel_graph_title">Rörelse</string>
+    <string name="trk_sound_graph_title">Ljud</string>
+    <string name="trk_label_high">Hög</string>
+    <string name="trk_label_medium">Mellan</string>
+    <string name="trk_label_low">Låg</string>
+    <string name="trk_sleep_reminder_title">Sovdagspåminnelse</string>
+    <string name="trk_sleep_reminder_toast">Gå och lägg dig snart för att vakna upp i tid!</string>
+    <string name="trk_remind_later">Påminn senare</string>
+    <string name="trk_choose_time">Välj en tid</string>
+    <string name="trk_remind_with_sleep_cycle">Om du inte går och lägger dig nu, kan du bli påmind senare i efterkommande sömncykler.\n\n Tiderna kommer räknas ut med 90 minuters mellanrum från nästa alarmtid med 30 minuter borträknat för att du ska hinna förbereda dig och somna.</string>
+    <string name="trk_you_should_really_go_to_sleep">Du borde verkligen gå och sova eller ta en power nap just nu. Det skulle hjälpa din produktivitet!</string>
+    <string-array name="range_choices">
+        <item>Alla</item>
+        <item>10 dagar</item>
+        <item>30 dagar</item>
+        <item>60 dagar</item>
+        <item>180 dagar</item>
+        <item>360 dagar</item>
+    </string-array>
+    <string-array name="hour_entries">
+        <item>3 timmar</item>
+        <item>3½ timmar</item>
+        <item>4 timmar</item>
+        <item>4½ timmar</item>
+        <item>5 timmar</item>
+        <item>5½ timmar</item>
+        <item>6 timmar</item>
+        <item>6½ timmar</item>
+        <item>7 timmar</item>
+        <item>7½ timmar</item>
+        <item>8 timmar</item>
+        <item>8½ timmar</item>
+        <item>9 timmar</item>
+        <item>9½ timmar</item>
+        <item>10 timmar</item>
+        <item>10½ timmar</item>
+        <item>11 timmar</item>
+    </string-array>
+    <string-array name="delay_min_entries">
+        <item>Ingen offest (0)</item>
+        <item>+5 minuter</item>
+        <item>+10 minuter</item>
+        <item>+15 minuter</item>
+        <item>+30 minuter</item>
+        <item>+45 minuter</item>
+        <item>+1 timme</item>
+        <item>+1 timme 20 minuter</item>
+        <item>+1 timme 40 minuter</item>
+        <item>+2 timmar</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets">
+        <item>15 minuter innan</item>
+        <item>30 minuter innan</item>
+        <item>45 minuter innan</item>
+        <item>1 timme innan</item>
+        <item>2 timmar innan</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets_2nd">
+        <item>15 minuter efter</item>
+        <item>30 minuter efter</item>
+        <item>45 minuter efter</item>
+        <item>1 timme efter</item>
+        <item>2 timmar efter</item>
+    </string-array>
+    <string-array name="sound_mode">
+        <item>Gör ingenting</item>
+        <item>Tyst+vibrera</item>
+        <item>Tyst utan vibration</item>
+    </string-array>
+    <string-array name="alarm_range_entries">
+        <item>15 minuter innan</item>
+        <item>30 minuter innan</item>
+        <item>45 minuter innan</item>
+        <item>60 minuter innan</item>
+        <item>90 minuter innan</item>
+    </string-array>
+    <string-array name="movement_sensitivity_entries">
+        <item>Väldigt lågt (mjuk säng + känslig telefon)</item>
+        <item>Låg</item>
+        <item>Normalt</item>
+        <item>Hög</item>
+        <item>Väldigt högt (för väldigt hårda sängar)</item>
+    </string-array>
+    <string-array name="entry_list_hour_format_entries">
+        <item>decimalt (3.5)</item>
+        <item>Tid (03:30)</item>
+    </string-array>
+    <string-array name="default_display_entries">
+        <item>Dagens sömn</item>
+        <item>Nuvarande skuld</item>
+    </string-array>
+    <string-array name="default_graph_entries">
+        <item>Sovtidstrend</item>
+        <item>Sovmönster</item>
+    </string-array>
+    <string-array name="date_entries">
+        <item>Månad/Dag/År</item>
+        <item>Dag/Månad/År</item>
+        <item>År/Månad/Dag</item>
+    </string-array>
+</resources>

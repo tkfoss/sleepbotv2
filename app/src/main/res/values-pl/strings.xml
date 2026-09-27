@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hour_n">%d godzina</string>
+    <string name="hours_n">%d godz.</string>
+    <string name="minute_n">%d minuta</string>
+    <string name="minutes_n">%d min.</string>
+    <string name="day_n">%d dzień</string>
+    <string name="days_n">%d dni</string>
+    <string name="alarm_has_occurred">Nastąpiło budzenie</string>
+    <string name="punched_in_since">Śledzenie od %s</string>
+    <string name="status_set_sleep">Status ustawiony na sen</string>
+    <string name="status_set_wake">Status ustawiony na budzenie</string>
+    <string name="not_punched_in">Nie rozpoczęto śledzenia</string>
+    <string name="todays_sleep">DZISIEJSZY SEN</string>
+    <string name="current_debt">AKTUALNY DEBET</string>
+    <string name="wake_up">Budzenie:</string>
+    <string name="smart_alarm">Inteligentny alarm</string>
+    <string name="track_motion">Śledzenie ruchu</string>
+    <string name="record_sound">Nagrywanie dźwięków</string>
+    <string name="cannot_change_settings_after_punchin">Nie możesz modyfikować ustawień po rozpoczęciu śledzenia snu.</string>
+    <string name="no_alarm_set_warning">Nie masz jeszcze ustawionych żadnych alarmów na jutrzejszy dzień! Inteligentny alarm obudzi cię o optymalnym czasie w ramach wybranego okresu twojego najwcześniejszego budzika.</string>
+    <string name="auto_alarm_prompt">Nie masz jeszcze ustawionych żadnych alarmów na jutrzejszy dzień. Czy chcesz rozpocząć śledzenie snu teraz, by włączyć automatyczne budzenie i inteligentny alarm?</string>
+    <string name="mode_smart">Tryb inteligentnego alarmu. Śledzenie ruchu rozpocznie się w wybranym okresie czasu przed pierwszym budzikiem.</string>
+    <string name="mode_smart_motion">Śledzenie ruchu przez całą noc + SleepBot obudzi cię o optymalnym czasie.</string>
+    <string name="mode_complete">Tryb kompletny. SleepBot będzie śledził twoje ruchy, nagrywał dźwięki i obudzi cię o optymalnym czasie w wyznaczonym okresie czasu przed twoim pierwszym budzikiem.</string>
+    <string name="mode_motion">Tryb śledzenia ruchu.</string>
+    <string name="mode_motion_sound">SleepBot będzie śledził twoje ruchy i zapisywał dźwięki</string>
+    <string name="mode_classic">SleepBot w trybie klasycznym.</string>
+    <string name="mode_sound">Tryb zapisywania dźwięków.</string>
+    <string name="entry_created_title">Wpis snu utworzony!</string>
+    <string name="entry_created_msg">Spałeś od:\n%1$s – %2$s\n(%3$s)</string>
+    <string name="future_title">Czas snu jest w przyszłości</string>
+    <string name="future_no_record">Brak zapisu</string>
+    <string name="future_zero_record">Zapis \'0\'</string>
+    <string name="future_no_offset">Bez opóźnienia</string>
+    <string name="future_no_record_toast">Status zmieniony na budzenie bez tworzenia nowego wpisu.</string>
+    <string name="current_session_title">Aktualna sesja snu</string>
+    <string name="awake_since">Jesteś obudzony od %1$d godz. %2$d min.</string>
+    <string name="reset_debt_q">Czy chcesz zresetować swój debet?</string>
+    <string name="reset_debt_title">Resetuj debet</string>
+    <string name="reset_debt_done">Debet zresetowany! Od teraz karta główna będzie wyświetlała nową wartość debetu.</string>
+    <string name="confirm">Potwierdź</string>
+    <string name="cancel">Anuluj</string>
+    <string name="reset">Resetuj</string>
+    <string name="edit">Edytować</string>
+    <string name="delete">Usuń…</string>
+    <string name="save">Zapisz</string>
+    <string name="share">Udostępnij</string>
+    <string name="view">Pokaż</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="note">Notka:</string>
+    <string name="from">Od:</string>
+    <string name="to">do</string>
+    <string name="col_date">Data</string>
+    <string name="col_sleep">SEN</string>
+    <string name="col_wake">BUDZENIE</string>
+    <string name="col_hours">godz.</string>
+    <string name="col_debt">Debet</string>
+    <string name="add_new_entry">DODAJ NOWY WPIS</string>
+    <string name="share_caps">UDOSTĘPNIJ</string>
+    <string name="delete_confirm_title">Potwierdzenie usunięcia</string>
+    <string name="delete_confirm_msg">Na pewno chcesz usunąć tę pozycję?</string>
+    <string name="no_entry_hint">Witaj!\n\nWróć po zapisaniu twojego dzisiejszego snu lub stwórz swój pierwszy wpis poniżej!</string>
+    <string name="no_entry_found_hint">Nie znaleziono wpisów pasujących do twoich kryteriów wyszukiwania.</string>
+    <string name="first_entry_title">Dodałeś swój pierwszy zapis snu!</string>
+    <string name="first_entry_msg">Naciśnij na wybranym wierszu, aby go przejrzeć lub edytować.\n\n (Wskazówka: spróbuj też dłużej przytrzymać wybrany wpis)</string>
+    <string name="period_stats">Statystyki okresu</string>
+    <string name="period_stats_note">Note: If no data is collected for a particular day, it is not included in the time period\'s statistical analysis. If you did not sleep at all that day, please insert a sleep record with a duration of \"0\" so that it will be included in the summary.</string>
+    <string name="export_title">Eksport zakończony sukcesem</string>
+    <string name="export_to">Eksportuj do</string>
+    <string name="export_subject">SleepBot: Dane snu eksportowane %s</string>
+    <string name="duration">Czas trwania:</string>
+    <string name="sleep_time">Czas snu:</string>
+    <string name="wake_time">Czas budzenia:</string>
+    <string name="invalid_time">Nieprawidłowe ustawienie czasu, czas snu musi być ustalony przed czasem budzenia.</string>
+    <string name="cancel_caps">Anuluj</string>
+    <string name="delete_caps">Usuń…</string>
+    <string name="save_caps">Zapisz</string>
+    <string name="share_entry">Udostępnij tę pozycję</string>
+    <string name="movement">Ruch</string>
+    <string name="sound">Dźwięk</string>
+    <string name="high">Wysokie</string>
+    <string name="medium">Średnie</string>
+    <string name="low">Niskie</string>
+    <string name="current_trend">Aktualna tendencja</string>
+    <string name="current_sleep_records">Aktualne zapisy snu</string>
+    <string name="avg_sleep_day">ŚR. CZAS SNU/DZIEŃ</string>
+    <string name="trend">TENDENCJA</string>
+    <string name="length">DŁUGOŚĆ</string>
+    <string name="pattern">WZÓR</string>
+    <string name="sleep_caps">SEN</string>
+    <string name="wake_caps">BUDZENIE</string>
+    <string name="ratings">Oceny</string>
+    <string name="title_trend">Tendencja czasu snu</string>
+    <string name="title_length">Zestawienie długości</string>
+    <string name="title_pattern">Rozkład czasu snu</string>
+    <string name="title_sleep">Zestawienie czasu snu</string>
+    <string name="title_wake">Zestawienie czasu budzenia</string>
+    <string name="alarm_clock_label">Budzik</string>
+    <string name="alarms">Alarmy</string>
+    <string name="add_alarm">DODAJ BUDZIK</string>
+    <string name="alarm_no_repeats">Bez powtarzania</string>
+    <string name="alarm_every_day">Codziennie</string>
+    <string name="alarm_weekdays">Dni robocze</string>
+    <string name="alarm_weekends">Weekendy</string>
+    <string name="alarm_status_text">Najbliższe budzenie: %1$s (%2$s)</string>
+    <string name="auto_alarm_set">Ustawiony budzik: %1$s, %2$s</string>
+    <string name="auto_alarm_disabled">Automatyczny budzik wyłączony</string>
+    <string name="alarm_scheduled">Zaplanowane budzenie: %1$s (%2$s)</string>
+    <string name="dismiss_slider">PRZECIĄGNIJ ABY WYŁĄCZYĆ</string>
+    <string name="alarm_time_out">Budzik wygasł</string>
+    <string name="time_out_error">UWAGA: Ten budzik wygasł po oczekiwaniu na działanie.</string>
+    <string name="snooze">DRZEMKA</string>
+    <string name="snooze_n_minutes">DRZEMKA\n%d min.</string>
+    <string name="alarm_edit">Edytować</string>
+    <string name="alarm_delete_ellipsis">Usuń…</string>
+    <string name="alarm_delete_all">Usuń wszystko…</string>
+    <string name="alarm_default_settings">Domyślne ustawienia budzika…</string>
+    <string name="alarm_confirm_delete">Na pewno usunąć?</string>
+    <string name="alarm_settings_header">Ustawienia</string>
+    <string name="alarm_default_settings_header">Domyślne ustawienia budzika…</string>
+    <string name="alarm_row_time">Czas</string>
+    <string name="alarm_row_label">Etykieta</string>
+    <string name="alarm_row_repeat">Powtarzanie</string>
+    <string name="alarm_row_tone">Dźwięk budzika</string>
+    <string name="alarm_row_snooze">Drzemka (w minutach)</string>
+    <string name="alarm_row_vibrate">Wibracje</string>
+    <string name="alarm_row_fade">Narastający dźwięk budzika</string>
+    <string name="alarm_label_none">Brak</string>
+    <string name="alarm_label_title">Etykieta budzika</string>
+    <string name="alarm_enabled">Włączone</string>
+    <string name="alarm_disabled">Wyłączone</string>
+    <string name="alarm_fade_summary">Od %1$d%% do %2$d%% w ciągu %3$d sek.</string>
+    <string name="alarm_fade_start">Głośność początkowa (procent)</string>
+    <string name="alarm_fade_end">Głośność końcowa (procent)</string>
+    <string name="alarm_fade_time">Czas przejścia (sekundy)</string>
+    <string name="alarm_scheduled_days">Planowanie budzenia</string>
+    <string name="alarm_unknown_name">Nieznana nazwa</string>
+    <string name="alarm_cancel">Anuluj</string>
+    <string name="alarm_default_tone">Domyślne</string>
+    <string name="help_section_sleepbot">Używając SleepBota</string>
+    <string name="help_section_sleep">Pomóż mi zasnąć…</string>
+    <string name="help_section_wake">Nie chcę spać!</string>
+    <string name="help_section_learn">Dowiedz się więcej o śnie</string>
+    <string name="help_instructions">Instrukcje</string>
+    <string name="help_entries_and_graphs">Karty wpisów i wykresu</string>
+    <string name="help_support">Wsparcie</string>
+    <string name="help_eat_this">Zjedz to!</string>
+    <string name="help_read_this">Przeczytaj to!</string>
+    <string name="help_quick_strategies">Szybkie strategie</string>
+    <string name="help_prepare_bedroom">Przygotuj swoją sypialnię</string>
+    <string name="help_sleep_debt">Co to jest debet snu</string>
+    <string name="help_health_problems">Potencjalne problemy zdrowotne</string>
+    <string name="help_sleep_disorders">Rodzaje zaburzeń snu</string>
+    <string name="tutorial_title_1">Witaj w całkowicie\nnowym SleepBocie!</string>
+    <string name="tutorial_1_1">SleepBot jest wspaniałą aplikacją do śledzenia snu\ni inteligentnym budzikiem pozwalającym na lepsze budzenie!</string>
+    <string name="tutorial_1_2">Na początek ustaw swój budzik</string>
+    <string name="tutorial_2_1">Wybierz opcje śledzenia, a następnie\nkliknij \'idź spać\'</string>
+    <string name="tutorial_3_1">Połóż telefon obok siebie na łóżku:</string>
+    <string name="tutorial_3_2">Budzenie: 8:00 AM ~ 8:30 AM</string>
+    <string name="tutorial_3_3">Inteligentny alarm obudzi cię w ciągu 30 minut lub wybranego okresu przed twoim pierwszym budzikiem, podczas płytkiego snu.\n\n\n(np. to jest dla inteligentnego alarmu na 8:30 AM)</string>
+    <string name="tutorial_4_1">Przejrzyj swoje zapisy i tendencje snu\ntutaj:</string>
+    <string name="tutorial_4_2">**Wskazówka: kliknij na wykresy dźwięków, aby odtwarzać dźwięki!</string>
+    <string name="get_started">Wprowadzenie</string>
+    <string name="intent_error_invalid">Nieprawidłowe dane.</string>
+    <string name="intent_error_reject">Użytkownik wyłączył integrację firm trzecich.</string>
+    <string name="settings">Ustawienia</string>
+    <string name="setting_title_general">OGÓLNE</string>
+    <string name="setting_title_app">Aplikacja</string>
+    <string name="about">O aplikacji</string>
+    <string name="agree">Zgadzam się</string>
+    <string name="next">Następny</string>
+    <string name="done_label">Gotowe</string>
+    <string name="error">Błąd</string>
+    <string name="please_wait">Czekaj…</string>
+    <string name="error_intent_empty_msg">Nie znaleziono aktywności wymaganej do wykonania tej czynności.</string>
+    <string name="options_hours_title">Optymalna godzina</string>
+    <string name="options_hours_summary">Idealny czas snu</string>
+    <string name="options_delay_min_title">Opóźnienie śledzenia snu</string>
+    <string name="options_delay_min_summary">Pozwala na opóźnienie śledzenia po naciśnięciu przycisku, aby tworzyć bardziej dokładne zapisy czasu snu.</string>
+    <string name="pref_sc_sleep_tracking">Śledzenie snu</string>
+    <string name="pref_sc_look_and_feel">Wygląd</string>
+    <string name="pref_alarm_klock_settings_title">Ustawienia budzika</string>
+    <string name="pref_cat_adv_data">Kopia i synchronizacja</string>
+    <string name="pref_adv_main_title">Ustawienia zaawansowane</string>
+    <string name="pref_view_update_notice">Wyświetl notkę o aktualizacji.</string>
+    <string name="rate_sleepbot">Oceń Sleepbota!</string>
+    <string name="sleep_reminder">Przypomnienie o czasie na sen</string>
+    <string name="sleep_reminder_title">Włącz przypomnienie o czasie na sen</string>
+    <string name="sleep_reminder_summary">Aplikacja przypomni ci w odpowiednim czasie o porze na sen bazując na ustawieniach budzika, gdy jeszcze nie rozpocząłeś śledzenia snu.</string>
+    <string name="times_before_offset">Przesunięcie czasu przypomnienia</string>
+    <string name="times_before_offset_summary">Czas następnego alarmu - (optymalny czas budzenia) - (przesunięcie czasu przypomnienia) = czas przypomnienia.</string>
+    <string name="sleep_reminder_title_2nd">Włącz drugie przypomnienie</string>
+    <string name="sleep_reminder_summary_2nd">Włącz drugie przypomnienie w razie, gdybyś jeszcze nie spał.</string>
+    <string name="times_before_offset_2nd">Przesunięcie czasu drugiego przypomnienia</string>
+    <string name="times_before_offset_summary_2nd">Czas następnego alarmu - (optymalny czas budzenia) - (przesunięcie czasu drugiego przypomnienia) = czas drugiego przypomnienia.</string>
+    <string name="no_reminder_snooze">Nie przypominaj później</string>
+    <string name="no_reminder_summary">Nie pokazuj wiadomości o późniejszym przypominaniu.</string>
+    <string name="reminder_mute_title">Bez dźwięku powiadomień</string>
+    <string name="reminder_mute_summary">Nie odtwarzaj dźwięku powiadomienia przy przypominaniu o czasie na sen.</string>
+    <string name="options_soundmode_title">Automatyczne wyciszanie</string>
+    <string name="options_soundmode_summary">Wycisz telefon kiedy śpisz</string>
+    <string name="options_auto_alarm_title">Włączenie automatycznego budzenia</string>
+    <string name="options_auto_alarm_summary">Tworzy budzik, który będzie dzwonił po \"optymalnej liczbie godzin\" (włączając opóźnienie) po rozpoczęciu śledzenia.</string>
+    <string name="pref_cat_movement_tracking">Śledzenie ruchu</string>
+    <string name="pref_allow_screen_off_title">Śledzenie z wyłączonym ekranem</string>
+    <string name="pref_allow_screen_off_summary">Niektóre telefony wspierają śledzenie ruchu, gdy ekran jest wyłączony.</string>
+    <string name="pref_cat_smart_alarm">Inteligentny alarm</string>
+    <string name="pref_time_alarm_range_title">Zakres alarmu</string>
+    <string name="pref_time_alarm_range_summary">Zakres czasu przed pierwszym alarmem używany przy optymalnym budzeniu.</string>
+    <string name="pref_movement_sensitivity_title">Czułość ruchu</string>
+    <string name="pref_movement_sensitivity_summary">Dopasuj ustawienie do swojego łóżka i telefonu, aby zoptymalizować działanie inteligentnego alarmu.</string>
+    <string name="pref_cat_sound_recording">Nagrywanie dźwięków</string>
+    <string name="pref_sound_sensitivity_title">Próg nagrywania</string>
+    <string name="pref_sound_sensitivity_summary">Nagrywanie dźwięków rozpoczyna się po przekroczeniu progu głośności</string>
+    <string name="delete_older_sound_files">Skasuj starsze pliki</string>
+    <string name="pref_alternate_display_show_title">Pokaż alternatywne wyświetlanie</string>
+    <string name="pref_alternate_display_show_summary">Odznacz, jeśli chcesz ukryj informację alternatywną.</string>
+    <string name="pref_hour_format_title">Format godzin listy wpisów</string>
+    <string name="pref_hour_format_summary">W telefonach z dużym ekranem możesz użyć formatu bez przecinka używanego do wyświetlania całkowitej liczby godzin i debetu.</string>
+    <string name="pref_default_display_title">Domyślne wyświetlanie</string>
+    <string name="pref_default_display_summary">Ustal jaką liczbę wyświetlać w głównej karcie.</string>
+    <string name="options_default_graph_title">Domyślny wykres</string>
+    <string name="options_default_graph_summary">Wybierz wykres wyświetlany w karcie śledzenia.</string>
+    <string name="pref_no_warning_title">Bez ostrzeżenia w trybie wyłączonego ekranu</string>
+    <string name="pref_no_warning_summary">Nie pokazuj ostrzeżenia na temat ładowania, jeśli zaznaczony jest tryb wyłączonego ekranu.</string>
+    <string name="options_notification_sleep_title">Tekst przypominający o śnie</string>
+    <string name="options_notification_sleep_summary">Wprowadź własną wiadomość snu wyświetlaną w powiadomieniach.</string>
+    <string name="options_notification_awake_title">Tekst przypominający o budzeniu</string>
+    <string name="options_notification_awake_summary">Wprowadź własną wiadomość budzenia wyświetlają w powiadomieniach.</string>
+    <string name="pref_sleep_notification_default">Dotknij, aby zakończyć śledzenie snu.</string>
+    <string name="pref_awake_notification_default">Dotknij, aby rozpocząć śledzenie snu.</string>
+    <string name="pref_title_show_disconnected_lines">Przerywane linie</string>
+    <string name="pref_summary_show_disconnected_lines">Połącz rozłączone punkty używając przerywanych linii na wykresie tendencji.</string>
+    <string name="pref_adv_backup_title">Kopia zapasowa</string>
+    <string name="restore_backup_title">Przywróć z pliku kopii</string>
+    <string name="restore_old_file_title">Przywróć z pliku eksportu</string>
+    <string name="restore_old_file_summary">Przywróć wpisy z plików stworzonych przez funkcję eksportu.</string>
+    <string name="restore_old_file_body">Ponieważ pliki eksportu nie są zaprojektowane do tworzenia kopii zapasowych i ich przywracania, upewnij się, że wybierasz taki sam format daty w następnym kroku jak użyty w tekście. Wybierz taki sam format daty jak w trakcie eksportu do pliku, aby upewnić się, że wszystkie dane zostaną poprawnie zaimportowane. Jeśli inna aplikacja będzie próbowała zaimportować dane SleepBota i nie zapyta cię o format daty, powinieneś zweryfikować poprawność zaimportowanych danych.</string>
+    <string name="restore_confirm_title">Potwierdź, aby przywrócić</string>
+    <string name="restore_warning_double">UWAGA: Przywracanie może stworzyć zduplikowane wpisy, jeśli już masz wpisy w twoim dzienniku (jeśli potrzeba, wyczyść dane SleepBota w ustawieniach aplikacji Androida).</string>
+    <string name="restore_progress_title">Przywracanie SleepBota</string>
+    <string name="backup_progress_title">Kopia zapasowa SleepBota</string>
+    <string name="pref_adv_restore_title">Przywracanie</string>
+    <string name="error_restore_file_malformatted">Plik przywracania ma nieprawidłowy format lub jest uszkodzony. Przywracanie przerwane.</string>
+    <string name="error_export_db_is_too_new">Dana baza jest zbyt nowa, aby móc ją przywrócić.</string>
+    <string name="pref_adv_cat_others">Inne ustawienia</string>
+    <string name="pref_adv_length_title">Aktualny zakres debetu</string>
+    <string name="pref_adv_length_summary">Wybierz 7, 10 lub 14 dni jako zakres daty używany do obliczenia twojego aktualnego debetu wyświetlanego w głównej karcie.</string>
+    <string name="pref_adv_security_third_party_title">Włącz integrację</string>
+    <string name="pref_adv_security_third_party_summary">Zezwól innym aplikacjom na budzenie/usypianie SleepBota.</string>
+    <string name="pref_adv_variable_block_title">Ochrona przed ponownym śledzeniem</string>
+    <string name="pref_adv_variable_block_summary">Ochrona przed przypadkowym rozpoczęciem śledzenia snu przez blokowanie takich prób przez dany okres czasu.</string>
+    <string name="notification_icon_title">Wyświetlaj ikonę powiadomienia</string>
+    <string name="notification_icon_on">Wyświetlaj ikonę, gdy są oczekujące alarmy</string>
+    <string name="notification_icon_off">Nie wyświetlaj ikony, gdy są oczekujące alarmy</string>
+    <string name="time_out_summary">Budzik będzie automatycznie wyłączony po tylu minutach.</string>
+    <string name="summary_num_records">Liczba zapisów:</string>
+    <string name="summary_num_days">Liczba dni:</string>
+    <string name="summary_total_sleep">Całkowity czas snu:</string>
+    <string name="summary_avg_daily">Średni czas snu/dzień:</string>
+    <string name="summary_avg_record">Śr. czas snu/zapis:</string>
+    <string name="summary_cum">Całkowity debet:</string>
+    <string name="hours_ori">godz.</string>
+    <string name="channel_alarm_status">Najbliższe budzenie:</string>
+    <string name="trk_no_alarm_set">Nie ustawiono budzika</string>
+    <string name="trk_phone_is_not_plugged">Podłącz ładowarkę do telefonu, aby uniknąć rozładowania baterii.</string>
+    <string name="trk_screen_dim_soon">Rozpoczynanie śledzenia snu: Ekran zostanie przygaszony za 15 sekund…</string>
+    <string name="trk_screen_already_dimmed">Wciśnij przycisk Wstecz, aby włączyć ekran. Nie naciskaj przycisku zasilania. Dobranoc!</string>
+    <string name="trk_screen_off_toast">SleepBot będzie śledził twój sen. Możesz wyłączać ekran lub robić inne rzeczy, ale spróbuj nie używać aplikacji wymagających dużej ilości pamięci.</string>
+    <string name="trk_accel_graph_title">Ruch</string>
+    <string name="trk_sound_graph_title">Dźwięk</string>
+    <string name="trk_label_high">Wysokie</string>
+    <string name="trk_label_medium">Średnie</string>
+    <string name="trk_label_low">Niskie</string>
+    <string name="trk_sleep_reminder_title">Przypomnienie o czasie na sen</string>
+    <string name="trk_sleep_reminder_toast">Przygotuj się do spania, aby obudzić się na czas!</string>
+    <string name="trk_remind_later">Przypomnij później</string>
+    <string name="trk_choose_time">Wybierz czas</string>
+    <string name="trk_you_should_really_go_to_sleep">Naprawdę powinieneś teraz iść spać lub uciąć sobie bardzo krótką drzemkę. Zwiększysz swoją produktywność!</string>
+    <string-array name="range_choices">
+        <item>Wszystko</item>
+        <item>10 dni</item>
+        <item>30 dni</item>
+        <item>60 dni</item>
+        <item>180 dni</item>
+        <item>360 dni</item>
+    </string-array>
+    <string-array name="hour_entries">
+        <item>3 godziny</item>
+        <item>3,5 godziny</item>
+        <item>4 godziny</item>
+        <item>4,5 godziny</item>
+        <item>5 godzin</item>
+        <item>5,5 godziny</item>
+        <item>6 godzin</item>
+        <item>6,5 godziny</item>
+        <item>7 godzin</item>
+        <item>7,5 godziny</item>
+        <item>8 godzin</item>
+        <item>8,5 godziny</item>
+        <item>9 godzin</item>
+        <item>9,5 godziny</item>
+        <item>10 godzin</item>
+        <item>10,5 godziny</item>
+        <item>11 godzin</item>
+    </string-array>
+    <string-array name="delay_min_entries">
+        <item>Bez opóźnienia (0)</item>
+        <item>+5 minut</item>
+        <item>+10 minut</item>
+        <item>+15 minut</item>
+        <item>+30 minut</item>
+        <item>+45 minut</item>
+        <item>+1 godzina</item>
+        <item>+1 godzina 20 minut</item>
+        <item>+1 godzina 40 minut</item>
+        <item>+2 godziny</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets">
+        <item>15 minut wcześniej</item>
+        <item>30 minut wcześniej</item>
+        <item>45 minut wcześniej</item>
+        <item>1 godzina wcześniej</item>
+        <item>2 godziny wcześniej</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets_2nd">
+        <item>15 minut później</item>
+        <item>30 minut później</item>
+        <item>45 minut później</item>
+        <item>1 godzina później</item>
+        <item>2 godziny później</item>
+    </string-array>
+    <string-array name="sound_mode">
+        <item>Nic nie rób</item>
+        <item>Wyciszony+Wibracje</item>
+        <item>Wyciszony bez wibracji</item>
+    </string-array>
+    <string-array name="alarm_range_entries">
+        <item>15 minut wcześniej</item>
+        <item>30 minut wcześniej</item>
+        <item>45 minut wcześniej</item>
+        <item>60 minut wcześniej</item>
+        <item>90 minut wcześniej</item>
+    </string-array>
+    <string-array name="movement_sensitivity_entries">
+        <item>Bardzo niska (miękkie łóżko + czułe telefony)</item>
+        <item>Niskie</item>
+        <item>Normalna</item>
+        <item>Wysokie</item>
+        <item>Bardzo wysoka (bardzo twarde łóżka)</item>
+    </string-array>
+    <string-array name="entry_list_hour_format_entries">
+        <item>przecinkowa (3,5)</item>
+        <item>czas (03:30)</item>
+    </string-array>
+    <string-array name="default_display_entries">
+        <item>Dzisiejszy sen</item>
+        <item>Aktualny debet</item>
+    </string-array>
+    <string-array name="default_graph_entries">
+        <item>Tendencja czasu snu</item>
+        <item>Wzór rozłożenia snu</item>
+    </string-array>
+    <string-array name="date_entries">
+        <item>Miesiąc/Dzień/Rok</item>
+        <item>Dzień/Miesiąc/Rok</item>
+        <item>Rok/Miesiąc/Dzień</item>
+    </string-array>
+</resources>

@@ -10,7 +10,6 @@ _Updated 2026-09-27_
 | Source (Kotlin + Compose, Gradle) | `app/`, see `README.md` for the layout |
 | Emulator launcher | `scripts/emulator.sh` |
 | Sample data generator | `scripts/seed-sample-data.sh` |
-| Reverse-engineering specs of 3.2.8 | not in repo; regenerate from the APK if needed |
 
 ## Test on the emulator
 
@@ -80,7 +79,15 @@ Real sleep tracking, sound recording and alarm reliability can only be judged on
 - Original bugs fixed: last sound record never saved, reset orphaning sensor data, empty "Punched in since" time, unselectable optimal hours.
 
 ### Known gaps / next steps
-- Only English strings (3.2.8 had ~40 translations in the APK that could be ported).
+- Translations: 3.2.8 really had 10 languages (the other ~30 `values-*` folders only held Facebook SDK /
+  date-picker library strings). All 10 are ported: da, de, es, it, pl, sv, zh-CN, zh-TW cover ~83% of strings;
+  fr and nl ~47% (their 3.2.8 translations were already incomplete). Strings new in v2 (permissions, backup
+  to file, notification channels, …) are English in every language. Missing strings fall back to English.
+  Test with `adb shell cmd locale set-app-locales com.sleepbot.app --locales de`. The "going to sleep…" /
+  "waking up!" buttons are images with English text, as in 3.2.8.
+- Help pages (`assets/kb/*.html`) are English only, as in 3.2.8. The FAQ "Support" section still links to the
+  old Play Store listing, Facebook, Twitter and support@mysleepbot.com.
+- Many count strings ("%d minutes", "%d entries restored") should become `<plurals>` for languages like Polish.
 - Debug-signed APK only; a release keystore + `assembleRelease` is needed for Play Store.
 - Night screen can't auto-open on screen-on (Android background-launch limits); opening the app while asleep does show it.
 - Help "Read this!"/exercise videos pages need internet and YouTube embeds may refuse to play in a WebView.

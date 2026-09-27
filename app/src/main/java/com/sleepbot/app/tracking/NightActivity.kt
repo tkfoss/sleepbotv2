@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.media.RingtoneManager
 import android.os.BatteryManager
+import android.os.Build
 import android.os.Bundle
 import android.text.format.DateFormat
 import android.view.WindowManager
@@ -50,6 +51,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -77,7 +79,6 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
-import java.util.Locale
 
 /** Night screen (legacy SensorsActivity): starfield, clock, live movement graph, "waking up!". */
 class NightActivity : ComponentActivity() {
@@ -88,8 +89,13 @@ class NightActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (app.prefs.isAwake) { finish(); return }
-        setShowWhenLocked(true)
-        setTurnScreenOn(true)
+        if (Build.VERSION.SDK_INT >= 27) {
+            setShowWhenLocked(true)
+            setTurnScreenOn(true)
+        } else {
+            @Suppress("DEPRECATION")
+            window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON)
+        }
         if (!app.prefs.screenOffTracking) window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         WindowInsetsControllerCompat(window, window.decorView).apply {
@@ -244,7 +250,7 @@ private fun Clock(modifier: Modifier) {
         }
     }
     val is24 = DateFormat.is24HourFormat(ctx)
-    val time = SimpleDateFormat(if (is24) "HH:mm" else "hh:mm", Locale.getDefault()).format(Date(now))
+    val time = SimpleDateFormat(if (is24) "HH:mm" else "hh:mm", LocalConfiguration.current.locales[0]).format(Date(now))
     val pm = Calendar.getInstance().apply { timeInMillis = now }.get(Calendar.AM_PM) == Calendar.PM
     Row(modifier, horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.Bottom) {
         Text(time, color = Color.White, fontSize = 84.sp, fontFamily = RobotoThin, textAlign = TextAlign.Center)

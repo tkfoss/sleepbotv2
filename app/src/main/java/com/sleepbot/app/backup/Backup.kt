@@ -3,6 +3,8 @@ package com.sleepbot.app.backup
 import android.content.Context
 import android.net.Uri
 import android.util.Base64
+import androidx.annotation.StringRes
+import com.sleepbot.app.R
 import com.sleepbot.app.app
 import com.sleepbot.app.data.AccelRecord
 import com.sleepbot.app.data.SleepEntry
@@ -25,7 +27,7 @@ object Backup {
 
     sealed interface RestoreResult {
         data class Ok(val restored: Int, val total: Int) : RestoreResult
-        data class Error(val message: String) : RestoreResult
+        data class Error(@StringRes val message: Int) : RestoreResult
     }
 
     fun looksLikeCsv(bytes: ByteArray) = String(bytes, 0, minOf(5, bytes.size), Charsets.UTF_8).contains("Date")
@@ -125,7 +127,7 @@ object Backup {
     private fun floatsOf(a: JSONArray?) = if (a == null) FloatArray(0) else FloatArray(a.length()) { a.optDouble(it, 0.0).toFloat() }
 
     suspend fun restore(context: Context, bytes: ByteArray): RestoreResult = withContext(Dispatchers.IO) {
-        val invalid = RestoreResult.Error("Restore file does not have a valid format or it is corrupted, restore canceled.")
+        val invalid = RestoreResult.Error(R.string.error_restore_file_malformatted)
         val root = try {
             val text = String(bytes, Charsets.UTF_8).trim()
             JSONObject(if (text.startsWith("{")) text else decodeLegacy(bytes))
@@ -133,7 +135,7 @@ object Backup {
             return@withContext invalid
         }
         if (root.optInt("dbVersion", DB_VERSION) > DB_VERSION) {
-            return@withContext RestoreResult.Error("The given database is too new to be restored.")
+            return@withContext RestoreResult.Error(R.string.error_export_db_is_too_new)
         }
         val arr = root.optJSONArray("hourEntries") ?: return@withContext invalid
         val db = context.app.db

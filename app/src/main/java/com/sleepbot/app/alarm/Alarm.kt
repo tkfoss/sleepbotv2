@@ -4,7 +4,10 @@ import android.content.Context
 import android.media.RingtoneManager
 import com.sleepbot.app.R
 import org.json.JSONObject
+import java.time.DayOfWeek
+import java.time.format.TextStyle
 import java.util.Calendar
+import java.util.Locale
 
 /** Per-alarm (or default, id −1) settings; legacy `settings` table. */
 data class AlarmSettings(
@@ -98,8 +101,11 @@ object Week {
     const val EVERYDAY = 0b1111111
     const val WEEKDAYS = 0b0111110
     const val WEEKENDS = 0b1000001
-    private val SHORT = arrayOf("Su", "Mo", "Tu", "We", "Th", "Fr", "Sa")
-    val LONG = arrayOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+    /** Localized day names, index 0 = Sunday. */
+    private fun names(style: TextStyle) =
+        (0..6).map { DayOfWeek.SUNDAY.plus(it.toLong()).getDisplayName(style, Locale.getDefault()) }
+
+    fun longNames() = names(TextStyle.FULL_STANDALONE)
 
     fun has(dow: Int, day: Int) = dow and (1 shl day) != 0
 
@@ -109,7 +115,7 @@ object Week {
         EVERYDAY -> context.getString(R.string.alarm_every_day)
         WEEKDAYS -> context.getString(R.string.alarm_weekdays)
         WEEKENDS -> context.getString(R.string.alarm_weekends)
-        else -> buildString { for (i in 0..6) if (has(dow, i)) append(' ').append(SHORT[i]) }
+        else -> names(TextStyle.SHORT_STANDALONE).let { short -> buildString { for (i in 0..6) if (has(dow, i)) append(' ').append(short[i]) } }
     }
 
     /** Legacy AlarmTime: today at H:M:S, +1 day if not after now, then advance to an enabled weekday. */

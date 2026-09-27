@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings (legacy res/xml/options.xml). Names follow 3.2.8 so its translations could be ported. -->
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="setting_title_general">General</string>
+    <string name="setting_title_app">Application</string>
+    <string name="about">About</string>
+    <string name="agree">Agree</string>
+    <string name="next">Next</string>
+    <string name="done_label">Done</string>
+    <string name="error">Error</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="error_intent_empty_msg">No activity found to perform this action.</string>
+
+    <string name="options_hours_title">Optimal Hour</string>
+    <string name="options_hours_summary">Your ideal goal for sleep duration</string>
+    <string name="options_delay_min_title">Punch-in time offset</string>
+    <string name="options_delay_min_summary">Lets you punch-in before you go to sleep/fall asleep to create more accurate sleep time.</string>
+    <string name="pref_reminder_summary">Get reminded when it is time to go to sleep</string>
+    <string name="pref_sc_sleep_tracking">Sleep Tracking</string>
+    <string name="pref_tracking_summary">Silence, auto alarm, smart alarm, movement and sound options</string>
+    <string name="pref_sc_look_and_feel">Appearance</string>
+    <string name="pref_alarm_klock_settings_title">Alarm Clock Settings</string>
+    <string name="pref_cat_adv_data">Backup &amp; Sync</string>
+    <string name="pref_adv_main_title">Advanced Settings</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="pref_view_update_notice">View update notice.</string>
+    <string name="rate_sleepbot">Rate SleepBot!</string>
+
+    <!-- Bedtime reminder -->
+    <string name="sleep_reminder">Bedtime Reminder</string>
+    <string name="sleep_reminder_title">Enable Bedtime Reminder</string>
+    <string name="sleep_reminder_summary">Bedtime Reminder will remind you to go to sleep base on your alarm settings if you have not punched in by the time already.</string>
+    <string name="times_before_offset">Remind time offset</string>
+    <string name="times_before_offset_summary">Next alarm time - (optimal wake up time) - (remind time offset) = remind time.</string>
+    <string name="sleep_reminder_title_2nd">Enable 2nd Reminder</string>
+    <string name="sleep_reminder_summary_2nd">Have a second reminder in case you are still not asleep yet.</string>
+    <string name="times_before_offset_2nd">2nd Remind time offset</string>
+    <string name="times_before_offset_summary_2nd">Next alarm time - (optimal wake up time) - (2nd remind time offset) = 2nd remind time.</string>
+    <string name="no_reminder_snooze">No Reminder Later</string>
+    <string name="no_reminder_summary">Do not show remind later dialog.</string>
+    <string name="reminder_mute_title">No Notification Sound</string>
+    <string name="reminder_mute_summary">Do not play a notification sound for the reminder.</string>
+
+    <!-- Sleep tracking -->
+    <string name="options_soundmode_title">AutoSilence</string>
+    <string name="options_soundmode_summary">Silence your phone while you sleep</string>
+    <string name="dnd_access_msg">To silence your phone while you sleep, SleepBot needs \"Do Not Disturb\" access. Alarms will still ring.</string>
+    <string name="options_auto_alarm_title">Auto Alarm On</string>
+    <string name="options_auto_alarm_summary">Creates an alarm that automatically rings the optimal number of hours (including offset) after punching in.</string>
+    <string name="pref_cat_movement_tracking">Movement Tracking</string>
+    <string name="pref_allow_screen_off_title">Screen Off Tracking</string>
+    <string name="pref_allow_screen_off_summary">Some phones may support movement tracking with screen turned off.</string>
+    <string name="pref_allow_screen_off_warning">Please note that if movement graphs shows all 0\'s, it means that your phone does not support screen off tracking and you should leave this option unchecked.</string>
+    <string name="pref_cat_smart_alarm">Smart Alarm</string>
+    <string name="pref_time_alarm_range_title">Alarm Range</string>
+    <string name="pref_time_alarm_range_summary">Time range before first alarm for optimal wake-up.</string>
+    <string name="pref_movement_sensitivity_title">Movement Sensitivity</string>
+    <string name="pref_movement_sensitivity_summary">Adjust to optimize smart alarm for your bed and phone.</string>
+    <string name="pref_cat_sound_recording">Sound Recording</string>
+    <string name="pref_sound_sensitivity_title">Recording Threshold</string>
+    <string name="pref_sound_sensitivity_summary">Sound recording begins when volume is greater than the threshold</string>
+    <string name="delete_older_sound_files">Delete Older Files</string>
+    <string name="delete_older_sound_files_7">Running out of space? Delete local sound files that are older than 7 days.</string>
+    <string name="delete_older_sound_files_message">Deleting older sound files is irreversible.</string>
+    <string name="files_deleted">%d files deleted</string>
+
+    <!-- Appearance -->
+    <string name="pref_alternate_display_show_title">Show alternate display</string>
+    <string name="pref_alternate_display_show_summary">Un-check if you want to hide the alternate information.</string>
+    <string name="pref_hour_format_title">Entry List Hours Format</string>
+    <string name="pref_hour_format_summary">For phones with big screens, you can use non-decimal format to display total hour and debt numbers.</string>
+    <string name="pref_default_display_title">Default Display</string>
+    <string name="pref_default_display_summary">Set what to show on home tab\'s main display number.</string>
+    <string name="options_default_graph_title">Default Graph</string>
+    <string name="options_default_graph_summary">Choose the graph displayed on the tracking tab.</string>
+    <string name="pref_no_warning_title">No warning in Screen Off mode</string>
+    <string name="pref_no_warning_summary">Do not show charging warning if Screen Off mode is checked.</string>
+    <string name="pref_notification_mode_title">Status notification</string>
+    <string name="pref_notification_mode_summary">When to show SleepBot\'s punch-in status in the notification bar.</string>
+    <string name="options_notification_sleep_title">Sleep Reminder Text</string>
+    <string name="options_notification_sleep_summary">Customize the sleep message shown in notifications.</string>
+    <string name="options_notification_awake_title">Wake Reminder Text</string>
+    <string name="options_notification_awake_summary">Customize the wake message shown in notifications.</string>
+    <string name="pref_sleep_notification_default">Touch to punch out.</string>
+    <string name="pref_awake_notification_default">Touch to punch in.</string>
+    <string name="pref_title_show_disconnected_lines">Dotted Lines</string>
+    <string name="pref_summary_show_disconnected_lines">Connect disconnected points using dotted lines on trend graph.</string>
+
+    <!-- Backup -->
+    <string name="pref_android_backup">Android Backup</string>
+    <string name="pref_android_backup_text">Your sleep entries and settings are also backed up automatically by Android\'s device backup (Google account backup) and restored when you set up a new phone.</string>
+    <string name="pref_adv_backup_title">Backup</string>
+    <string name="pref_adv_backup_summary">Backup your data to a file (e.g. on your phone or in the cloud).</string>
+    <string name="restore_backup_title">Restore from Backup file</string>
+    <string name="restore_backup_summary">Restore entries from files made by the Backup function. (Recommended)</string>
+    <string name="restore_old_file_title">Restore from an Export file</string>
+    <string name="restore_old_file_summary">Restore entries from files generated by the Export function.</string>
+    <string name="restore_old_file_body">Because the export files are not originally designed for backup and restore purposes, please make you choose the same Date Format in the next step to match the same date format used in the text. Please choose the same date format as the one when you export the file to ensure all the data are correctly imported (If another application on the market tries to import SleepBot data and does not ask you for date format, you should verify that all the data are imported correctly).</string>
+    <string name="restore_confirm_title">Confirm to restore</string>
+    <string name="restore_warning_double">IMPORTANT: Restoring can create duplicate entries if you already have entries in your log (clear SleepBot data in Android Application Settings if necessary).</string>
+    <string name="restore_choose_backup_hint">Choose a file created by SleepBot\'s Backup function. Entries that are already in your log are skipped.</string>
+    <string name="restore_choose_file_button">Choose file</string>
+    <string name="restore_progress_title">Restoring SleepBot</string>
+    <string name="backup_progress_title">Backing up SleepBot</string>
+    <string name="backup_done_n">Backup finished: %d entries saved, including movement/sound data.\nPlease note that alarm clock settings are not backed up.</string>
+    <string name="backup_failed">Backup failed: %s</string>
+    <string name="pref_adv_restore_title">Restore</string>
+    <string name="restore_done">%1$d/%2$d entries successfully restored.\n\nSleep debt start date successfully reset to today.</string>
+    <string name="restore_csv_done">%d entries successfully restored.</string>
+    <string name="restore_csv_partial">The rest of the file could not be read. Please check that the date format matches the file.</string>
+    <string name="error_restore_file_malformatted">Restore file does not have a valid format or it is corrupted, restore canceled.</string>
+    <string name="error_export_db_is_too_new">The given database is too new to be restored.</string>
+    <string name="date_format">Date Format</string>
+
+    <!-- Advanced -->
+    <string name="pref_adv_cat_others">Other Settings</string>
+    <string name="pref_reset_debt_summary">Restart the sleep debt calculation from today.</string>
+    <string name="pref_adv_length_title">Current Debt Range</string>
+    <string name="pref_adv_length_summary">Choose 7, 10, or 14 days for the date range used to calculate your Current Debt shown on the home tab.</string>
+    <string name="pref_adv_security_third_party_title">Enable Integration</string>
+    <string name="pref_adv_security_third_party_summary">Allow third party applications to sleep/wake up SleepBot.</string>
+    <string name="pref_adv_variable_block_title">Re-Punch-in Guard</string>
+    <string name="pref_adv_variable_block_summary">Prevent accidental punch-ins by blocking any attempts within a certain period of time.</string>
+
+    <!-- Alarm clock settings -->
+    <string name="notification_icon_title">Display notification icon</string>
+    <string name="notification_icon_on">Display an icon when there are pending alarms</string>
+    <string name="notification_icon_off">Do not display an icon when there are pending alarms</string>
+    <string name="time_out_summary">A firing alarm will be automatically dismissed after this many minutes.</string>
+    <string name="alarm_default_settings_summary">Default tone, snooze, vibrate and volume fade for new alarms</string>
+
+    <!-- Period statistics (Entries tab) -->
+    <string name="summary_num_records">Number of records:</string>
+    <string name="summary_num_days">Number of days:</string>
+    <string name="summary_total_sleep">Total sleep time:</string>
+    <string name="summary_avg_daily">Average daily sleep:</string>
+    <string name="summary_avg_record">Avg. sleep/record:</string>
+    <string name="summary_cum">Cumulative debt:</string>
+    <string name="hours_ori">hours</string>
+
+    <!-- Notification channels -->
+    <string name="channel_session">Sleep status</string>
+    <string name="channel_tracking">Sleep tracking</string>
+    <string name="channel_alarm">Ringing alarms</string>
+    <string name="channel_reminder">Bedtime reminders</string>
+    <string name="channel_alarm_status">Next alarm</string>
+
+    <!-- Header icons -->
+    <string name="cd_logo">SleepBot</string>
+
+    <string-array name="hour_entries">
+        <item>3 Hours</item>
+        <item>3.5 Hours</item>
+        <item>4 Hours</item>
+        <item>4.5 Hours</item>
+        <item>5 Hours</item>
+        <item>5.5 Hours</item>
+        <item>6 Hours</item>
+        <item>6.5 Hours</item>
+        <item>7 Hours</item>
+        <item>7.5 Hours</item>
+        <item>8 Hours</item>
+        <item>8.5 Hours</item>
+        <item>9 Hours</item>
+        <item>9.5 Hours</item>
+        <item>10 Hours</item>
+        <item>10.5 Hours</item>
+        <item>11 Hours</item>
+    </string-array>
+    <string-array name="delay_min_entries">
+        <item>No offset (0)</item>
+        <item>+5 minutes</item>
+        <item>+10 minutes</item>
+        <item>+15 minutes</item>
+        <item>+30 minutes</item>
+        <item>+45 minutes</item>
+        <item>+1 hour</item>
+        <item>+1 hour 20 minutes</item>
+        <item>+1 hour 40 minutes</item>
+        <item>+2 hours</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets">
+        <item>15 minutes before</item>
+        <item>30 minutes before</item>
+        <item>45 minutes before</item>
+        <item>1 hour before</item>
+        <item>2 hours before</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets_2nd">
+        <item>15 minutes after</item>
+        <item>30 minutes after</item>
+        <item>45 minutes after</item>
+        <item>1 hour after</item>
+        <item>2 hours after</item>
+    </string-array>
+    <string-array name="sound_mode">
+        <item>Do nothing</item>
+        <item>Silent+Vibrate</item>
+        <item>Silent without vibrate</item>
+    </string-array>
+    <string-array name="alarm_range_entries">
+        <item>15 minutes before</item>
+        <item>30 minutes before</item>
+        <item>45 minutes before</item>
+        <item>60 minutes before</item>
+        <item>90 minutes before</item>
+    </string-array>
+    <string-array name="movement_sensitivity_entries">
+        <item>Very Low (soft bed + sensitive phones)</item>
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Very High (for very hard beds)</item>
+    </string-array>
+    <!-- 3.2.8 had these labels inverted (index 0 is the highest threshold); translations not ported for that reason. -->
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>Very Low (record only very loud sounds)</item>
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Very High (record nearly all sounds)</item>
+    </string-array>
+    <string-array name="entry_list_hour_format_entries">
+        <item>decimal (3.5)</item>
+        <item>time (03:30)</item>
+    </string-array>
+    <string-array name="default_display_entries">
+        <item>Today\'s Sleep</item>
+        <item>Current Debt</item>
+    </string-array>
+    <string-array name="default_graph_entries">
+        <item>Sleep Duration Trend</item>
+        <item>Sleep Distribution Pattern</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>Always</item>
+        <item>Only while asleep</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="date_entries">
+        <item>Month/Day/Year</item>
+        <item>Day/Month/Year</item>
+        <item>Year/Month/Day</item>
+    </string-array>
+</resources>

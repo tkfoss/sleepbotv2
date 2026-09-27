@@ -1,5 +1,6 @@
 package com.sleepbot.app.ui.entries
 
+import android.content.Context
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -34,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -91,13 +93,14 @@ fun buildRows(entries: List<SleepEntry>, optimal: Float, decimal: Boolean, short
 data class PeriodStats(val records: Int, val days: Int, val total: Double) {
     val avgDaily get() = if (days == 0) 0.0 else total / days
     val avgRecord get() = if (records == 0) 0.0 else total / records
-    fun summary() = buildString {
-        fun t(d: Double) = String.format(Locale.US, "%.1f", d)
-        append("Number of records: $records\n")
-        append("Number of days: ${days.toFloat()}\n")
-        append("Total sleep time: ${t(total)} hours\n")
-        append("Average daily sleep: ${t(avgDaily)} hours\n")
-        append("Avg. sleep/record: ${t(avgRecord)} hours\n")
+    fun summary(context: Context) = buildString {
+        fun s(id: Int) = context.getString(id)
+        fun t(d: Double) = String.format(Locale.US, "%.1f", d) + " " + s(R.string.hours_ori)
+        append(s(R.string.summary_num_records)).append(" $records\n")
+        append(s(R.string.summary_num_days)).append(" $days\n")
+        append(s(R.string.summary_total_sleep)).append(" ${t(total)}\n")
+        append(s(R.string.summary_avg_daily)).append(" ${t(avgDaily)}\n")
+        append(s(R.string.summary_avg_record)).append(" ${t(avgRecord)}\n")
     }
 }
 
@@ -105,6 +108,7 @@ data class PeriodStats(val records: Int, val days: Int, val total: Double) {
 @Composable
 fun EntriesTab(onOpenEntry: (Long) -> Unit) {
     val context = LocalContext.current
+    val res = LocalResources.current
     val app = context.app
     val prefs = app.prefs
     val dao = app.db.entries()
@@ -188,7 +192,7 @@ fun EntriesTab(onOpenEntry: (Long) -> Unit) {
             BarAction(R.drawable.new_icon, stringResource(R.string.add_new_entry)) { onOpenEntry(-1) },
             BarAction(R.drawable.share_icon, stringResource(R.string.share_caps)) {
                 val list = entries.orEmpty()
-                context.startActivity(Csv.exportShareIntent(context, list, periodStats(list, zone).summary()))
+                context.startActivity(Csv.exportShareIntent(context, list, periodStats(list, zone).summary(context)))
             },
         ))
     }
@@ -205,7 +209,7 @@ fun EntriesTab(onOpenEntry: (Long) -> Unit) {
             onDismissRequest = { showStats = false },
             title = { Text(stringResource(R.string.period_stats)) },
             text = {
-                Text(s.summary() + "Cumulative debt:" + String.format(Locale.US, "%.1f", (prefs.optimalHours - s.avgDaily) * s.days) +
+                Text(s.summary(context) + stringResource(R.string.summary_cum) + " " + String.format(Locale.US, "%.1f", (prefs.optimalHours - s.avgDaily) * s.days) +
                     "\n\n" + stringResource(R.string.period_stats_note))
             },
             confirmButton = { TextButton({ showStats = false }) { Text(stringResource(R.string.confirm)) } },
@@ -213,9 +217,9 @@ fun EntriesTab(onOpenEntry: (Long) -> Unit) {
                 TextButton({
                     showStats = false
                     val send = android.content.Intent(android.content.Intent.ACTION_SEND).setType("text/plain")
-                        .putExtra(android.content.Intent.EXTRA_SUBJECT, context.getString(R.string.period_stats))
-                        .putExtra(android.content.Intent.EXTRA_TEXT, s.summary() + "\n via SleepBot")
-                    context.startActivity(android.content.Intent.createChooser(send, context.getString(R.string.period_stats)))
+                        .putExtra(android.content.Intent.EXTRA_SUBJECT, res.getString(R.string.period_stats))
+                        .putExtra(android.content.Intent.EXTRA_TEXT, s.summary(context) + "\n via SleepBot")
+                    context.startActivity(android.content.Intent.createChooser(send, res.getString(R.string.period_stats)))
                 }) { Text(stringResource(R.string.share)) }
             },
         )

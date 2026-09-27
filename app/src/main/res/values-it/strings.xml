@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hour_n">%d ora</string>
+    <string name="hours_n">%d ore</string>
+    <string name="minute_n">%d minuto</string>
+    <string name="minutes_n">%d minuti</string>
+    <string name="day_n">%d giorno</string>
+    <string name="days_n">%d giorni</string>
+    <string name="alarm_has_occurred">È suonata una sveglia</string>
+    <string name="punched_in_since">Attivazione log %s</string>
+    <string name="status_set_sleep">Stato impostato su dormita</string>
+    <string name="status_set_wake">Stato impostato su risveglio</string>
+    <string name="not_punched_in">Attivazione log terminata</string>
+    <string name="todays_sleep">OGGI HO DORMITO</string>
+    <string name="current_debt">DEB. ATTUALE</string>
+    <string name="wake_up">Sveglia alle:</string>
+    <string name="smart_alarm">Mod. intelligente</string>
+    <string name="track_motion">Movimenti</string>
+    <string name="record_sound">Suoni</string>
+    <string name="cannot_change_settings_after_punchin">Impossibile modificare le impostazioni dopo aver attivato il log.</string>
+    <string name="no_alarm_set_warning">Non hai ancora impostato nessuna sveglia per i prossimi giorni! La sveglia intelligente ti sveglierà nel momento migliore all\'interno dell\'intervallo selezionato prima della prima sveglia.</string>
+    <string name="auto_alarm_prompt">Non è impostata nessuna sveglia per i prossimi giorni. Vuoi attivare il log ora per abilitare la sveglia automatica e la sveglia intelligente?</string>
+    <string name="mode_smart">Modalità sveglia intelligente. La registrazione dei movimenti inizierà nell\'intervallo di tempo selezionato prima della prima sveglia.</string>
+    <string name="mode_smart_motion">Registrazione movimenti + risveglio nel momento migliore.</string>
+    <string name="mode_complete">Modalità completa. SleepBot registrerà i movimenti e i suoni, e ti sveglierà nel momento migliore entro l\'intervallo di tempo prima della tua prima sveglia.</string>
+    <string name="mode_motion">Modalità registrazione movimenti.</string>
+    <string name="mode_motion_sound">SleepBot registrerà i movimenti e i suoni durante la notte</string>
+    <string name="mode_classic">Modalità classica SleepBot.</string>
+    <string name="mode_sound">Modalità registrazione suoni.</string>
+    <string name="entry_created_title">Record dormita creato!</string>
+    <string name="entry_created_msg">Hai dormito dalle:\n%1$s – %2$s\n(%3$s)</string>
+    <string name="future_title">L\'orario di inizio dormita è nel futuro</string>
+    <string name="future_no_record">Nessun record</string>
+    <string name="future_zero_record">Record \'0\'</string>
+    <string name="future_no_offset">Nessun offset</string>
+    <string name="future_no_record_toast">Stato cambiato in risveglio senza aver inserito una nuova voce.</string>
+    <string name="current_session_title">Sessione attuale sonno</string>
+    <string name="awake_since">Ti sei svegliato %1$d ore %2$d minuti fa.</string>
+    <string name="reset_debt_q">Vuoi resettare il debito?</string>
+    <string name="reset_debt_title">Resetta debito</string>
+    <string name="reset_debt_msg">Resettando il debito cancellerai l\' attuale debito di sonno e sarà riavviato il calcolo partendo dalla data di oggi. \n\n*Questa operazione cambia solo la data da quando il debito è calcolato e visualizzato nella Scheda Home - nessuna voce sarà modificata. \n\n*Il debito per oggi sarà ancora calcolato, dato dal sonno di oggi sottratto al valore delle ore ottimali giornaliere.</string>
+    <string name="reset_debt_done">Reset debito completato! La scheda home mostrerà il nuovo valore del debito.</string>
+    <string name="confirm">Conferma</string>
+    <string name="cancel">Annulla</string>
+    <string name="reset">Resetta</string>
+    <string name="edit">Modifica</string>
+    <string name="delete">Cancella...</string>
+    <string name="save">Salva</string>
+    <string name="share">Condividi</string>
+    <string name="view">Visualizza</string>
+    <string name="yes">Sì</string>
+    <string name="from">Dal:</string>
+    <string name="to">alle</string>
+    <string name="col_date">Data</string>
+    <string name="col_sleep">Dormita</string>
+    <string name="col_wake">Risveglio</string>
+    <string name="col_hours">ore</string>
+    <string name="col_debt">Debito</string>
+    <string name="add_new_entry">NUOVO RECORD</string>
+    <string name="share_caps">CONDIVIDI</string>
+    <string name="delete_confirm_title">Conferma cancellazione</string>
+    <string name="delete_confirm_msg">Vuoi davvero cancellare questo record?</string>
+    <string name="no_entry_hint">Ciao!\n\nTorna qui dopo aver registrato i dati sul sonno, oppure crea il tuo primo record!</string>
+    <string name="no_entry_found_hint">Nessun record trovato che corrisponde ai criteri di ricerca.</string>
+    <string name="first_entry_title">Hai creato il tuo primo record dormita!</string>
+    <string name="first_entry_msg">Premere un record per visualizzarlo o modificarlo.\n\n (Sugg: provare anche con una pressione prolungata)</string>
+    <string name="period_stats">Intervallo statistica</string>
+    <string name="period_stats_note">Nota: Se non vengono raccolti dati in un particolare giorno non verranno inclusi nel periodo di analisi statistica. Se non hai dormito quel giorno per favore inserisci un record con durata \'0\' in modo che venga incluso nelle statistiche.</string>
+    <string name="export_title">Esportazione riuscita</string>
+    <string name="export_to">Esporta su</string>
+    <string name="export_subject">SleepBot: Dati sul sonno esportati su %s</string>
+    <string name="duration">Durata:</string>
+    <string name="sleep_time">Inizio dormita:</string>
+    <string name="wake_time">Risveglio:</string>
+    <string name="invalid_time">Impostazioni orario non valide: l\'ora di risveglio deve essere precedente all\'ora di inizio dormita.</string>
+    <string name="cancel_caps">Annulla</string>
+    <string name="delete_caps">Cancella...</string>
+    <string name="save_caps">Salva</string>
+    <string name="share_entry">Condividi questo record</string>
+    <string name="movement">Movimenti</string>
+    <string name="sound">Suoni</string>
+    <string name="high">Alta</string>
+    <string name="medium">Media</string>
+    <string name="low">Bassa</string>
+    <string name="current_trend">Trend attuale</string>
+    <string name="current_sleep_records">Record dormita attuali</string>
+    <string name="avg_sleep_day">MEDIA SONNO/GIORNO</string>
+    <string name="trend">Trend</string>
+    <string name="length">Durata</string>
+    <string name="pattern">Pattern</string>
+    <string name="sleep_caps">Dormita</string>
+    <string name="wake_caps">Risveglio</string>
+    <string name="ratings">Valutazioni</string>
+    <string name="title_trend">Durata dormita</string>
+    <string name="title_length">Frequenze durata</string>
+    <string name="title_pattern">Distribuzione dormita</string>
+    <string name="title_sleep">Frequenze inizio dormita</string>
+    <string name="title_wake">Frequenze risveglio</string>
+    <string name="alarm_clock_label">Sveglia</string>
+    <string name="alarms">Sveglie</string>
+    <string name="add_alarm">NUOVA SVEGLIA</string>
+    <string name="alarm_no_repeats">Nessuna ripetizione</string>
+    <string name="alarm_every_day">Ogni giorno</string>
+    <string name="alarm_weekdays">Nei giorni feriali</string>
+    <string name="alarm_weekends">Weekend</string>
+    <string name="alarm_status_text">Prossima sveglia: %1$s (%2$s)</string>
+    <string name="auto_alarm_set">Sveglia impostata: %1$s, %2$s</string>
+    <string name="auto_alarm_disabled">Sveglia auto disattivata</string>
+    <string name="alarm_scheduled">Sveglia in programma: %1$s (%2$s)</string>
+    <string name="alarm_time_out">Scadenza sveglia</string>
+    <string name="time_out_error">ATTENZIONE: Questa sveglia è scaduta ed è in attesa di conferma.</string>
+    <string name="alarm_edit">Modifica</string>
+    <string name="alarm_delete_ellipsis">Cancella...</string>
+    <string name="alarm_delete_all">Cancella tutto...</string>
+    <string name="alarm_default_settings">Impostazioni predefinite sveglia...</string>
+    <string name="alarm_confirm_delete">Confermare cancellazione?</string>
+    <string name="alarm_settings_header">Impostazioni</string>
+    <string name="alarm_default_settings_header">Impostazioni predefinite sveglia...</string>
+    <string name="alarm_row_time">Orario</string>
+    <string name="alarm_row_label">Nome</string>
+    <string name="alarm_row_repeat">Ripetizione</string>
+    <string name="alarm_row_tone">Suoneria</string>
+    <string name="alarm_row_snooze">Snooze (minuti)</string>
+    <string name="alarm_row_vibrate">Vibrazione</string>
+    <string name="alarm_row_fade">Incremento volume sveglia</string>
+    <string name="alarm_label_none">Nessun nome</string>
+    <string name="alarm_label_title">Nome sveglia</string>
+    <string name="alarm_enabled">Attivata</string>
+    <string name="alarm_disabled">Disattivata</string>
+    <string name="alarm_fade_summary">Da %1$d%% a %2$d%% in %3$d secondi.</string>
+    <string name="alarm_fade_start">Volume iniziale (percentuale)</string>
+    <string name="alarm_fade_end">Volume finale (percentuale)</string>
+    <string name="alarm_fade_time">Durata incremento (secondi)</string>
+    <string name="alarm_scheduled_days">Programmazione giorni</string>
+    <string name="alarm_unknown_name">Nome sconosciuto</string>
+    <string name="alarm_cancel">Annulla</string>
+    <string name="alarm_default_tone">Predefinita</string>
+    <string name="help_section_sleepbot">Utilizzo di SleepBot</string>
+    <string name="help_section_sleep">Aiuto per dormire…</string>
+    <string name="help_section_wake">Aiuto per rimanere svegli!</string>
+    <string name="help_section_learn">Conoscere il sonno</string>
+    <string name="help_instructions">Guida</string>
+    <string name="help_entries_and_graphs">Record &amp; Grafici</string>
+    <string name="help_support">Supporto</string>
+    <string name="help_eat_this">Mangia questo!</string>
+    <string name="help_read_this">Leggi questo!</string>
+    <string name="help_quick_strategies">Strategie rapide</string>
+    <string name="help_prepare_bedroom">Preparazione camera da letto</string>
+    <string name="help_sleep_debt">Che cos\'è il debito di sonno</string>
+    <string name="help_health_problems">Potenziali problemi di salute</string>
+    <string name="help_sleep_disorders">Disturbi del sonno</string>
+    <string name="tutorial_title_1">Benvenuti nel\n nuovo SleepBot!</string>
+    <string name="tutorial_1_1">SleepBot è un\'app per il monitoraggio del sonno\nInoltre la sveglia intelligente ti aiuterà a svegliarti più riposato!</string>
+    <string name="tutorial_1_2">Prima imposta una sveglia</string>
+    <string name="tutorial_2_1">Scegliere le opzioni di monitoraggio,quindi\npremere \'vado a dormire\'</string>
+    <string name="tutorial_3_1">Posiziona il telefono nel letto accanto a te:</string>
+    <string name="tutorial_3_2">Risvegio: 8:00 AM ~ 8:30 AM</string>
+    <string name="tutorial_3_3">La sveglia intelligente ti sveglierà fino a 30 min prima dell\'intervallo selezionato che precede la tua prima sveglia, durante la fase di sonno leggero.\n\n\n(es. questa è per una sveglia intelligente alle 8:30 AM!)</string>
+    <string name="tutorial_4_1">Visualizza i tuoi record e i trend sul sonno\nqui:</string>
+    <string name="tutorial_4_2">**Suggerimento: premi sul grafico per riprodurre i suoni!</string>
+    <string name="get_started">Per iniziare</string>
+    <string name="intent_error_invalid">Coppia di chiavi segrete non valida.</string>
+    <string name="intent_error_reject">L\'utente ha disabilitato l\'integrazione di terze parti.</string>
+    <string name="settings">Impostazioni</string>
+    <string name="setting_title_general">GENERALI</string>
+    <string name="setting_title_app">Applicazione</string>
+    <string name="about">Info</string>
+    <string name="agree">Accetto</string>
+    <string name="next">Avanti</string>
+    <string name="done_label">Fine</string>
+    <string name="error">Errore</string>
+    <string name="please_wait">Attendere prego…</string>
+    <string name="error_intent_empty_msg">Nessuna attività trovata per eseguire questa azione.</string>
+    <string name="options_hours_title">Riposo ideale</string>
+    <string name="options_hours_summary">Ore necessarie per un riposo ideale</string>
+    <string name="options_delay_min_title">Offset attivazione log</string>
+    <string name="options_delay_min_summary">Attivare il log prima di andare a dormire/addormentarti per avere una durata della dormita più precisa.</string>
+    <string name="pref_sc_sleep_tracking">Monitoraggio sonno</string>
+    <string name="pref_sc_look_and_feel">Aspetto</string>
+    <string name="pref_alarm_klock_settings_title">Impostazioni sveglia</string>
+    <string name="pref_adv_main_title">Impostazioni avanzate</string>
+    <string name="pref_view_update_notice">Visualizza note aggiornamento.</string>
+    <string name="rate_sleepbot">Vota Sleepbot!</string>
+    <string name="sleep_reminder">Promemoria dormita</string>
+    <string name="sleep_reminder_title">Attiva promemoria dormita</string>
+    <string name="sleep_reminder_summary">Il promemoria dormita ti ricorderà di andare a dormire in base alla sveglia se non hai ancora attivato il log.</string>
+    <string name="times_before_offset">Offset promemoria</string>
+    <string name="times_before_offset_summary">Orario prossima sveglia - (orario risveglio ottimale) - (offset promemoria) = orario promemoria.</string>
+    <string name="sleep_reminder_title_2nd">Attiva 2° promemoria</string>
+    <string name="sleep_reminder_summary_2nd">Secondo promemoria in caso non si fosse ancora andati a dormire.</string>
+    <string name="times_before_offset_2nd">Offset 2° promemoria</string>
+    <string name="times_before_offset_summary_2nd">Orario prossima sveglia - (risveglio ottimale) - (offset 2° promemoria) = orario 2° promemoria.</string>
+    <string name="no_reminder_snooze">Non ricordarmelo più</string>
+    <string name="no_reminder_summary">Non mostrare più la finestra promemoria.</string>
+    <string name="reminder_mute_title">Nessuna notifica sonora</string>
+    <string name="reminder_mute_summary">Non riprodurre una notifica sonora per il promemoria.</string>
+    <string name="options_soundmode_title">Silenzioso automatico</string>
+    <string name="options_soundmode_summary">Il telefono diventerà silenzioso mentre stai dormendo</string>
+    <string name="options_auto_alarm_title">Sveglia auto attivata</string>
+    <string name="options_auto_alarm_summary">Creare una sveglia che suona automaticamente il \"numero di ore ottimali\" (incluso l\'offset) dopo l\'attivazione del log.</string>
+    <string name="pref_cat_movement_tracking">Regitrazione movimenti</string>
+    <string name="pref_allow_screen_off_title">Registrazione a schermo spento</string>
+    <string name="pref_allow_screen_off_summary">Alcuni telefoni potrebbero non supportare la registrazione dei movimenti con lo schermo spento.</string>
+    <string name="pref_cat_smart_alarm">Mod. intelligente</string>
+    <string name="pref_time_alarm_range_title">Intervallo sveglia</string>
+    <string name="pref_time_alarm_range_summary">Intervallo di tempo prima della sveglia effettiva, utile per un risveglio ottimale.</string>
+    <string name="pref_movement_sensitivity_title">Sensibilità movimenti</string>
+    <string name="pref_movement_sensitivity_summary">Regolare per ottimizzare la sveglia intelligente in base al tuo letto e telefono.</string>
+    <string name="pref_cat_sound_recording">Registrazione suoni</string>
+    <string name="pref_sound_sensitivity_title">Soglia registrazione</string>
+    <string name="pref_sound_sensitivity_summary">La registrazione dei suoni inizia quando il volume è maggiore della soglia</string>
+    <string name="delete_older_sound_files">Cancella vecchi file</string>
+    <string name="pref_alternate_display_show_title">Schermata alternativa</string>
+    <string name="pref_alternate_display_show_summary">Deseleziona per nascondere le informazioni alternative.</string>
+    <string name="pref_hour_format_title">Formato ore record</string>
+    <string name="pref_hour_format_summary">Per i telefoni con uno schermo grande, è possibile utilizzare il formato non decimale per visualizzare il totale delle ore e il debito.</string>
+    <string name="pref_default_display_title">Schermata predefinita</string>
+    <string name="pref_default_display_summary">Impostare quale schermata visualizzare nella home.</string>
+    <string name="options_default_graph_title">Grafico prefefinito</string>
+    <string name="options_default_graph_summary">Scegliere il grafico da visualizzare nella scheda monitoraggio.</string>
+    <string name="pref_no_warning_title">No notifiche a schermo spento</string>
+    <string name="pref_no_warning_summary">Non visualizzare notifiche di ricarica se è stata selezionata la modalità a schermo spento.</string>
+    <string name="options_notification_sleep_title">Promemoria dormita</string>
+    <string name="options_notification_sleep_summary">Personalizzare il messaggio di inizio dormita mostrato nelle notifiche.</string>
+    <string name="options_notification_awake_title">Promemoria risveglio</string>
+    <string name="options_notification_awake_summary">Personalizzare il messaggio di risveglio mostrato nelle notifiche.</string>
+    <string name="pref_sleep_notification_default">Tocca per disattivare il log.</string>
+    <string name="pref_awake_notification_default">Tocca per attivare il log.</string>
+    <string name="pref_title_show_disconnected_lines">Linee tratteggiate</string>
+    <string name="pref_summary_show_disconnected_lines">Nei grafici collegare i punti non collegati con linee tratteggiate.</string>
+    <string name="restore_backup_title">Ripristina da backup</string>
+    <string name="restore_old_file_title">Ripristina da file</string>
+    <string name="restore_old_file_summary">Ripristinare i record generati con la funzione esporta.</string>
+    <string name="restore_old_file_body">Poiché i file di esportazione non sono originariamente concepiti per scopi di backup e ripristino, nel prossimo step scegliere lo stesso formato della data corrispondente a quello utilizzato nel testo. Scegliere lo stesso formato della data come quello utilizzato quando si esportano i file, per essere sicuri che tutte le date siano correttamente importate (Se un\'altra app sul market tenta di importare i dati di SleepBot e non chiede il formato della data, è necessario verificare che tutti i dati siano importati correttamente).</string>
+    <string name="restore_confirm_title">Conferma per ripristinare</string>
+    <string name="restore_warning_double">IMPORTANTE: Il ripristino potrebbe creare doppi record se alcuni sono già presenti nel log (cancellare i dati di SleepBot dalle impostazioni di Android se necessario).</string>
+    <string name="restore_progress_title">Ripristino SleepBot</string>
+    <string name="backup_progress_title">Salvataggio SleepBot</string>
+    <string name="pref_adv_restore_title">Ripristina</string>
+    <string name="error_restore_file_malformatted">Il file di ripristino non ha un formato valido o è danneggiato, ripristino annullato.</string>
+    <string name="error_export_db_is_too_new">Il database è troppo recente per poter essere ripristinato.</string>
+    <string name="pref_adv_cat_others">Altre impostazioni</string>
+    <string name="pref_adv_length_title">Intervallo debito attuale</string>
+    <string name="pref_adv_length_summary">Scegliere 7, 10 o 14 giorni per l\' intervallo utilizzato per calcolare il debito attuale visualizzato nella home.</string>
+    <string name="pref_adv_security_third_party_title">Abilita integrazione</string>
+    <string name="pref_adv_security_third_party_summary">Consentire ad app di terze parti di chiudere/avviare SleepBot.</string>
+    <string name="pref_adv_variable_block_title">Guardia re-attivazione log</string>
+    <string name="pref_adv_variable_block_summary">Previene l\'attivazione del log accidentale bloccando eventuali tentativi entro un certo periodo di tempo.</string>
+    <string name="notification_icon_title">Icona notifica</string>
+    <string name="notification_icon_on">Visulizzare un\'icona nella barra delle notifiche quando ci sono sveglie in attesa</string>
+    <string name="notification_icon_off">Non visualizzare un\'icona quando ci sono sveglie in attesa</string>
+    <string name="time_out_summary">Dopo quanti minuti spegnere automaticamente una sveglia che sta suonando.</string>
+    <string name="summary_num_records">Record:</string>
+    <string name="summary_num_days">Giorni:</string>
+    <string name="summary_total_sleep">Tempo totale dormite:</string>
+    <string name="summary_avg_daily">Media dormita giornaliera:</string>
+    <string name="summary_avg_record">Media dormite/record:</string>
+    <string name="summary_cum">Debito accumulato:</string>
+    <string name="hours_ori">ore</string>
+    <string name="channel_alarm_status">Prossima sveglia:</string>
+    <string name="trk_no_alarm_set">Nessuna sveglia impostata</string>
+    <string name="trk_phone_is_not_plugged">Lasciare il telefono sotto carica per evitare che la batteria si scarichi.</string>
+    <string name="trk_screen_dim_soon">Inizio monitoraggio dormita: lo schermo si spegnerà fra 15 sec...</string>
+    <string name="trk_screen_already_dimmed">Premere il pulsante indietro per accendere lo schermo. Non premere il pulsante power. Buonanotte!</string>
+    <string name="trk_screen_off_toast">SleepBot monitorerà la tua dormita, è possibile spegnere lo schermo o fare altre cose, ma è bene non utilizzare app che usano molta memoria.</string>
+    <string name="trk_accel_graph_title">Movimenti</string>
+    <string name="trk_sound_graph_title">Suoni</string>
+    <string name="trk_label_high">Alta</string>
+    <string name="trk_label_medium">Media</string>
+    <string name="trk_label_low">Bassa</string>
+    <string name="trk_sleep_reminder_title">Promemoria dormita</string>
+    <string name="trk_sleep_reminder_toast">Vai a dormire presto per svegliarti in tempo!</string>
+    <string name="trk_remind_later">Ricordamelo più tardi</string>
+    <string name="trk_choose_time">Scegliere un orario</string>
+    <string name="trk_remind_with_sleep_cycle">Se non vai a dormire ora, può esserti ricordato nei seguenti cicli di sonno.\n\n I tempi saranno calcolati in questo modo: 90 minuti uno dall\'altro a partire dalla prossima sveglia, meno 30 minuti per prepararti e addormentarti.</string>
+    <string name="trk_you_should_really_go_to_sleep">Ora dovresti andare a letto o fare un pisolino. Aumenterà la tua produttività!</string>
+    <string-array name="range_choices">
+        <item>Tutto</item>
+        <item>10 giorni</item>
+        <item>30 giorni</item>
+        <item>60 giorni</item>
+        <item>180 giorni</item>
+        <item>360 giorni</item>
+    </string-array>
+    <string-array name="hour_entries">
+        <item>3 ore</item>
+        <item>3.5 ore</item>
+        <item>4 ore</item>
+        <item>4.5 ore</item>
+        <item>5 ore</item>
+        <item>5.5 ore</item>
+        <item>6 ore</item>
+        <item>6.5 ore</item>
+        <item>7 ore</item>
+        <item>7.5 ore</item>
+        <item>8 ore</item>
+        <item>8.5 ore</item>
+        <item>9 ore</item>
+        <item>9.5 ore</item>
+        <item>10 ore</item>
+        <item>10.5 ore</item>
+        <item>11 ore</item>
+    </string-array>
+    <string-array name="delay_min_entries">
+        <item>Nessun offset (0)</item>
+        <item>+5 minuti</item>
+        <item>+10 minuti</item>
+        <item>+15 minuti</item>
+        <item>+30 minuti</item>
+        <item>+45 minuti</item>
+        <item>+1 ora</item>
+        <item>+1 ora e 20 minuti</item>
+        <item>+1 ora e 40 minuti</item>
+        <item>+2 ore</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets">
+        <item>15 minuti prima</item>
+        <item>30 minuti prima</item>
+        <item>45 minuti prima</item>
+        <item>1 ora prima</item>
+        <item>2 ore prima</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets_2nd">
+        <item>15 minuti dopo</item>
+        <item>30 minuti dopo</item>
+        <item>45 minuti dopo</item>
+        <item>1 ora dopo</item>
+        <item>2 ore dopo</item>
+    </string-array>
+    <string-array name="sound_mode">
+        <item>Non fare nulla</item>
+        <item>Silenzioso+Vibrazione</item>
+        <item>Silenzioso senza vibrazione</item>
+    </string-array>
+    <string-array name="alarm_range_entries">
+        <item>15 minuti prima</item>
+        <item>30 minuti prima</item>
+        <item>45 minuti prima</item>
+        <item>60 minuti prima</item>
+        <item>90 minuti prima</item>
+    </string-array>
+    <string-array name="movement_sensitivity_entries">
+        <item>Molto bassa (letto morbidi e telefono sensibile)</item>
+        <item>Bassa</item>
+        <item>Normale</item>
+        <item>Alta</item>
+        <item>Molto alta (letto duro)</item>
+    </string-array>
+    <string-array name="entry_list_hour_format_entries">
+        <item>decimale (3.5)</item>
+        <item>orario (03:30)</item>
+    </string-array>
+    <string-array name="default_display_entries">
+        <item>Quanto ho dormito</item>
+        <item>Debito attuale</item>
+    </string-array>
+    <string-array name="default_graph_entries">
+        <item>Durata dormita</item>
+        <item>Pattern distribuzione dormita</item>
+    </string-array>
+    <string-array name="date_entries">
+        <item>Mese/Giorno/Anno</item>
+        <item>Giorno/Mese/Anno</item>
+        <item>Anno/Mese/Giorno</item>
+    </string-array>
+</resources>

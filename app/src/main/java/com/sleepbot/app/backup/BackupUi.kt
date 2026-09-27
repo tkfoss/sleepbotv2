@@ -19,8 +19,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
+import com.sleepbot.app.R
 import com.sleepbot.app.app
 import com.sleepbot.app.settings.MessageDialog
 import com.sleepbot.app.settings.PrefRow
@@ -31,18 +34,6 @@ import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-
-private const val RESTORE_WARNING =
-    "IMPORTANT: Restoring can create duplicate entries if you already have entries in your log " +
-        "(clear SleepBot data in Android Application Settings if necessary).\n" +
-        "Choose a file created by SleepBot's Backup function. Entries that are already in your log are skipped."
-
-private const val EXPORT_RESTORE_MSG =
-    "Because the export files are not originally designed for backup and restore purposes, please make you choose " +
-        "the same Date Format in the next step to match the same date format used in the text. Please choose the same " +
-        "date format as the one when you export the file to ensure all the data are correctly imported (If another " +
-        "application on the market tries to import SleepBot data and does not ask you for date format, you should " +
-        "verify that all the data are imported correctly)."
 
 private fun readBytes(ctx: Context, uri: Uri): ByteArray? =
     runCatching { ctx.contentResolver.openInputStream(uri)?.use { it.readBytes() } }.getOrNull()
@@ -57,7 +48,7 @@ private fun ProgressDialog(title: String) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 CircularProgressIndicator()
                 Spacer(Modifier.width(16.dp))
-                Text("Please wait…")
+                Text(stringResource(R.string.please_wait))
             }
         },
         confirmButton = {},
@@ -71,18 +62,20 @@ private fun ProgressDialog(title: String) {
 @Composable
 fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
     val ctx = LocalContext.current
+    val res = LocalResources.current
+    fun s(id: Int, vararg args: Any) = res.getString(id, *args)
     val scope = rememberCoroutineScope()
     var csvPattern by remember { mutableStateOf("MM/dd/yy") }
 
     fun done(title: String, msg: String) = show { MessageDialog(title, msg, onConfirm = close, onDismiss = close) }
 
     fun importCsv(bytes: ByteArray, pattern: String) {
-        show { ProgressDialog("Restoring SleepBot") }
+        show { ProgressDialog(s(R.string.restore_progress_title)) }
         scope.launch {
             val r = withContext(Dispatchers.IO) { Csv.import(ctx, String(bytes, Charsets.UTF_8), pattern) }
-            val msg = "${r.imported} entries successfully restored." +
-                if (r.failed) "\n\nThe rest of the file could not be read. Please check that the date format matches the file." else ""
-            done("Restore from an Export file", msg)
+            val msg = s(R.string.restore_csv_done, r.imported) +
+                if (r.failed) "\n\n" + s(R.string.restore_csv_partial) else ""
+            done(s(R.string.restore_old_file_title), msg)
         }
     }
 
@@ -91,7 +84,7 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
         val sel = Csv.IMPORT_PATTERNS.indexOf(system).coerceAtLeast(0)
         show {
             SingleChoiceDialog(
-                "Date Format", listOf("Month/Day/Year", "Day/Month/Year", "Year/Month/Day"), sel,
+                s(R.string.date_format), res.getStringArray(R.array.date_entries).toList(), sel,
                 onSelect = { close(); onChosen(Csv.IMPORT_PATTERNS[it]) }, onDismiss = close,
             )
         }
@@ -99,31 +92,31 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
 
     val createBackup = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
         if (uri == null) return@rememberLauncherForActivityResult
-        show { ProgressDialog("Backing up SleepBot") }
+        show { ProgressDialog(s(R.string.backup_progress_title)) }
         scope.launch {
             val n = runCatching { Backup.write(ctx, uri) }
             n.onSuccess {
-                done("Done", "Backup finished: $it entries saved, including movement/sound data.\nPlease note that alarm clock settings are not backed up.")
-            }.onFailure { done("Error", "Backup failed: ${it.message}") }
+                done(s(R.string.done_label), s(R.string.backup_done_n, it))
+            }.onFailure { done(s(R.string.error), s(R.string.backup_failed, it.message.orEmpty())) }
         }
     }
 
     val openBackup = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri == null) return@rememberLauncherForActivityResult
         val bytes = readBytes(ctx, uri)
-        if (bytes == null) { done("Error", "Restore file does not have a valid format or it is corrupted, restore canceled."); return@rememberLauncherForActivityResult }
+        if (bytes == null) { done(s(R.string.error), s(R.string.error_restore_file_malformatted)); return@rememberLauncherForActivityResult }
         if (Backup.looksLikeCsv(bytes)) {
             chooseFormat { importCsv(bytes, it) }
             return@rememberLauncherForActivityResult
         }
-        show { ProgressDialog("Restoring SleepBot") }
+        show { ProgressDialog(s(R.string.restore_progress_title)) }
         scope.launch {
             when (val r = Backup.restore(ctx, bytes)) {
                 is Backup.RestoreResult.Ok -> done(
-                    "Restore",
-                    "${r.restored}/${r.total} entries successfully restored.\n\nSleep debt start date successfully reseted to today.",
+                    s(R.string.pref_adv_restore_title),
+                    s(R.string.restore_done, r.restored, r.total),
                 )
-                is Backup.RestoreResult.Error -> done("Error", r.message)
+                is Backup.RestoreResult.Error -> done(s(R.string.error), s(r.message))
             }
         }
     }
@@ -134,29 +127,33 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
         importCsv(bytes, csvPattern)
     }
 
-    PrefRow("Backup", "Backup your data to a file (e.g. on your phone or in the cloud).", onClick = {
+    PrefRow(stringResource(R.string.pref_adv_backup_title), stringResource(R.string.pref_adv_backup_summary), onClick = {
         val name = "sleepbot_backup_" + SimpleDateFormat("yyyyMMdd", Locale.US).format(Date()) + ".json"
         runCatching { createBackup.launch(name) }
     })
     PrefRow(
-        "Restore from Backup file",
-        "Restore entries from files made by the Backup function. (Recommended)",
+        stringResource(R.string.restore_backup_title),
+        stringResource(R.string.restore_backup_summary),
         onClick = {
             show {
                 MessageDialog(
-                    "Confirm to restore", RESTORE_WARNING, confirm = "Choose file",
+                    stringResource(R.string.restore_confirm_title),
+                    stringResource(R.string.restore_warning_double) + "\n" + stringResource(R.string.restore_choose_backup_hint),
+                    confirm = stringResource(R.string.restore_choose_file_button),
                     onConfirm = { close(); runCatching { openBackup.launch(arrayOf("*/*")) } },
-                    dismiss = "Cancel", onDismiss = close,
+                    dismiss = stringResource(R.string.cancel), onDismiss = close,
                 )
             }
         },
     )
     PrefRow(
-        "Restore from an Export file",
-        "Restore entries from files generated by the Export function.",
+        stringResource(R.string.restore_old_file_title),
+        stringResource(R.string.restore_old_file_summary),
         onClick = {
             show {
-                MessageDialog("Restore from an Export file", EXPORT_RESTORE_MSG, confirm = "Next", onConfirm = {
+                MessageDialog(
+                    stringResource(R.string.restore_old_file_title), stringResource(R.string.restore_old_file_body),
+                    confirm = stringResource(R.string.next), onConfirm = {
                     chooseFormat { p -> csvPattern = p; runCatching { openExport.launch(arrayOf("text/*", "application/octet-stream", "*/*")) } }
                 }, onDismiss = close)
             }

@@ -340,7 +340,7 @@ fun AlarmEditScreen(alarmId: Long, onBack: () -> Unit) {
                 SettingItem(stringResource(R.string.alarm_row_label), a.name.ifEmpty { stringResource(R.string.alarm_label_none) }) { dialog = "label" }
                 SettingItem(stringResource(R.string.alarm_row_repeat), Week.summary(ctx, a.dow, noRepeatText = true).trim()) { dialog = "repeat" }
             }
-            SettingItem(stringResource(R.string.alarm_row_tone), settings.toneName) { dialog = "tone" }
+            SettingItem(stringResource(R.string.alarm_row_tone), if (settings.toneUri == null) stringResource(R.string.alarm_default_tone) else settings.toneName) { dialog = "tone" }
             SettingItem(stringResource(R.string.alarm_row_snooze), settings.snooze.toString()) { dialog = "snooze" }
             SettingItem(
                 stringResource(R.string.alarm_row_vibrate),
@@ -379,7 +379,7 @@ fun AlarmEditScreen(alarmId: Long, onBack: () -> Unit) {
         }
         "repeat" -> alarm?.let { a ->
             MultiChoiceDialog(
-                stringResource(R.string.alarm_scheduled_days), Week.LONG.toList(), (0..6).map { Week.has(a.dow, it) },
+                stringResource(R.string.alarm_scheduled_days), Week.longNames(), (0..6).map { Week.has(a.dow, it) },
                 onToggle = { i, on -> alarm = alarm!!.let { cur -> cur.copy(dow = if (on) cur.dow or (1 shl i) else cur.dow and (1 shl i).inv()) } },
                 onDismiss = { dialog = null },
             )

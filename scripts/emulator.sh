@@ -8,6 +8,12 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 APK="$ROOT/dist/SleepBot-4.0.0-debug.apk"
 [ "${1:-}" = "--build" ] && { (cd "$ROOT" && ./gradlew :app:assembleDebug -q); APK="$ROOT/app/build/outputs/apk/debug/app-debug.apk"; }
 
+# A headless emulator (e.g. left over from screenshot runs) shows nothing — replace it with a windowed one.
+if pgrep -f "qemu-system.*-headless.*-avd sb" >/dev/null; then
+  "$ADB" emu kill >/dev/null 2>&1 || true
+  while "$ADB" devices | grep -q emulator; do sleep 1; done
+fi
+
 if ! "$ADB" devices | grep -q emulator; then
   "$SDK/emulator/emulator" -avd sb -no-boot-anim >/dev/null 2>&1 &
   "$ADB" wait-for-device

@@ -10,6 +10,8 @@ import androidx.compose.material3.TimePicker
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+import com.sleepbot.app.R
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
@@ -25,9 +27,9 @@ fun DatePickDialog(initial: LocalDate, onPick: (LocalDate) -> Unit, onDismiss: (
             TextButton({
                 state.selectedDateMillis?.let { onPick(Instant.ofEpochMilli(it).atZone(ZoneOffset.UTC).toLocalDate()) }
                 onDismiss()
-            }) { Text("OK") }
+            }) { Text(stringResource(R.string.ok)) }
         },
-        dismissButton = { TextButton(onDismiss) { Text("Cancel") } },
+        dismissButton = { TextButton(onDismiss) { Text(stringResource(R.string.cancel)) } },
     ) { DatePicker(state) }
 }
 
@@ -37,8 +39,8 @@ fun TimePickDialog(initial: LocalTime, is24h: Boolean, onPick: (LocalTime) -> Un
     val state = rememberTimePickerState(initial.hour, initial.minute, is24h)
     AlertDialog(
         onDismissRequest = onDismiss,
-        confirmButton = { TextButton({ onPick(LocalTime.of(state.hour, state.minute)); onDismiss() }) { Text("OK") } },
-        dismissButton = { TextButton(onDismiss) { Text("Cancel") } },
+        confirmButton = { TextButton({ onPick(LocalTime.of(state.hour, state.minute)); onDismiss() }) { Text(stringResource(R.string.ok)) } },
+        dismissButton = { TextButton(onDismiss) { Text(stringResource(R.string.cancel)) } },
         text = { TimePicker(state) },
     )
 }

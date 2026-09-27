@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.sleepbot.app.R
 import com.sleepbot.app.app
@@ -101,10 +102,10 @@ fun MainScreen(
 private fun Header(onOpenAlarms: () -> Unit, onOpenSettings: () -> Unit) {
     Box(Modifier.fillMaxWidth().height(48.dp)) {
         Box(Modifier.fillMaxSize().drawableBackground(R.drawable.namebar))
-        Image(painterResource(R.drawable.sleepbot_logo), "SleepBot", Modifier.align(Alignment.Center).height(48.dp))
-        PressableImage(R.drawable.alarm_unselected, R.drawable.alarm_selected, "Alarms", onOpenAlarms,
+        Image(painterResource(R.drawable.sleepbot_logo), stringResource(R.string.cd_logo), Modifier.align(Alignment.Center).height(48.dp))
+        PressableImage(R.drawable.alarm_unselected, R.drawable.alarm_selected, stringResource(R.string.alarms), onOpenAlarms,
             Modifier.align(Alignment.CenterStart).width(56.dp).height(48.dp))
-        PressableImage(R.drawable.settings_unselected, R.drawable.settings_selected, "Settings", onOpenSettings,
+        PressableImage(R.drawable.settings_unselected, R.drawable.settings_selected, stringResource(R.string.settings), onOpenSettings,
             Modifier.align(Alignment.CenterEnd).width(56.dp).height(48.dp))
     }
 }

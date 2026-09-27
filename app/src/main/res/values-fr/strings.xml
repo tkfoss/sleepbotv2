@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hour_n">%d heure</string>
+    <string name="hours_n">%d heures</string>
+    <string name="day_n">%d jour</string>
+    <string name="days_n">%d jours</string>
+    <string name="alarm_has_occurred">L’alarme a eu lieu</string>
+    <string name="punched_in_since">Pointage sommeil(punch in)depuis %s</string>
+    <string name="status_set_sleep">Statut activée pour le sommeil</string>
+    <string name="status_set_wake">Statut mis à réveil</string>
+    <string name="not_punched_in">SleepBot – Pas de pointage</string>
+    <string name="mode_smart">Smart Alarm mode. Motion tracking starts 30 min before first alarm.</string>
+    <string name="mode_complete">Complete mode. SleepBot will track your movements and sounds, and wake you up at the optimal time 30 min before your first alarm.</string>
+    <string name="entry_created_title">Donnée créée!</string>
+    <string name="entry_created_msg">Vous avez dormis depuis:\n%1$s – %2$s\n(%3$s)</string>
+    <string name="future_title">L’heure du sommeil est dans le futur</string>
+    <string name="future_no_record">Aucun enregistrement</string>
+    <string name="future_zero_record">0 \'enregistrement</string>
+    <string name="future_no_offset">Pas de décalage</string>
+    <string name="future_no_record_toast">Statut change à réveil sans ajout de nouvelle donnée.</string>
+    <string name="current_session_title">Session de sommeil en cours</string>
+    <string name="awake_since">Vous avez été réveillé depuis %1$d heures %2$d minutes.</string>
+    <string name="reset_debt_q">Voulez vous redémarrer votre mesure du déficit?</string>
+    <string name="reset_debt_title">Réinitialise le déficit</string>
+    <string name="reset_debt_msg">Réinitialiser le déficit va effacer le déficit courant et redémarrer le calcul à partir d’aujourd’hui. \n\n*Cela ne change que la date de départ du calcul, il n’y a pas de modification des données. \n\n*Le déficit pour aujourd’hui sera cependant calculé, égal à la différence entre la durée réalisée et la durée optimale définie.</string>
+    <string name="reset_debt_done">Reset du déficit réalisé! La prochaine fois la page d’accueil affichera la nouvelle valeur.</string>
+    <string name="confirm">Confirmer</string>
+    <string name="cancel">Annuler</string>
+    <string name="edit">Modifier</string>
+    <string name="delete">Supprime…</string>
+    <string name="save">Enregistrer</string>
+    <string name="share">Partage</string>
+    <string name="view">Vue</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="from">De:</string>
+    <string name="to">à</string>
+    <string name="col_sleep">Couché</string>
+    <string name="col_wake">Reveil</string>
+    <string name="col_hours">heures</string>
+    <string name="col_debt">Déficit</string>
+    <string name="share_caps">Partage</string>
+    <string name="delete_confirm_title">Confirmation de suppression</string>
+    <string name="delete_confirm_msg">Êtes vous sur de vouloir supprimer cette entrée?</string>
+    <string name="period_stats">Période Statistique</string>
+    <string name="period_stats_note">Note: S’il n’y a pas de données collectées sur un jour particulier, il ne sera pas inclut dans la periode en analyse statistique. Si vous n’avez pas dormi sur un jour complet, merci de saisir un enregistrement avec une durée de sommeil à 0, comme cela il sera inclus dans l’étude.</string>
+    <string name="export_title">Export réussi</string>
+    <string name="export_to">Exporter vers</string>
+    <string name="export_subject">SleepBot: Données du sommeil exporté dans %s</string>
+    <string name="duration">Durée:</string>
+    <string name="sleep_time">Heure de couché :</string>
+    <string name="wake_time">Heure de réveil :</string>
+    <string name="invalid_time">Temps défini invalide, le couché doit être avant le réveil.</string>
+    <string name="cancel_caps">Annuler</string>
+    <string name="delete_caps">Supprime…</string>
+    <string name="save_caps">Enregistrer</string>
+    <string name="share_entry">Partager cette entrée</string>
+    <string name="current_sleep_records">Enregistrement courant</string>
+    <string name="trend">Tendance</string>
+    <string name="length">Longueur</string>
+    <string name="pattern">Motif</string>
+    <string name="sleep_caps">Couché</string>
+    <string name="wake_caps">Reveil</string>
+    <string name="title_trend">Tendance des heures de sommeil</string>
+    <string name="title_length">Durée enregistrée</string>
+    <string name="title_pattern">Distribution des temps de sommeil</string>
+    <string name="title_sleep">Heure du couché</string>
+    <string name="title_wake">Heure du lever</string>
+    <string name="alarm_clock_label">Alarm Klock</string>
+    <string name="add_alarm">Ajouter alarme …</string>
+    <string name="alarm_no_repeats">Pas de repetition</string>
+    <string name="alarm_every_day">Tous les jours</string>
+    <string name="alarm_weekdays">Jours de semaine</string>
+    <string name="alarm_status_text">Alarme suivante: %1$s (%2$s)</string>
+    <string name="dismiss_slider">ETEINDRE</string>
+    <string name="alarm_time_out">Heure de l’alarme</string>
+    <string name="time_out_error">ATTENTION: Cette alarme est en attente de validation.</string>
+    <string name="snooze">SONNE PLUS TARD</string>
+    <string name="alarm_edit">Modifier</string>
+    <string name="alarm_delete_ellipsis">Supprime…</string>
+    <string name="alarm_delete_all">Supprime tout…</string>
+    <string name="alarm_default_settings">Paramètres d’alarme par défaut…</string>
+    <string name="alarm_confirm_delete">Confirmer suppression?</string>
+    <string name="alarm_settings_header">Paramètres</string>
+    <string name="alarm_default_settings_header">Paramètres d’alarme par défaut…</string>
+    <string name="alarm_row_time">Temps</string>
+    <string name="alarm_row_label">Identifiant</string>
+    <string name="alarm_row_repeat">Répétition</string>
+    <string name="alarm_row_tone">Son</string>
+    <string name="alarm_row_snooze">Report de sonnerie (minutes)</string>
+    <string name="alarm_row_vibrate">Vibrer</string>
+    <string name="alarm_row_fade">Augmentation du volume de l’alarme</string>
+    <string name="alarm_label_none">Sans</string>
+    <string name="alarm_label_title">Identifiant alarme</string>
+    <string name="alarm_enabled">Mise en route</string>
+    <string name="alarm_disabled">Arrêt</string>
+    <string name="alarm_fade_summary">Depuis %1$d%% a %2$d%% pour %3$d secondes.</string>
+    <string name="alarm_fade_start">Volume initial (pourcent)</string>
+    <string name="alarm_fade_end">Volume final (pourcent)</string>
+    <string name="alarm_fade_time">Durée augmentation (secondes)</string>
+    <string name="alarm_scheduled_days">Jours planifiés</string>
+    <string name="alarm_unknown_name">Nom inconnu</string>
+    <string name="alarm_cancel">Annuler</string>
+    <string name="alarm_default_tone">Défaut</string>
+    <string name="tutorial_3_3">The smart alarm will wake you up within 30min pr your selected range. before your first alarm, during lightest sleep.\n\n\n(e.g. this is for an 8:30 AM smart alarm!)</string>
+    <string name="intent_error_invalid">Clé secrète d\'appairage invalide.</string>
+    <string name="intent_error_reject">L\'utilisateur à désactivé l\'integration des applications tierces.</string>
+    <string name="settings">Paramètres</string>
+    <string name="about">A propos</string>
+    <string name="next">Suivant</string>
+    <string name="done_label">OK</string>
+    <string name="error">Erreur</string>
+    <string name="please_wait">Attendez…</string>
+    <string name="error_intent_empty_msg">Aucune activité n\'a été trouvée pour effectuer cette action.</string>
+    <string name="options_hours_title">Heures optimales</string>
+    <string name="options_hours_summary">Heures optimales pour un sommeil durable</string>
+    <string name="options_delay_min_title">Temps de décalage pour pointage</string>
+    <string name="options_delay_min_summary">Permet pointage avant que vous dormiez pour tenir compte de votre durée d\'endormissement.</string>
+    <string name="pref_alarm_klock_settings_title">Paramètres Alarm Klock</string>
+    <string name="pref_cat_adv_data">Sauvegarde &amp; Restauration</string>
+    <string name="pref_adv_main_title">Paramètres avancés</string>
+    <string name="options_soundmode_title">Silence automatique</string>
+    <string name="options_soundmode_summary">Coupe la sonnerie de votre téléphone pendant votre sommeil</string>
+    <string name="options_auto_alarm_summary">Creates an alarm that automatically rings the \"optimal number of hours\" (including offset) after punching in.</string>
+    <string name="options_default_graph_title">Graphique par défaut</string>
+    <string name="options_default_graph_summary">Choisissez le graphique affiché dans l’index de suivi.</string>
+    <string name="options_notification_sleep_title">Texte de rappel de sommeil</string>
+    <string name="options_notification_sleep_summary">Personnalisez le message de réveil apparaissant dans les notifications.</string>
+    <string name="options_notification_awake_title">Texte pour rappel de réveil</string>
+    <string name="options_notification_awake_summary">Personnalisez le message de réveil apparaissant dans les notifications.</string>
+    <string name="pref_sleep_notification_default">Toucher pour arrêter (punch out).</string>
+    <string name="pref_awake_notification_default">Toucher pour démarrer (punch in)</string>
+    <string name="pref_adv_backup_title">Sauvegarde</string>
+    <string name="restore_backup_title">Restaurer à partir du fichier de sauvegarde</string>
+    <string name="restore_old_file_title">Restaurer à partir d\'un fichier d\'exportation</string>
+    <string name="restore_old_file_summary">Restaurer les entrées de fichiers générés par la fonction d\'exportation.</string>
+    <string name="restore_old_file_body">Du fait que les fichier export n\'ont pas été concus initialement à fin de sauvegarde et restauration, choisissez à l\'étaoe suivante le format de dates correspondant au format de date utilisé dans le texte. Choisissez le même format de date à celui utilisé lors de l\'export pour assurer une importation correcte (Si une autre application du Market importe des données Sleepbot sans vous demander le format des dates, vous devrez vérifier que les données ont été importées correctement).</string>
+    <string name="restore_confirm_title">Confirmer la restauration</string>
+    <string name="restore_progress_title">Restaure SleepBot</string>
+    <string name="backup_progress_title">Sauvegarde de SleepBot</string>
+    <string name="pref_adv_restore_title">Restauration</string>
+    <string name="error_restore_file_malformatted">Le fichier de restauration n\'a pas un format valide ou il est endommagé, restauration annulée.</string>
+    <string name="pref_adv_cat_others">Autres paramètres</string>
+    <string name="pref_adv_length_title">Plage de déficit courant</string>
+    <string name="pref_adv_length_summary">Choisissez 7, 10, ou 14 jours pour la plage de calcul de votre déficit de sommeil figurant sur la page d\'accueil.</string>
+    <string name="pref_adv_security_third_party_title">Permettre l\'intégration</string>
+    <string name="pref_adv_security_third_party_summary">Permet à des application tierces de mettre en veille/réveiller SleepBot.</string>
+    <string name="pref_adv_variable_block_title">Anti Re-Punch</string>
+    <string name="pref_adv_variable_block_summary">Empêche un punch-in accidentel en bloquant toute tentative pendant un certain laps de temps.</string>
+    <string name="notification_icon_title">Affiche l’icone de notification</string>
+    <string name="notification_icon_on">Affiche une icone en cas d’alarme en attente</string>
+    <string name="notification_icon_off">N’affiche pas d’icone en cas d’alarme en attente</string>
+    <string name="time_out_summary">Une alarme en fonctionnement sera automatiquement éteinte après ce délai.</string>
+    <string name="summary_num_records">Nombre d’enregistrements:</string>
+    <string name="summary_num_days">Nombre de jours:</string>
+    <string name="summary_total_sleep">Durée totale de sommeil:</string>
+    <string name="summary_avg_daily">Durée moyenne journalière:</string>
+    <string name="summary_avg_record">Sommeil moy./enreg.:</string>
+    <string name="summary_cum">Déficit cumulé:</string>
+    <string name="hours_ori">heures</string>
+    <string name="channel_alarm_status">Alarme suivante:</string>
+    <string-array name="range_choices">
+        <item>Tous</item>
+        <item>Derniers 10 jours</item>
+        <item>30 jours</item>
+        <item>60 jours</item>
+        <item>180 jours</item>
+        <item>360 jours</item>
+    </string-array>
+    <string-array name="hour_entries">
+        <item>3 Heures</item>
+        <item>3.5 Heures</item>
+        <item>4 Heures</item>
+        <item>4.5 Heures</item>
+        <item>5 Heures</item>
+        <item>5.5 Heures</item>
+        <item>6 Heures</item>
+        <item>6.5 Heures</item>
+        <item>7 Heures</item>
+        <item>7.5 Heures</item>
+        <item>8 Heures</item>
+        <item>8.5 Heures</item>
+        <item>9 Heures</item>
+        <item>9.5 Heures</item>
+        <item>10 Heures</item>
+        <item>10,5 heures</item>
+        <item>11 heures</item>
+    </string-array>
+    <string-array name="delay_min_entries">
+        <item>Pas de décalage (0)</item>
+        <item>+5 minutes</item>
+        <item>+10 minutes</item>
+        <item>+15 minutes</item>
+        <item>+30 minutes</item>
+        <item>+45 minutes</item>
+        <item>+1 heure</item>
+        <item>+1 heure 20 minutes</item>
+        <item>+1 heure 40 minutes</item>
+        <item>+2 heures</item>
+    </string-array>
+    <string-array name="sound_mode">
+        <item>Ne rien faire</item>
+        <item>Silence + vibreur</item>
+        <item>Silence sans vibreur</item>
+    </string-array>
+    <string-array name="default_graph_entries">
+        <item>Tendance du temps de sommeil</item>
+        <item>Modèle de distribution du sommeil</item>
+    </string-array>
+    <string-array name="date_entries">
+        <item>Mois/Jour/Année</item>
+        <item>Jour / Mois / Année</item>
+        <item>Année / Mois / Jour</item>
+    </string-array>
+</resources>

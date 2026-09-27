@@ -29,6 +29,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -62,9 +63,10 @@ private fun rememberPrefState(sp: SharedPreferences): PrefState {
     return remember(sp) { PrefState(sp, v) }
 }
 
-private enum class Page(val title: String) {
-    ROOT("Settings"), REMINDER("Bedtime Reminder"), TRACKING("Sleep Tracking"), APPEARANCE("Appearance"),
-    BACKUP("Backup & Sync"), ADVANCED("Advanced Settings"), ALARM("Alarm Clock Settings"),
+private enum class Page(val title: Int) {
+    ROOT(R.string.settings), REMINDER(R.string.sleep_reminder), TRACKING(R.string.pref_sc_sleep_tracking),
+    APPEARANCE(R.string.pref_sc_look_and_feel), BACKUP(R.string.pref_cat_adv_data), ADVANCED(R.string.pref_adv_main_title),
+    ALARM(R.string.pref_alarm_klock_settings_title),
 }
 
 /** Legacy SettingActivity (res/xml/options.xml), sub-screens as nested in-composable navigation. */
@@ -85,7 +87,7 @@ fun SettingsScreen(onBack: () -> Unit, onAlarmDefaults: () -> Unit, onOpenHtml: 
     val ui = PrefUi(ctx, ps, show, close)
 
     Column(Modifier.fillMaxSize().background(SB.EditorBg).windowInsetsPadding(WindowInsets.systemBars)) {
-        NamebarHeader(page.title, onBack = goBack)
+        NamebarHeader(stringResource(page.title), onBack = goBack)
         Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState())) {
             when (page) {
                 Page.ROOT -> RootPage(ui, open, onOpenHtml)
@@ -179,40 +181,45 @@ private fun startOfToday() = Calendar.getInstance().apply {
 
 private fun safeStart(ctx: Context, intent: Intent) {
     try { ctx.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) } catch (_: ActivityNotFoundException) {
-        Toast.makeText(ctx, "No activity found to perform this action.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(ctx, R.string.error_intent_empty_msg, Toast.LENGTH_SHORT).show()
     }
 }
 
 // ---- pages -------------------------------------------------------------------------------
 
 private val OPTIMAL_VALUES = (6..22).map { it / 2.0 }.map { if (it % 1.0 == 0.0) it.toInt().toString() else it.toString() }
-private val OPTIMAL_LABELS = OPTIMAL_VALUES.map { "$it Hours" }
+
+@Composable
+private fun s(id: Int) = stringResource(id)
+
+@Composable
+private fun a(id: Int) = stringArrayResource(id).toList()
 
 @Composable
 private fun RootPage(ui: PrefUi, open: (Page) -> Unit, onOpenHtml: (String) -> Unit) {
     val ctx = ui.ctx
     ListPref(
-        ui, "optimal_hours", "Optimal Hour", "Your ideal goal for sleep duration",
-        OPTIMAL_LABELS, OPTIMAL_VALUES, "8", onChanged = { reschedReminders(ctx); ctx.app.alarms.refresh() },
+        ui, "optimal_hours", s(R.string.options_hours_title), s(R.string.options_hours_summary),
+        a(R.array.hour_entries), OPTIMAL_VALUES, "8",
+        onChanged = { reschedReminders(ctx); ctx.app.alarms.refresh() },
     )
     ListPref(
-        ui, "punch_in_delay", "Punch-in time offset",
-        "Lets you punch-in before you go to sleep/fall asleep to create more accurate sleep time.",
-        listOf("No offset", "+5 minutes", "+10 minutes", "+15 minutes", "+30 minutes", "+45 minutes", "+1 hour",
-            "+1 hour 20 minutes", "+1 hour 40 minutes", "+2 hours"),
-        listOf("0", "5", "10", "15", "30", "45", "60", "80", "100", "120"), "0",
+        ui, "punch_in_delay", s(R.string.options_delay_min_title), s(R.string.options_delay_min_summary),
+        a(R.array.delay_min_entries), listOf("0", "5", "10", "15", "30", "45", "60", "80", "100", "120"), "0",
     )
-    SubPage("Bedtime Reminder", "Get reminded when it is time to go to sleep") { open(Page.REMINDER) }
-    SubPage("Sleep Tracking", "Silence, auto alarm, smart alarm, movement and sound options") { open(Page.TRACKING) }
-    CategoryHeader("Application")
-    SubPage("Appearance") { open(Page.APPEARANCE) }
-    SubPage("Alarm Clock Settings") { open(Page.ALARM) }
-    SubPage("Backup & Sync") { open(Page.BACKUP) }
-    SubPage("Advanced Settings") { open(Page.ADVANCED) }
-    CategoryHeader("About")
-    PrefRow("SleepBot 4.0.0", "View update notice.", onClick = { onOpenHtml("update.html") })
-    PrefRow("Rate SleepBot!", onClick = {
-        safeStart(ctx, Intent.createChooser(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + ctx.packageName)), "Rate SleepBot!"))
+    SubPage(s(R.string.sleep_reminder), s(R.string.pref_reminder_summary)) { open(Page.REMINDER) }
+    SubPage(s(R.string.pref_sc_sleep_tracking), s(R.string.pref_tracking_summary)) { open(Page.TRACKING) }
+    CategoryHeader(s(R.string.setting_title_app))
+    SubPage(s(R.string.pref_sc_look_and_feel)) { open(Page.APPEARANCE) }
+    SubPage(s(R.string.pref_alarm_klock_settings_title)) { open(Page.ALARM) }
+    SubPage(s(R.string.pref_cat_adv_data)) { open(Page.BACKUP) }
+    SubPage(s(R.string.pref_adv_main_title)) { open(Page.ADVANCED) }
+    CategoryHeader(s(R.string.about))
+    val version = remember { runCatching { ctx.packageManager.getPackageInfo(ctx.packageName, 0).versionName }.getOrNull().orEmpty() }
+    PrefRow(stringResource(R.string.pref_version, version), s(R.string.pref_view_update_notice), onClick = { onOpenHtml("update.html") })
+    val rate = s(R.string.rate_sleepbot)
+    PrefRow(rate, onClick = {
+        safeStart(ctx, Intent.createChooser(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + ctx.packageName)), rate))
     })
 }
 
@@ -220,157 +227,139 @@ private fun RootPage(ui: PrefUi, open: (Page) -> Unit, onOpenHtml: (String) -> U
 private fun ReminderPage(ui: PrefUi) {
     val ctx = ui.ctx
     val r = { _: Any -> reschedReminders(ctx); Unit }
-    CategoryHeader("Bedtime Reminder")
-    CheckPref(
-        ui, "reminder1", "Enable Bedtime Reminder",
-        "Bedtime Reminder will remind you to go to sleep base on your alarm settings if you have not punched in by the time already.",
-        onChanged = r,
-    )
+    CategoryHeader(s(R.string.sleep_reminder))
+    CheckPref(ui, "reminder1", s(R.string.sleep_reminder_title), s(R.string.sleep_reminder_summary), onChanged = r)
     ListPref(
-        ui, "reminder1_offset", "Remind time offset",
-        "Next alarm time - (optimal wake up time) - (remind time offset) = remind time.",
-        listOf("15 minutes before", "30 minutes before", "45 minutes before", "1 hour before", "2 hours before"),
-        listOf("15", "30", "45", "60", "120"), "30", enabled = ui.ps.bool("reminder1", false), onChanged = r,
+        ui, "reminder1_offset", s(R.string.times_before_offset), s(R.string.times_before_offset_summary),
+        a(R.array.sleep_reminder_offsets), listOf("15", "30", "45", "60", "120"), "30",
+        enabled = ui.ps.bool("reminder1", false), onChanged = r,
     )
-    CheckPref(ui, "reminder2", "Enable 2nd Reminder", "Have a second reminder in case you are still not asleep yet.", onChanged = r)
+    CheckPref(ui, "reminder2", s(R.string.sleep_reminder_title_2nd), s(R.string.sleep_reminder_summary_2nd), onChanged = r)
     ListPref(
-        ui, "reminder2_offset", "2nd Remind time offset",
-        "Next alarm time - (optimal wake up time) - (2nd remind time offset) = 2nd remind time.",
-        listOf("15 minutes after", "30 minutes after", "45 minutes after", "1 hour after", "2 hours after"),
-        listOf("-15", "-30", "-45", "-60", "-120"), "-15", enabled = ui.ps.bool("reminder2", false), onChanged = r,
+        ui, "reminder2_offset", s(R.string.times_before_offset_2nd), s(R.string.times_before_offset_summary_2nd),
+        a(R.array.sleep_reminder_offsets_2nd), listOf("-15", "-30", "-45", "-60", "-120"), "-15",
+        enabled = ui.ps.bool("reminder2", false), onChanged = r,
     )
-    CheckPref(ui, "reminder_no_later", "No Reminder Later", "Do not show remind later dialog.", onChanged = r)
-    CheckPref(ui, "reminder_muted", "No Notification Sound", "Do not play a notification sound for the reminder.", onChanged = r)
+    CheckPref(ui, "reminder_no_later", s(R.string.no_reminder_snooze), s(R.string.no_reminder_summary), onChanged = r)
+    CheckPref(ui, "reminder_muted", s(R.string.reminder_mute_title), s(R.string.reminder_mute_summary), onChanged = r)
 }
 
 @Composable
 private fun TrackingPage(ui: PrefUi) {
     val ctx = ui.ctx
-    CategoryHeader("General")
+    CategoryHeader(s(R.string.setting_title_general))
+    val silenceTitle = s(R.string.options_soundmode_title)
     ListPref(
-        ui, "auto_silence", "AutoSilence", "Silence your phone while you sleep",
-        listOf("Do nothing", "Silent+Vibrate", "Silent without vibrate"), listOf("0", "1", "2"), "0",
+        ui, "auto_silence", silenceTitle, s(R.string.options_soundmode_summary),
+        a(R.array.sound_mode), listOf("0", "1", "2"), "0",
         onChanged = { v ->
             val nm = ctx.getSystemService(NotificationManager::class.java)
             if (v != "0" && !nm.isNotificationPolicyAccessGranted) {
                 ui.show {
                     MessageDialog(
-                        "AutoSilence",
-                        "To silence your phone while you sleep, SleepBot needs \"Do Not Disturb\" access. Alarms will still ring.",
-                        confirm = "Grant", onConfirm = {
+                        silenceTitle, s(R.string.dnd_access_msg),
+                        confirm = s(R.string.alarm_grant), onConfirm = {
                             ui.close(); safeStart(ctx, Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS))
-                        }, dismiss = stringResourceSafe(ctx, R.string.cancel), onDismiss = ui.close,
+                        }, dismiss = s(R.string.cancel), onDismiss = ui.close,
                     )
                 }
             }
         },
     )
+    CheckPref(ui, "auto_alarm", s(R.string.options_auto_alarm_title), s(R.string.options_auto_alarm_summary))
+    CategoryHeader(s(R.string.pref_cat_movement_tracking))
     CheckPref(
-        ui, "auto_alarm", "Auto Alarm On",
-        "Creates an alarm that automatically rings the optimal number of hours (including offset) after punching in.",
-    )
-    CategoryHeader("Movement Tracking")
-    CheckPref(
-        ui, "screen_off_tracking", "Screen Off Tracking", "Some phones may support movement tracking with screen turned off.",
+        ui, "screen_off_tracking", s(R.string.pref_allow_screen_off_title), s(R.string.pref_allow_screen_off_summary),
         default = true,
         beforeEnable = { commit ->
             ui.show {
                 MessageDialog(
-                    null,
-                    "Please note that if movement graphs shows all 0's, it means that your phone does not support screen off tracking and you should leave this option unchecked.",
-                    confirm = "Agree", onConfirm = { ui.close(); commit() }, onDismiss = ui.close,
+                    null, s(R.string.pref_allow_screen_off_warning),
+                    confirm = s(R.string.agree), onConfirm = { ui.close(); commit() }, onDismiss = ui.close,
                 )
             }
         },
     )
-    CategoryHeader("Smart Alarm")
+    CategoryHeader(s(R.string.pref_cat_smart_alarm))
     ListPref(
-        ui, "smart_window", "Alarm Range", "Time range before first alarm for optimal wake-up.",
-        listOf("15 minutes before", "30 minutes before", "45 minutes before", "60 minutes before", "90 minutes before"),
-        listOf("15", "30", "45", "60", "90"), "30", onChanged = { ctx.app.alarms.refresh() },
+        ui, "smart_window", s(R.string.pref_time_alarm_range_title), s(R.string.pref_time_alarm_range_summary),
+        a(R.array.alarm_range_entries), listOf("15", "30", "45", "60", "90"), "30", onChanged = { ctx.app.alarms.refresh() },
     )
     ListPref(
-        ui, "motion_sensitivity", "Movement Sensitivity", "Adjust to optimize smart alarm for your bed and phone.",
-        listOf("Very Low (soft bed + sensitive phones)", "Low", "Normal", "High", "Very High (for very hard beds)"),
-        listOf("0", "1", "2", "3", "4"), "2",
+        ui, "motion_sensitivity", s(R.string.pref_movement_sensitivity_title), s(R.string.pref_movement_sensitivity_summary),
+        a(R.array.movement_sensitivity_entries), listOf("0", "1", "2", "3", "4"), "2",
     )
-    CategoryHeader("Sound Recording")
+    CategoryHeader(s(R.string.pref_cat_sound_recording))
     ListPref(
-        ui, "sound_sensitivity", "Recording Sensitivity",
-        "Sound recording begins when volume is greater than the threshold",
-        listOf("Very Low (record only very loud sounds)", "Low", "Normal", "High", "Very High (record nearly all sounds)"),
-        listOf("0", "1", "2", "3", "4"), "2",
+        ui, "sound_sensitivity", s(R.string.pref_sound_sensitivity_title), s(R.string.pref_sound_sensitivity_summary),
+        a(R.array.sound_sensitivity_entries_v4), listOf("0", "1", "2", "3", "4"), "2",
     )
-    PrefRow(
-        "Delete Older Files",
-        "Running out of space? Delete local sound files that are older than 7 days.",
-        onClick = {
-            ui.show {
-                MessageDialog(
-                    "Delete Older Files", "Deleting older sound files is irreversible.",
-                    confirm = "Confirm", onConfirm = {
-                        ui.close()
-                        val cutoff = System.currentTimeMillis() - 7 * 86_400_000L
-                        val n = File(ctx.filesDir, "sounds").listFiles()?.count { f ->
-                            val ts = f.name.substringBefore('.').toLongOrNull() ?: f.lastModified()
-                            ts < cutoff && f.delete()
-                        } ?: 0
-                        Toast.makeText(ctx, "$n files deleted", Toast.LENGTH_SHORT).show()
-                    }, dismiss = "Cancel", onDismiss = ui.close,
-                )
-            }
-        },
-    )
+    val deleteTitle = s(R.string.delete_older_sound_files)
+    PrefRow(deleteTitle, s(R.string.delete_older_sound_files_7), onClick = {
+        ui.show {
+            MessageDialog(
+                deleteTitle, s(R.string.delete_older_sound_files_message),
+                confirm = s(R.string.confirm), onConfirm = {
+                    ui.close()
+                    val cutoff = System.currentTimeMillis() - 7 * 86_400_000L
+                    val n = File(ctx.filesDir, "sounds").listFiles()?.count { f ->
+                        val ts = f.name.substringBefore('.').toLongOrNull() ?: f.lastModified()
+                        ts < cutoff && f.delete()
+                    } ?: 0
+                    Toast.makeText(ctx, ctx.getString(R.string.files_deleted, n), Toast.LENGTH_SHORT).show()
+                }, dismiss = s(R.string.cancel), onDismiss = ui.close,
+            )
+        }
+    })
 }
-
-private fun stringResourceSafe(ctx: Context, id: Int) = ctx.getString(id)
 
 @Composable
 private fun AppearancePage(ui: PrefUi) {
     val ctx = ui.ctx
-    CategoryHeader("Appearance")
-    CheckPref(ui, "show_alt_number", "Show alternate display", "Un-check if you want to hide the alternate information.", default = true)
-    ListPref(
-        ui, "entry_hour_format", "Entry List Hours Format",
-        "For phones with big screens, you can use non-decimal format to display total hour and debt numbers.",
-        listOf("decimal (3.5)", "time (03:30)"), listOf("decimal", "time"), "decimal",
-    )
-    ListPref(
-        ui, "home_display", "Default Display", "Set what to show on home tab's main display number.",
-        listOf("Today's Sleep", "Current Debt"), listOf("today", "debt"), "today",
-    )
-    ListPref(
-        ui, "overview_graph", "Default Graph", "Choose the graph displayed on the tracking tab.",
-        listOf("Sleep Duration Trend", "Sleep Distribution Pattern"), listOf("0", "1"), "0",
-    )
+    CategoryHeader(s(R.string.pref_sc_look_and_feel))
     CheckPref(
-        ui, "hide_charging_warning", "No warning in Screen Off mode",
-        "Do not show charging warning if Screen Off mode is checked.",
+        ui, "show_alt_number", s(R.string.pref_alternate_display_show_title), s(R.string.pref_alternate_display_show_summary),
+        default = true,
     )
     ListPref(
-        ui, "notification_mode", "Status notification", "When to show SleepBot's punch-in status in the notification bar.",
-        listOf("Always", "Only while asleep", "Never"), listOf("0", "1", "2"), "1",
+        ui, "entry_hour_format", s(R.string.pref_hour_format_title), s(R.string.pref_hour_format_summary),
+        a(R.array.entry_list_hour_format_entries), listOf("decimal", "time"), "decimal",
+    )
+    ListPref(
+        ui, "home_display", s(R.string.pref_default_display_title), s(R.string.pref_default_display_summary),
+        a(R.array.default_display_entries), listOf("today", "debt"), "today",
+    )
+    ListPref(
+        ui, "overview_graph", s(R.string.options_default_graph_title), s(R.string.options_default_graph_summary),
+        a(R.array.default_graph_entries), listOf("0", "1"), "0",
+    )
+    CheckPref(ui, "hide_charging_warning", s(R.string.pref_no_warning_title), s(R.string.pref_no_warning_summary))
+    ListPref(
+        ui, "notification_mode", s(R.string.pref_notification_mode_title), s(R.string.pref_notification_mode_summary),
+        a(R.array.notification_mode_entries), listOf("0", "1", "2"), "1",
         onChanged = { refreshSessionNotification(ctx) },
     )
-    EditPref(ui, "sleep_notification_text", "Sleep Reminder Text", "Customize the sleep message shown in notifications.",
-        "Touch to punch out.") { refreshSessionNotification(ctx) }
-    EditPref(ui, "wake_notification_text", "Wake Reminder Text", "Customize the wake message shown in notifications.",
-        "Touch to punch in.") { refreshSessionNotification(ctx) }
-    CheckPref(ui, "disconnected_lines", "Dotted Lines", "Connect disconnected points using dotted lines on trend graph.", default = true)
+    EditPref(
+        ui, "sleep_notification_text", s(R.string.options_notification_sleep_title), s(R.string.options_notification_sleep_summary),
+        s(R.string.pref_sleep_notification_default),
+    ) { refreshSessionNotification(ctx) }
+    EditPref(
+        ui, "wake_notification_text", s(R.string.options_notification_awake_title), s(R.string.options_notification_awake_summary),
+        s(R.string.pref_awake_notification_default),
+    ) { refreshSessionNotification(ctx) }
+    CheckPref(
+        ui, "disconnected_lines", s(R.string.pref_title_show_disconnected_lines), s(R.string.pref_summary_show_disconnected_lines),
+        default = true,
+    )
 }
 
 @Composable
 private fun BackupPage(ui: PrefUi) {
-    CategoryHeader("Backup & Sync")
+    CategoryHeader(s(R.string.pref_cat_adv_data))
     BackupSection(ui.show, ui.close)
-    ListPref(
-        ui, "overview_graph", "Default Graph", "Choose the graph displayed on the tracking tab.",
-        listOf("Sleep Duration Trend", "Sleep Distribution Pattern"), listOf("0", "1"), "0",
-    )
-    CategoryHeader("Android Backup")
+    CategoryHeader(s(R.string.pref_android_backup))
     Text(
-        "Your sleep entries and settings are also backed up automatically by Android's device backup " +
-            "(Google account backup) and restored when you set up a new phone.",
+        s(R.string.pref_android_backup_text),
         Modifier.padding(horizontal = 16.dp, vertical = 10.dp), color = SummaryColor, fontSize = 14.sp,
     )
 }
@@ -378,29 +367,30 @@ private fun BackupPage(ui: PrefUi) {
 @Composable
 private fun AdvancedPage(ui: PrefUi) {
     val ctx = ui.ctx
-    CategoryHeader("Other Settings")
-    PrefRow("Reset Debt", "Restart the sleep debt calculation from today.", onClick = {
+    CategoryHeader(s(R.string.pref_adv_cat_others))
+    PrefRow(s(R.string.reset_debt_title), s(R.string.pref_reset_debt_summary), onClick = {
         ui.show {
             MessageDialog(
-                stringResourceSafe(ctx, R.string.reset_debt_title), stringResourceSafe(ctx, R.string.reset_debt_msg),
-                confirm = stringResourceSafe(ctx, R.string.reset), onConfirm = {
+                s(R.string.reset_debt_title), s(R.string.reset_debt_msg),
+                confirm = s(R.string.reset), onConfirm = {
                     ui.close()
                     ctx.app.prefs.debtResetTime = startOfToday()
                     Toast.makeText(ctx, R.string.reset_debt_done, Toast.LENGTH_LONG).show()
-                }, dismiss = stringResourceSafe(ctx, R.string.cancel), onDismiss = ui.close,
+                }, dismiss = s(R.string.cancel), onDismiss = ui.close,
             )
         }
     })
     ListPref(
-        ui, "debt_range", "Current Debt Range",
-        "Choose 7, 10, or 14 days for the date range used to calculate your Current Debt shown on the home tab.",
+        ui, "debt_range", s(R.string.pref_adv_length_title), s(R.string.pref_adv_length_summary),
         listOf("7", "10", "14"), listOf("7", "10", "14"), "10",
     )
-    CheckPref(ui, "allow_integration", "Enable Integration", "Allow third party applications to sleep/wake up SleepBot.", default = true)
+    CheckPref(
+        ui, "allow_integration", s(R.string.pref_adv_security_third_party_title), s(R.string.pref_adv_security_third_party_summary),
+        default = true,
+    )
     val guard = listOf("0.0s", "0.5s", "1.0s", "2.0s", "3.0s", "4.0s", "5.0s")
     ListPref(
-        ui, "repunch_guard", "Re-Punch-in Guard",
-        "Prevent accidental punch-ins by blocking any attempts within a certain period of time.",
+        ui, "repunch_guard", s(R.string.pref_adv_variable_block_title), s(R.string.pref_adv_variable_block_summary),
         guard, guard.map { it.dropLast(1) }, "1.0",
     )
 }
@@ -408,16 +398,15 @@ private fun AdvancedPage(ui: PrefUi) {
 @Composable
 private fun AlarmPage(ui: PrefUi, onAlarmDefaults: () -> Unit) {
     val ctx = ui.ctx
-    CategoryHeader("Alarm Clock Settings")
+    CategoryHeader(s(R.string.pref_alarm_klock_settings_title))
     CheckPref(
-        ui, "alarm_notification_icon", "Display notification icon", default = true,
-        summaryOn = "Display an icon when there are pending alarms",
-        summaryOff = "Do not display an icon when there are pending alarms",
+        ui, "alarm_notification_icon", s(R.string.notification_icon_title), default = true,
+        summaryOn = s(R.string.notification_icon_on), summaryOff = s(R.string.notification_icon_off),
         onChanged = { ctx.app.alarms.refresh() },
     )
     ListPref(
-        ui, "alarm_timeout", "Alarm time out", "A firing alarm will be automatically dismissed after this many minutes.",
+        ui, "alarm_timeout", s(R.string.alarm_time_out), s(R.string.time_out_summary),
         listOf("1", "5", "10", "30", "60"), listOf("1", "5", "10", "30", "60"), "10",
     )
-    PrefRow(stringResource(R.string.alarm_default_settings), "Default tone, snooze, vibrate and volume fade for new alarms", onClick = onAlarmDefaults)
+    PrefRow(s(R.string.alarm_default_settings), s(R.string.alarm_default_settings_summary), onClick = onAlarmDefaults)
 }

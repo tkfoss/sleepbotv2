@@ -42,6 +42,7 @@ import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.layer.drawLayer
 import androidx.compose.ui.graphics.rememberGraphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -64,6 +65,7 @@ import java.io.File
 @Composable
 fun OverviewTab(onOpenGraphs: () -> Unit) {
     val context = LocalContext.current
+    val res = LocalResources.current
     val app = context.app
     val prefs = app.prefs
     val prefTick by remember { prefs.changes() }.collectAsState(null)
@@ -71,8 +73,8 @@ fun OverviewTab(onOpenGraphs: () -> Unit) {
     val from = minOf(today - 9 * Debt.DAY, Debt.windowFrom(prefs))
     val entries by remember(prefTick, today) { app.db.entries().observeRange(from - Debt.DAY, today + Debt.DAY) }.collectAsState(emptyList())
     val spec = remember(entries, prefTick) {
-        if (prefs.overviewGraph == 1) Charts.pattern(entries, 10, context.getString(R.string.current_sleep_records), prefs, overview = true)
-        else Charts.trend(entries.filter { it.awake > today - 9 * Debt.DAY }, 10, context.getString(R.string.current_trend), prefs, ratings = false, overview = true)
+        if (prefs.overviewGraph == 1) Charts.pattern(entries, 10, res.getString(R.string.current_sleep_records), prefs, overview = true)
+        else Charts.trend(entries.filter { it.awake > today - 9 * Debt.DAY }, 10, res.getString(R.string.current_trend), prefs, ratings = false, overview = true)
     }
     val summary = remember(entries, prefTick) { Debt.summarize(entries, prefs) }
 
@@ -107,6 +109,7 @@ private enum class ChartKind { TREND, LENGTH, PATTERN, SLEEP, WAKE }
 fun GraphsScreen(onBack: () -> Unit) {
     LockOrientation()
     val context = LocalContext.current
+    val res = LocalResources.current
     val app = context.app
     val prefs = app.prefs
     val scope = rememberCoroutineScope()
@@ -127,11 +130,11 @@ fun GraphsScreen(onBack: () -> Unit) {
     val inRange = remember(entries, days) { entries.filter { it.awake > today - (days - 1) * Debt.DAY } }
     val spec = remember(inRange, kind, ratings, days) {
         when (kind) {
-            ChartKind.TREND -> Charts.trend(inRange, days, context.getString(R.string.title_trend), prefs, ratings, overview = false)
-            ChartKind.LENGTH -> Charts.length(inRange, days, context.getString(R.string.title_length))
-            ChartKind.PATTERN -> Charts.pattern(entries, days, context.getString(R.string.title_pattern), prefs, overview = false)
-            ChartKind.SLEEP -> Charts.hourTally(inRange, false, context.getString(R.string.title_sleep), prefs.is24h())
-            ChartKind.WAKE -> Charts.hourTally(inRange, true, context.getString(R.string.title_wake), prefs.is24h())
+            ChartKind.TREND -> Charts.trend(inRange, days, res.getString(R.string.title_trend), prefs, ratings, overview = false)
+            ChartKind.LENGTH -> Charts.length(inRange, days, res.getString(R.string.title_length))
+            ChartKind.PATTERN -> Charts.pattern(entries, days, res.getString(R.string.title_pattern), prefs, overview = false)
+            ChartKind.SLEEP -> Charts.hourTally(inRange, false, res.getString(R.string.title_sleep), prefs.is24h())
+            ChartKind.WAKE -> Charts.hourTally(inRange, true, res.getString(R.string.title_wake), prefs.is24h())
         }
     }
     val layer = rememberGraphicsLayer()
@@ -149,7 +152,7 @@ fun GraphsScreen(onBack: () -> Unit) {
         val send = Intent(Intent.ACTION_SEND).setType("image/png").putExtra(Intent.EXTRA_STREAM, uri)
             .putExtra(Intent.EXTRA_SUBJECT, spec.title).putExtra(Intent.EXTRA_TEXT, spec.title + " @SleepBot")
             .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        context.startActivity(Intent.createChooser(send, context.getString(R.string.share)))
+        context.startActivity(Intent.createChooser(send, res.getString(R.string.share)))
     }
 
     Column(Modifier.fillMaxSize().background(Color.Black).systemBarsPadding()) {

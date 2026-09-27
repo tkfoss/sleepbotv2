@@ -27,6 +27,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures { compose = true }
+    // Per-app language picker (Android 13+); locales come from res/values-*.
+    androidResources { generateLocaleConfig = true }
+    // Translations ported from 3.2.8 are partial; missing strings fall back to English.
+    lint { disable += "MissingTranslation" }
 }
 
 ksp {

@@ -1,8 +1,8 @@
 # SleepBot v2
 
-A modern rebuild of **SleepBot 3.2.8** (2013–2015) in Kotlin + Jetpack Compose. The original APK
-(`SleepBot+-+Sleep+Cycle+Alarm_3.2.8_APKPure.apk`) was decompiled with jadx/apktool; behaviour,
-formulas, texts and the original artwork were carried over, while platform plumbing was modernised.
+A modern rebuild of **SleepBot 3.2.8** (2013–2015) in Kotlin + Jetpack Compose. Behaviour, formulas,
+texts, translations and the original artwork were carried over from the 3.2.8 APK, while platform
+plumbing was modernised. This repo no longer depends on the old APK.
 
 ## Build
 
@@ -12,6 +12,9 @@ formulas, texts and the original artwork were carried over, while platform plumb
 ```
 
 Requires JDK 17+ and an Android SDK with platform 37 (`local.properties` → `sdk.dir`).
+
+Translations in `res/values-*/strings.xml` were ported once from 3.2.8 and are now maintained by hand.
+Strings missing from a language fall back to English.
 
 ## Layout
 

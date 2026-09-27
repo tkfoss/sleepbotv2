@@ -59,7 +59,7 @@ fun NamebarHeader(
         Text(title, Modifier.align(Alignment.Center), color = Color.White, fontSize = fontSize.sp)
         if (onBack != null) {
             IconButton(onBack, Modifier.align(Alignment.CenterStart)) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = Color.White)
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.back), tint = Color.White)
             }
         }
         Box(Modifier.align(Alignment.CenterEnd)) { actions() }

@@ -41,6 +41,7 @@ import androidx.compose.ui.graphics.layer.drawLayer
 import androidx.compose.ui.graphics.rememberGraphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -80,6 +81,7 @@ private enum class Pick { SLEEP_TIME, SLEEP_DATE, WAKE_TIME, WAKE_DATE }
 @Composable
 fun EntryEditScreen(entryId: Long, onBack: () -> Unit, onOpenSensors: (Long) -> Unit) {
     val context = LocalContext.current
+    val res = LocalResources.current
     val app = context.app
     val prefs = app.prefs
     val dao = app.db.entries()
@@ -145,8 +147,8 @@ fun EntryEditScreen(entryId: Long, onBack: () -> Unit, onOpenSensors: (Long) -> 
         sharing = false
         val uri = FileProvider.getUriForFile(context, context.packageName + ".files", file)
         val send = Intent(Intent.ACTION_SEND).setType("image/png").putExtra(Intent.EXTRA_STREAM, uri)
-            .putExtra(Intent.EXTRA_TEXT, context.getString(R.string.share_entry)).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        context.startActivity(Intent.createChooser(send, context.getString(R.string.share_entry)))
+            .putExtra(Intent.EXTRA_TEXT, res.getString(R.string.share_entry)).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        context.startActivity(Intent.createChooser(send, res.getString(R.string.share_entry)))
     }
 
     BackHandler { onBack() }

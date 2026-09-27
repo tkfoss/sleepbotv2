@@ -38,6 +38,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -54,7 +55,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
-import java.util.Locale
 
 /** Legacy ActivityAlarmNotification (layout notification.xml). */
 class AlarmRingingActivity : ComponentActivity() {
@@ -145,16 +145,17 @@ class AlarmRingingActivity : ComponentActivity() {
                     shape = shape, colors = btnColors,
                 ) { Text(stringResource(R.string.plus_five), fontSize = 24.sp) }
             }
+            val locale = LocalConfiguration.current.locales[0]
             val clockPattern = if (DateFormat.is24HourFormat(ctx)) "HH:mm:ss" else "h:mm:ss a"
             Text(
-                SimpleDateFormat(clockPattern, Locale.getDefault()).format(Date(now)),
+                SimpleDateFormat(clockPattern, locale).format(Date(now)),
                 Modifier.fillMaxWidth(), fontSize = 56.sp, textAlign = TextAlign.Center, color = Color.White,
             )
             Button(
                 { onSnooze(snooze) }, Modifier.fillMaxWidth().weight(4f).padding(4.dp),
                 shape = shape, colors = btnColors,
             ) { Text(stringResource(R.string.snooze), fontSize = 32.sp) }
-            val info = SimpleDateFormat("HH:mm.ss MMMM dd yyyy", Locale.getDefault()).format(Date(r.time)) + "\n" + r.name
+            val info = SimpleDateFormat("HH:mm.ss MMMM dd yyyy", locale).format(Date(r.time)) + "\n" + r.name
             Text(info, Modifier.weight(3f).padding(horizontal = 4.dp), color = Color.White, fontSize = 14.sp)
             DismissSlider(onComplete = onDismiss, modifier = Modifier.fillMaxWidth().weight(1f).heightIn(min = 60.dp))
         }

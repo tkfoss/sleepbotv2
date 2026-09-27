@@ -1,6 +1,7 @@
 package com.sleepbot.app.util
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -29,11 +30,11 @@ object Notifications {
     fun createChannels(context: Context) {
         val nm = context.getSystemService(NotificationManager::class.java)
         nm.createNotificationChannels(listOf(
-            NotificationChannel(CH_SESSION, "Sleep status", NotificationManager.IMPORTANCE_LOW),
-            NotificationChannel(CH_TRACKING, "Sleep tracking", NotificationManager.IMPORTANCE_LOW),
-            NotificationChannel(CH_ALARM, "Ringing alarms", NotificationManager.IMPORTANCE_HIGH).apply { setSound(null, null) },
-            NotificationChannel(CH_REMINDER, "Bedtime reminders", NotificationManager.IMPORTANCE_DEFAULT),
-            NotificationChannel(CH_ALARM_STATUS, "Next alarm", NotificationManager.IMPORTANCE_MIN),
+            NotificationChannel(CH_SESSION, context.getString(R.string.channel_session), NotificationManager.IMPORTANCE_LOW),
+            NotificationChannel(CH_TRACKING, context.getString(R.string.channel_tracking), NotificationManager.IMPORTANCE_LOW),
+            NotificationChannel(CH_ALARM, context.getString(R.string.channel_alarm), NotificationManager.IMPORTANCE_HIGH).apply { setSound(null, null) },
+            NotificationChannel(CH_REMINDER, context.getString(R.string.channel_reminder), NotificationManager.IMPORTANCE_DEFAULT),
+            NotificationChannel(CH_ALARM_STATUS, context.getString(R.string.channel_alarm_status), NotificationManager.IMPORTANCE_MIN),
         ))
     }
 
@@ -48,6 +49,7 @@ object Notifications {
         ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 
     /** Legacy "Punched in since …" ongoing notification (mode 0/1). */
+    @SuppressLint("MissingPermission") // canPost() checked
     fun showAsleep(context: Context, since: Long) {
         val prefs = context.app.prefs
         if (prefs.notificationMode == 2 || !canPost(context)) return
@@ -63,6 +65,7 @@ object Notifications {
         NotificationManagerCompat.from(context).notify(ID_PUNCH, n)
     }
 
+    @SuppressLint("MissingPermission") // canPost() checked
     fun showAwake(context: Context) {
         val prefs = context.app.prefs
         val nm = NotificationManagerCompat.from(context)

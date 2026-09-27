@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.text.format.DateFormat
 import androidx.core.content.edit
+import com.sleepbot.app.R
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -92,8 +93,8 @@ class Prefs(context: Context) {
     val reminder2Offset: Int get() = str("reminder2_offset", "-15").toIntOrNull() ?: -15
     val reminderMuted: Boolean get() = sp.getBoolean("reminder_muted", false)
     /** "22" / "23" */
-    val sleepNotificationText: String get() = str("sleep_notification_text", "Touch to punch out.")
-    val wakeNotificationText: String get() = str("wake_notification_text", "Touch to punch in.")
+    val sleepNotificationText: String get() = str("sleep_notification_text", app.getString(R.string.pref_sleep_notification_default))
+    val wakeNotificationText: String get() = str("wake_notification_text", app.getString(R.string.pref_awake_notification_default))
     /** "40" */
     val allowIntegration: Boolean get() = sp.getBoolean("allow_integration", true)
 
