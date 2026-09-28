@@ -19,7 +19,10 @@
     <string name="minus_five">-5</string>
     <string name="plus_five">+5</string>
     <string name="snooze">SNOOZE</string>
-    <string name="snooze_n_minutes">SNOOZE\n%d minutes</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="one">SNOOZE\n%d minute</item>
+        <item quantity="other">SNOOZE\n%d minutes</item>
+    </plurals>
     <string name="alarm_edit">Edit</string>
     <string name="alarm_delete_ellipsis">Delete…</string>
     <string name="alarm_delete_all">Delete All…</string>
@@ -38,7 +41,10 @@
     <string name="alarm_label_title">Alarm label</string>
     <string name="alarm_enabled">Enabled</string>
     <string name="alarm_disabled">Disabled</string>
-    <string name="alarm_fade_summary">From %1$d%% to %2$d%% over %3$d seconds.</string>
+    <plurals name="alarm_fade_summary">
+        <item quantity="one">From %1$d%% to %2$d%% over %3$d second.</item>
+        <item quantity="other">From %1$d%% to %2$d%% over %3$d seconds.</item>
+    </plurals>
     <string name="alarm_fade_start">Start volume (percent)</string>
     <string name="alarm_fade_end">End volume (percent)</string>
     <string name="alarm_fade_time">Fade duration (seconds)</string>

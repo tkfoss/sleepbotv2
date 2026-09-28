@@ -5,6 +5,7 @@
     <string name="trk_notification_motion">Tracking your movements</string>
     <string name="trk_notification_sound">Listening for sounds</string>
     <string name="trk_notification_both">Tracking your movements and sounds</string>
+    <string name="trk_night_screen_open">Tap to show the night screen</string>
 
     <!-- Night screen (SensorsActivity) -->
     <string name="trk_no_alarm_set">No alarm set</string>

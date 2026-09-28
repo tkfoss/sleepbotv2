@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hour_n">%d 小时</string>
-    <string name="hours_n">%d 小时</string>
-    <string name="minute_n">%d 分钟</string>
-    <string name="minutes_n">%d 分钟</string>
-    <string name="day_n">%d 天</string>
-    <string name="days_n">%d 天</string>
     <string name="alarm_has_occurred">闹铃已经响过了</string>
     <string name="punched_in_since">睡觉时间： %s</string>
     <string name="status_set_sleep">修改为睡眠状态</string>
     <string name="status_set_wake">修改为清醒状态</string>
-    <string name="not_punched_in">SleepBot - 还没有清醒状态</string>
+    <string name="not_punched_in">未进入睡眠状态</string>
     <string name="todays_sleep">今日睡眠</string>
     <string name="current_debt">睡眠负债</string>
     <string name="wake_up">起床：</string>
@@ -35,7 +29,6 @@
     <string name="future_no_offset">无偏移量</string>
     <string name="future_no_record_toast">状态已改变，但没有添加新记录</string>
     <string name="current_session_title">当前睡眠阶段</string>
-    <string name="awake_since">你已经醒了%1$d小时%2$d分钟。</string>
     <string name="reset_debt_q">你确定你要重置你的睡债吗？</string>
     <string name="reset_debt_title">重置睡债</string>
     <string name="reset_debt_msg">重置睡债将把当前睡债的起始计算时间调整到今天，没有记录将被改变，这仅仅会调整这个数字的计算方法而已。</string>
@@ -44,7 +37,7 @@
     <string name="cancel">取消</string>
     <string name="reset">重置</string>
     <string name="edit">编辑</string>
-    <string name="delete">删除…</string>
+    <string name="delete">删除</string>
     <string name="save">保存</string>
     <string name="share">分享</string>
     <string name="view">查看</string>
@@ -66,7 +59,7 @@
     <string name="no_entry_hint">嘿！\n\n纪录一个晚上的睡眠后回来，或者点击下面的添加按钮来建立你的第一个睡眠纪录。</string>
     <string name="no_entry_found_hint">没有找到任何符合条件的纪录。</string>
     <string name="first_entry_title">您刚刚创建了你的第一个睡眠记录！</string>
-    <string name="first_entry_msg">点击单行记录来查看详细信息。\n\n（提示：长按现实更多菜单）</string>
+    <string name="first_entry_msg">点击单行记录来查看详细信息。\n\n（提示：长按显示更多菜单）</string>
     <string name="period_stats">阶段数据</string>
     <string name="period_stats_note">注: 没有记录的日子将不被纳入到统计，如果你哪天一天都没睡的话请输入一个0分钟的空记录来表示。</string>
     <string name="export_title">导出成功</string>
@@ -77,7 +70,7 @@
     <string name="wake_time">起床时间：</string>
     <string name="invalid_time">睡觉时间必须在起床时间之前。</string>
     <string name="cancel_caps">取消</string>
-    <string name="delete_caps">删除…</string>
+    <string name="delete_caps">删除</string>
     <string name="save_caps">保存</string>
     <string name="share_entry">分享这个记录</string>
     <string name="movement">移动</string>
@@ -99,7 +92,7 @@
     <string name="title_pattern">睡眠时间分布图</string>
     <string name="title_sleep">睡觉钟点计数表</string>
     <string name="title_wake">起床钟点计数</string>
-    <string name="alarm_clock_label">Klock闹钟</string>
+    <string name="alarm_clock_label">闹钟</string>
     <string name="alarms">闹钟</string>
     <string name="add_alarm">添加闹钟…</string>
     <string name="alarm_no_repeats">不重复</string>
@@ -114,7 +107,6 @@
     <string name="alarm_time_out">闹铃超时</string>
     <string name="time_out_error">警告：这个闹铃已超时。</string>
     <string name="snooze">打盹</string>
-    <string name="snooze_n_minutes">打盹\n%d 分钟</string>
     <string name="alarm_edit">编辑</string>
     <string name="alarm_delete_ellipsis">删除…</string>
     <string name="alarm_delete_all">全部删除…</string>
@@ -133,7 +125,6 @@
     <string name="alarm_label_title">闹钟标记</string>
     <string name="alarm_enabled">开启了</string>
     <string name="alarm_disabled">关闭了</string>
-    <string name="alarm_fade_summary">从 %1$d%% 到 %2$d%% 在 %3$d 秒内.</string>
     <string name="alarm_fade_start">开始音量 （百分比）</string>
     <string name="alarm_fade_end">最终音量 （百分比）</string>
     <string name="alarm_fade_time">渐入时间 （秒）</string>
@@ -162,12 +153,12 @@
     <string name="tutorial_2_1">选择记录模式，然后点击\n\'go to sleep\'（去睡觉）</string>
     <string name="tutorial_3_1">将手机放在床上：</string>
     <string name="tutorial_3_2">起床： 8:00 早上~ 8:30 早上</string>
-    <string name="tutorial_3_3">智能闹钟将在第一个闹钟想起倩选择时段（默认30分钟）之内，在你最轻的睡眠状态时闹醒你。\n\n（例：这个智能闹钟会在8:30之前发生）</string>
+    <string name="tutorial_3_3">智能闹钟将在第一个闹钟响起前的选择时段（默认30分钟）之内，在你最轻的睡眠状态时闹醒你。\n\n（例：这个智能闹钟会在8:30之前发生）</string>
     <string name="tutorial_4_1">你可以在手机上查看你的睡眠纪录。</string>
     <string name="tutorial_4_2">提示：点击声音图表来播放声音。</string>
     <string name="get_started">开始</string>
     <string name="intent_error_invalid">SleepBot API 呼叫失败，呼叫方没有给予正确的验证码。</string>
-    <string name="intent_error_reject">SleepBot API 呼叫失败，用户以屏蔽第三方软件。</string>
+    <string name="intent_error_reject">SleepBot API 呼叫失败，用户已屏蔽第三方软件。</string>
     <string name="settings">设置</string>
     <string name="setting_title_general">常规</string>
     <string name="setting_title_app">程序</string>
@@ -193,17 +184,17 @@
     <string name="sleep_reminder_title">打开睡觉提醒</string>
     <string name="sleep_reminder_summary">睡眠提醒将根据你的下一个闹钟来提醒你睡觉的时间。</string>
     <string name="times_before_offset">提醒拖后</string>
-    <string name="times_before_offset_summary">下一个闹钟世界 - 最佳起床睡觉 - 提醒拖后 = 提醒时间.</string>
+    <string name="times_before_offset_summary">下一个闹钟时间 - 最佳睡眠时长 - 提醒提前量 = 提醒时间。</string>
     <string name="sleep_reminder_title_2nd">打开第二个提醒</string>
     <string name="sleep_reminder_summary_2nd">如果你还没睡觉，你可以打开第二个提醒.</string>
     <string name="times_before_offset_2nd">第二提醒拖后</string>
-    <string name="times_before_offset_summary_2nd">下一个闹钟世界 - 最佳起床睡觉 - 提醒拖后 = 提醒时间.</string>
+    <string name="times_before_offset_summary_2nd">下一个闹钟时间 - 最佳睡眠时长 - 第二提醒提前量 = 第二提醒时间。</string>
     <string name="no_reminder_snooze">不让拖后提醒</string>
     <string name="no_reminder_summary">不让拖后提醒</string>
     <string name="reminder_mute_title">无提醒声音</string>
     <string name="reminder_mute_summary">提醒的时候不要发出声音。</string>
     <string name="options_soundmode_title">自动静音</string>
-    <string name="options_soundmode_summary">避免在睡觉时受来电打扰，并显示记录</string>
+    <string name="options_soundmode_summary">睡觉时将手机静音</string>
     <string name="options_auto_alarm_title">开启自动闹铃</string>
     <string name="options_auto_alarm_summary">在进入睡眠状态时创造一个会在”最佳睡眠小时“后响的闹钟。</string>
     <string name="pref_cat_movement_tracking">移动跟踪</string>
@@ -224,7 +215,7 @@
     <string name="pref_default_display_title">默认显示</string>
     <string name="pref_default_display_summary">设置主要显示的数字（今日睡眠或者睡债）。</string>
     <string name="options_default_graph_title">默认图表</string>
-    <string name="options_default_graph_summary">选择Tracker上默认的图</string>
+    <string name="options_default_graph_summary">选择记录页上默认显示的图表。</string>
     <string name="pref_no_warning_title">屏幕关闭模式时不显示警告</string>
     <string name="pref_no_warning_summary">屏幕关闭模式开启时不显示充电的警告。</string>
     <string name="options_notification_sleep_title">睡前提醒</string>
@@ -241,7 +232,7 @@
     <string name="restore_old_file_summary">从导出功能建立的文件还原。</string>
     <string name="restore_old_file_body">由于导出功能建立的文件并不带有日期格式信息，请选择正确的日期格式以避免数据混乱。</string>
     <string name="restore_confirm_title">确定你要还原吗？</string>
-    <string name="restore_warning_double">警告：回复可能会产生重复的记录（你可以在安卓系统设置里先清除现有的数据）。</string>
+    <string name="restore_warning_double">警告：还原可能会产生重复的记录（你可以在安卓系统设置里先清除现有的数据）。</string>
     <string name="restore_progress_title">还原中…</string>
     <string name="backup_progress_title">备份中…</string>
     <string name="pref_adv_restore_title">还原</string>
@@ -249,7 +240,7 @@
     <string name="error_export_db_is_too_new">这个数据库比现在这个版本要新，新版本的数据库只能用新版的来恢复。</string>
     <string name="pref_adv_cat_others">其他设置</string>
     <string name="pref_adv_length_title">\"当前睡债\"天数</string>
-    <string name="pref_adv_length_summary">选择 7, 10, 或 14 天来作为\"Current Debt\"的计算范围。</string>
+    <string name="pref_adv_length_summary">选择 7, 10, 或 14 天来作为主页上\"当前睡债\"的计算范围。</string>
     <string name="pref_adv_security_third_party_title">开启插件功能</string>
     <string name="pref_adv_security_third_party_summary">允许第三方软件改变SleepBot的状态。</string>
     <string name="pref_adv_variable_block_title">重复按键保护</string>
@@ -265,7 +256,7 @@
     <string name="summary_avg_record">记录平均:</string>
     <string name="summary_cum">累计睡债:</string>
     <string name="hours_ori">小时</string>
-    <string name="channel_alarm_status">下一次闹铃：</string>
+    <string name="channel_alarm_status">下一次闹铃</string>
     <string name="trk_no_alarm_set">没有开启的闹钟</string>
     <string name="trk_phone_is_not_plugged">请将电话放到充电器上充电以避免电池在早上起来时没电。</string>
     <string name="trk_screen_dim_soon">开始进入睡眠状态，屏幕将在15秒内变暗…</string>
@@ -331,8 +322,8 @@
         <item>2小时前</item>
     </string-array>
     <string-array name="sleep_reminder_offsets_2nd">
-        <item>15分钟前r</item>
-        <item>30分钟前</item>
+        <item>15分钟后</item>
+        <item>30分钟后</item>
         <item>45分钟后</item>
         <item>1小时后</item>
         <item>2小时后</item>
@@ -365,7 +356,7 @@
         <item>睡眠负债</item>
     </string-array>
     <string-array name="default_graph_entries">
-        <item>睡觉时间趋势图</item>
+        <item>睡眠时长趋势图</item>
         <item>睡眠时间分布图</item>
     </string-array>
     <string-array name="date_entries">
@@ -373,4 +364,92 @@
         <item>日/月/年</item>
         <item>年/月/日</item>
     </string-array>
+    <plurals name="n_hours">
+        <item quantity="other">%d 小时</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="other">%d 分钟</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="other">%d 天</item>
+    </plurals>
+    <string name="current_session_msg">你于 %1$s 进入睡眠状态，已经过去 %2$s。</string>
+    <string name="awake_for">你已经清醒了 %s。</string>
+    <string name="edit_data">编辑数据</string>
+    <string name="alarm_status_title">睡眠宝宝闹钟</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="other">打盹\n%d 分钟</item>
+    </plurals>
+    <plurals name="alarm_fade_summary">
+        <item quantity="other">在 %3$d 秒内从 %1$d%% 渐变到 %2$d%%。</item>
+    </plurals>
+    <string name="alarm_pick_system_tone">从闹钟铃声中选择</string>
+    <string name="alarm_pick_file">选择音频文件</string>
+    <string name="alarm_file_not_chosen">未选择文件</string>
+    <string name="alarm_exact_permission">SleepBot 需要“精确闹钟”权限，才能让闹钟准时响起。</string>
+    <string name="alarm_fsi_permission">允许 SleepBot 显示全屏闹钟，这样手机锁屏时也能显示闹钟界面。</string>
+    <string name="alarm_grant">授权</string>
+    <string name="help_caffeine_chart">咖啡因含量表</string>
+    <string name="help_do_this">做这些！</string>
+    <string name="widget_label">睡眠宝宝小部件</string>
+    <string name="back">返回</string>
+    <string name="pref_reminder_summary">到该睡觉的时间时提醒你</string>
+    <string name="pref_tracking_summary">静音、自动闹钟、智能闹钟、移动和声音选项</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="dnd_access_msg">要在你睡觉时将手机静音，SleepBot 需要“勿扰模式”访问权限。闹钟仍会正常响起。</string>
+    <string name="pref_allow_screen_off_warning">请注意：如果移动图表全部显示为 0，说明你的手机不支持关闭屏幕时记录，请不要勾选此选项。</string>
+    <string name="delete_older_sound_files">删除旧文件</string>
+    <string name="delete_older_sound_files_7">存储空间不足？删除 7 天前的本地录音文件。</string>
+    <string name="delete_older_sound_files_message">删除旧录音文件后将无法恢复。</string>
+    <plurals name="files_deleted">
+        <item quantity="other">已删除 %d 个文件</item>
+    </plurals>
+    <string name="pref_notification_mode_title">状态通知</string>
+    <string name="pref_notification_mode_summary">何时在通知栏中显示 SleepBot 的睡眠状态。</string>
+    <string name="pref_android_backup">Android 备份</string>
+    <string name="pref_android_backup_text">你的睡眠记录和设置也会通过 Android 设备备份（Google 帐号备份）自动备份，并在设置新手机时自动恢复。</string>
+    <string name="pref_adv_backup_summary">将数据备份到文件（例如保存在手机上或云端）。</string>
+    <string name="restore_backup_summary">从备份功能创建的文件还原记录。（推荐）</string>
+    <string name="restore_choose_backup_hint">请选择由 SleepBot 备份功能创建的文件。已存在于记录中的条目将被跳过。</string>
+    <string name="restore_choose_file_button">选择文件</string>
+    <plurals name="backup_done_n">
+        <item quantity="other">备份完成：已保存 %d 条记录，包括移动/声音数据。\n请注意，闹钟设置不会被备份。</item>
+    </plurals>
+    <string name="backup_failed">备份失败：%s</string>
+    <plurals name="restore_done">
+        <item quantity="other">成功还原 %1$d/%2$d 条记录。\n\n睡债起始日期已重置为今天。</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="other">成功还原 %d 条记录。</item>
+    </plurals>
+    <string name="restore_csv_partial">文件的其余部分无法读取。请检查日期格式是否与文件一致。</string>
+    <string name="date_format">日期格式</string>
+    <string name="pref_reset_debt_summary">从今天开始重新计算睡债。</string>
+    <string name="alarm_default_settings_summary">新闹钟的默认铃声、打盹、震动和音量渐入</string>
+    <string name="channel_session">睡眠状态</string>
+    <string name="channel_tracking">睡眠记录</string>
+    <string name="channel_alarm">正在响的闹钟</string>
+    <string name="channel_reminder">睡觉提醒</string>
+    <string name="trk_notification_title">睡眠记录</string>
+    <string name="trk_notification_motion">正在记录你的身体移动</string>
+    <string name="trk_notification_sound">正在监听声音</string>
+    <string name="trk_notification_both">正在记录你的身体移动和声音</string>
+    <string name="trk_waking_up">起床啦！</string>
+    <string name="trk_no_sensor_data">此记录没有传感器数据。</string>
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>非常低（只录下很大的声音）</item>
+        <item>低</item>
+        <item>正常</item>
+        <item>高</item>
+        <item>非常高（几乎录下所有声音）</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>始终</item>
+        <item>仅在睡眠时</item>
+        <item>从不</item>
+    </string-array>
+    <string name="pref_night_auto_title">自动显示夜间屏幕</string>
+    <string name="pref_night_auto_summary">夜间打开屏幕时自动显示夜间屏幕。需要\"显示在其他应用的上层\"权限。</string>
+    <string name="channel_night">夜间屏幕</string>
+    <string name="trk_night_screen_open">点击显示夜间屏幕</string>
 </resources>

@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hour_n">%d uur</string>
-    <string name="hours_n">%d uren</string>
-    <string name="minute_n">%d minuut</string>
-    <string name="minutes_n">%d minuten</string>
-    <string name="day_n">%d dag</string>
-    <string name="days_n">%d dagen</string>
     <string name="alarm_has_occurred">Alarm heeft plaatsgevonden</string>
     <string name="punched_in_since">Aangemeld sinds %s</string>
     <string name="status_set_sleep">Status ingesteld om te slapen</string>
     <string name="status_set_wake">Status ingesteld om wakker te worden</string>
-    <string name="not_punched_in">SlaapBot - Niet aangemeld</string>
+    <string name="not_punched_in">Niet aangemeld</string>
     <string name="entry_created_title">Slaap vermelding gemaakt!</string>
     <string name="entry_created_msg">Je hebt geslapen van:\n%1$s – %2$s\n(%3$s)</string>
     <string name="future_title">Slaaptijd is in de toekomst</string>
@@ -19,15 +13,14 @@
     <string name="future_no_offset">Geen Offset</string>
     <string name="future_no_record_toast">Status gewijzigd in wakker, zonder een nieuwe vermelding toe te voegen.</string>
     <string name="current_session_title">Huidige Slaap Sessie</string>
-    <string name="awake_since">Je bent %1$d uur en %2$d minuten wakker.</string>
     <string name="reset_debt_q">Wilt u uw slaaptekort resetten?</string>
     <string name="reset_debt_title">Reset Schuld</string>
-    <string name="reset_debt_msg">Resetten van de schuld zal uw huidige slaapschuld verduidelijken en start de berekening van vandaag\'s datum. \n\n* Dit zal alleen de datum vanaf wanneer de schuld wordt berekend weergegeven op het tabblad Thuis -. Geen inzendingen zullen worden aangepast \n\n*Schuld voor vandaag zal nog worden berekend, gelijk aan de slaap van vandaag wordt afgetrokken van de dagelijkse optimale slaap uurwaarde.</string>
+    <string name="reset_debt_msg">Door de slaapschuld te resetten wordt je huidige slaapschuld gewist en begint de berekening opnieuw vanaf vandaag. \n\n*Dit verandert alleen de datum vanaf wanneer de schuld op het tabblad Home wordt berekend; er worden geen vermeldingen aangepast. \n\n*De schuld voor vandaag wordt nog steeds berekend: het optimale aantal uren min de slaap van vandaag.</string>
     <string name="reset_debt_done">Reset schulden gedaan! Volgende keer zal het Thuis tabblad de nieuwe schuld waarde weergeven.</string>
-    <string name="confirm">Opslaan</string>
+    <string name="confirm">Bevestigen</string>
     <string name="cancel">Annuleren</string>
     <string name="edit">Bewerk</string>
-    <string name="delete">Verwijderen…</string>
+    <string name="delete">Verwijderen</string>
     <string name="save">Opslaan</string>
     <string name="share">Delen</string>
     <string name="view">Bekijk</string>
@@ -35,46 +28,46 @@
     <string name="no">Nee</string>
     <string name="note">Opmerking:</string>
     <string name="from">Van:</string>
-    <string name="to">tot</string>
+    <string name="to">Tot:</string>
     <string name="col_date">Datum</string>
     <string name="col_sleep">Slaap</string>
     <string name="col_wake">Wakker</string>
-    <string name="col_hours">uur</string>
+    <string name="col_hours">Uren</string>
     <string name="col_debt">Schuld</string>
-    <string name="share_caps">Delen</string>
+    <string name="share_caps">DELEN</string>
     <string name="delete_confirm_title">Verwijdering Bevestigen</string>
-    <string name="delete_confirm_msg">Weet u zeker dat u deze ingang wilt verwijderen?</string>
+    <string name="delete_confirm_msg">Weet je zeker dat je deze vermelding wilt verwijderen?</string>
     <string name="period_stats">Periode Statistieken</string>
-    <string name="period_stats_note">Opmerking: als geen gegevens worden verzameld voor een bepaalde dag, is het niet opgenomen in de tijds periode van de statistische analyse. Als je die dag helemaal niet slapen hebt, kunt u een slaaprecord met een duur van 0 invoegen zodat het zal worden opgenomen in de samenvatting.</string>
+    <string name="period_stats_note">Opmerking: als er voor een bepaalde dag geen gegevens zijn verzameld, wordt die dag niet meegenomen in de statistische analyse van de periode. Als je die dag helemaal niet hebt geslapen, voeg dan een slaapvermelding met een duur van 0 toe, zodat de dag wel in de samenvatting wordt opgenomen.</string>
     <string name="export_title">Export Succesvol</string>
     <string name="export_to">Exporteren naar</string>
     <string name="export_subject">SleepBot: Slaapgegevens geëxporteerd op %s</string>
     <string name="duration">Tijdsduur:</string>
     <string name="sleep_time">Slaaptijd:</string>
     <string name="wake_time">Tijd Wakker:</string>
-    <string name="invalid_time">Ongeldige tijd instelling, wakkertijd moet voor slaaptijd zijn.</string>
-    <string name="cancel_caps">Annuleren</string>
-    <string name="delete_caps">Verwijderen…</string>
-    <string name="save_caps">Opslaan</string>
-    <string name="share_entry">Deel van deze ingang</string>
+    <string name="invalid_time">Ongeldige tijd: de slaaptijd moet vóór de wektijd liggen.</string>
+    <string name="cancel_caps">ANNULEREN</string>
+    <string name="delete_caps">VERWIJDEREN</string>
+    <string name="save_caps">OPSLAAN</string>
+    <string name="share_entry">Deze vermelding delen</string>
     <string name="current_sleep_records">Huidige Slaap Records</string>
     <string name="trend">Trend</string>
     <string name="length">Lengte</string>
     <string name="pattern">Patroon</string>
-    <string name="sleep_caps">Slaap</string>
-    <string name="wake_caps">Wakker</string>
+    <string name="sleep_caps">SLAAP</string>
+    <string name="wake_caps">WAKKER</string>
     <string name="title_trend">Slaapduur Trend</string>
-    <string name="title_length">Duur Tally</string>
+    <string name="title_length">Telling slaapduur</string>
     <string name="title_pattern">Slaaptijd Distributie</string>
-    <string name="title_sleep">Slaaptijd Tally</string>
-    <string name="title_wake">Wakker-tijd Tally</string>
+    <string name="title_sleep">Telling slaaptijden</string>
+    <string name="title_wake">Telling waaktijden</string>
     <string name="alarm_clock_label">Alarm Klok</string>
     <string name="add_alarm">Alarm toevoegen…</string>
     <string name="alarm_no_repeats">Geen herhalingen</string>
     <string name="alarm_every_day">Elke dag</string>
     <string name="alarm_weekdays">Weekdagen</string>
-    <string name="alarm_status_text">Volgende alarm: %1$s (%2$s)</string>
-    <string name="dismiss_slider">ONTSLAAN</string>
+    <string name="alarm_status_text">Volgend alarm: %1$s (%2$s)</string>
+    <string name="dismiss_slider">VEEG OM UIT TE ZETTEN</string>
     <string name="alarm_time_out">Alarm time-out</string>
     <string name="time_out_error">WAARSCHUWING: Dit alarm heeft een time-out bij het wachten op een bevestiging.</string>
     <string name="alarm_edit">Bewerk</string>
@@ -94,7 +87,6 @@
     <string name="alarm_label_title">Alarm-label</string>
     <string name="alarm_enabled">Ingeschakeld</string>
     <string name="alarm_disabled">Uitgeschakeld</string>
-    <string name="alarm_fade_summary">Van %1$d%% tot %2$d%% over %3$d seconden.</string>
     <string name="alarm_fade_start">Start volume (procent)</string>
     <string name="alarm_fade_end">Eind volume (procent)</string>
     <string name="alarm_fade_time">Fade duur (seconden)</string>
@@ -113,8 +105,8 @@
     <string name="error">Fout</string>
     <string name="please_wait">Even geduld aub…</string>
     <string name="error_intent_empty_msg">Geen activiteit gevonden om deze actie uit te voeren.</string>
-    <string name="options_hours_title">Optimaal Uren</string>
-    <string name="options_hours_summary">Optimale uur voor de slaapduur</string>
+    <string name="options_hours_title">Optimale uren</string>
+    <string name="options_hours_summary">Je ideale doel voor de slaapduur</string>
     <string name="options_delay_min_title">Punch-in compenseer tijd</string>
     <string name="options_delay_min_summary">Stelt de punch-in tijd in voordat je gaat slapen/in slaap valt, voor een nauwkeuriger slaaptijd.</string>
     <string name="pref_alarm_klock_settings_title">Alarmklok Instellingen</string>
@@ -133,22 +125,22 @@
     <string name="restore_backup_title">Terugzetten van een backup-bestand</string>
     <string name="restore_old_file_title">Herstellen vanuit een exportbestand</string>
     <string name="restore_old_file_summary">Herstel vermeldingen van bestanden die zijn gegenereerd door de exportfunctie.</string>
-    <string name="restore_old_file_body">Omdat de exportbestanden oorspronkelijk niet voor back-up en herstel doeleinden zijn ontworpen, zorg dat u de dezelfde datumnotatie kiest in de volgende stap die ook gebruikt is in de tekst. Kies dezelfde datumnotatie als die bij het exporteren van het bestand om ervoor te zorgen dat alle gegevens correct worden ingevoerd (als een andere toepassing op de markt probeert om SleepBot gegevens te importeren en u niet om datum formaat vraagt, moet u controleren of alle gegevens correct zijn geïmporteerd).</string>
+    <string name="restore_old_file_body">Omdat exportbestanden oorspronkelijk niet bedoeld zijn voor back-up en herstel, moet je in de volgende stap dezelfde datumnotatie kiezen als in de tekst wordt gebruikt. Kies dezelfde datumnotatie als bij het exporteren van het bestand, zodat alle gegevens correct worden geïmporteerd (als een andere app SleepBot-gegevens probeert te importeren zonder naar de datumnotatie te vragen, controleer dan of alle gegevens correct zijn geïmporteerd).</string>
     <string name="restore_confirm_title">Bevestigen om te herstellen</string>
-    <string name="restore_progress_title">Herstel SlaapBot</string>
-    <string name="backup_progress_title">Back-up SlaapBot</string>
+    <string name="restore_progress_title">SleepBot herstellen</string>
+    <string name="backup_progress_title">Back-up van SleepBot maken</string>
     <string name="pref_adv_restore_title">Herstellen</string>
     <string name="error_restore_file_malformatted">Herstel bestand heeft geen geldige notatie of is beschadigd, herstellen geannuleerd.</string>
     <string name="pref_adv_cat_others">Overige Instellingen</string>
     <string name="pref_adv_length_title">Bereik voor huidige tekort</string>
     <string name="pref_adv_length_summary">Kies 7, 10, of 14 dagen voor het datumbereik, gebruikt om uw huidige tekort op de thuis tab te berekenen.</string>
     <string name="pref_adv_security_third_party_title">Integratie inschakelen</string>
-    <string name="pref_adv_security_third_party_summary">Laat toepassingen van derden toe om Slaapbot te laten slapen/wakker te maken.</string>
-    <string name="pref_adv_variable_block_title">Her-Intoets Bewaking</string>
-    <string name="pref_adv_variable_block_summary">Voorkom perongeluk intoetsen door het blokkeren van het aantal pogingen in een bepaalde periode.</string>
+    <string name="pref_adv_security_third_party_summary">Sta apps van derden toe om SleepBot op slapen/wakker te zetten.</string>
+    <string name="pref_adv_variable_block_title">Bescherming tegen herhaald aanmelden</string>
+    <string name="pref_adv_variable_block_summary">Voorkom per ongeluk aanmelden door herhaalde pogingen binnen een bepaalde periode te blokkeren.</string>
     <string name="notification_icon_title">Kennisgeving pictogram weergeven</string>
-    <string name="notification_icon_on">Toon een pictogram wanneer er alarms zijn ingesteld.</string>
-    <string name="notification_icon_off">Toon geen pictogram wanneer er alarms zijn ingesteld.</string>
+    <string name="notification_icon_on">Toon een pictogram wanneer er alarmen zijn ingesteld.</string>
+    <string name="notification_icon_off">Toon geen pictogram wanneer er alarmen zijn ingesteld.</string>
     <string name="time_out_summary">Een afgaand alarm zal automatisch worden uitgezet na zoveel minuten.</string>
     <string name="summary_num_records">Aantal records:</string>
     <string name="summary_num_days">Aantal dagen:</string>
@@ -157,8 +149,8 @@
     <string name="summary_avg_record">Gemiddelde slaap/record:</string>
     <string name="summary_cum">Cumulatieve schuld:</string>
     <string name="hours_ori">uur</string>
-    <string name="channel_alarm_status">Volgende alarm:</string>
-    <string name="trk_remind_later">Later</string>
+    <string name="channel_alarm_status">Volgend alarm</string>
+    <string name="trk_remind_later">Later herinneren</string>
     <string-array name="hour_entries">
         <item>3 uur</item>
         <item>3,5 uur</item>
@@ -187,7 +179,7 @@
         <item>+45 minuten</item>
         <item>+1 uur</item>
         <item>+1 uur 20 minuten</item>
-        <item>+1 uur 20 minuten</item>
+        <item>+1 uur 40 minuten</item>
         <item>+2 uur</item>
     </string-array>
     <string-array name="sound_mode">
@@ -204,4 +196,286 @@
         <item>Dag/Maand/Jaar</item>
         <item>Jaar/Maand/Dag</item>
     </string-array>
+    <plurals name="n_hours">
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uur</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagen</item>
+    </plurals>
+    <!-- Home -->
+    <string name="todays_sleep">SLAAP VANDAAG</string>
+    <string name="current_debt">HUIDIGE SLAAPSCHULD</string>
+    <string name="wake_up">Wekken:</string>
+    <string name="smart_alarm">Slim alarm</string>
+    <string name="track_motion">Beweging volgen</string>
+    <string name="record_sound">Geluid opnemen</string>
+    <string name="cannot_change_settings_after_punchin">Je kunt de instellingen niet meer wijzigen nadat je je hebt aangemeld.</string>
+    <string name="no_alarm_set_warning">Je hebt nog geen alarm ingesteld dat binnen de komende dag afgaat! Het slimme alarm wekt je op het optimale moment binnen het gekozen bereik vóór je eerste alarm.</string>
+    <string name="auto_alarm_prompt">Je hebt geen alarmen binnen de komende dag. Wil je je nu aanmelden en het automatische en slimme alarm inschakelen?</string>
+    <string name="mode_smart">Slim-alarmmodus. Het volgen van beweging begint binnen het gekozen tijdsbereik vóór het eerste alarm.</string>
+    <string name="mode_smart_motion">Beweging wordt de hele nacht gevolgd + SleepBot wekt je op het optimale moment.</string>
+    <string name="mode_complete">Volledige modus. SleepBot volgt je bewegingen en geluiden en wekt je op het optimale moment binnen het gekozen tijdsbereik vóór je eerste alarm.</string>
+    <string name="mode_motion">Bewegingsmodus.</string>
+    <string name="mode_motion_sound">SleepBot volgt de hele nacht je bewegingen en geluiden</string>
+    <string name="mode_classic">SleepBot klassieke modus.</string>
+    <string name="mode_sound">Geluidsmodus.</string>
+    <string name="current_session_msg">Je hebt je aangemeld om %1$s, %2$s geleden.</string>
+    <!-- %s: a duration such as "5 uur 12 minuten" (n_hours + n_minutes) -->
+    <string name="awake_for">Je bent al %s wakker.</string>
+    <string name="edit_data">Gegevens bewerken</string>
+    <string name="reset">Resetten</string>
+    <string name="ok">OK</string>
+    <string name="add_new_entry">NIEUWE VERMELDING</string>
+    <string name="no_entry_hint">Hallo!\n\nKom terug nadat je vannacht je slaap hebt gevolgd, of maak hieronder je eerste vermelding!</string>
+    <string name="no_entry_found_hint">Er zijn geen vermeldingen gevonden die aan je zoekcriteria voldoen.</string>
+    <string name="first_entry_title">Je hebt je eerste slaapvermelding gemaakt!</string>
+    <string name="first_entry_msg">Tik op de rij om te bekijken of te bewerken.\n\n (Tip: probeer ook lang indrukken)</string>
+    <string name="movement">Beweging</string>
+    <string name="sound">Geluid</string>
+    <string name="high">Hoog</string>
+    <string name="medium">Gemiddeld</string>
+    <string name="low">Laag</string>
+    <!-- Overview / graphs -->
+    <string name="current_trend">Huidige trend</string>
+    <string name="avg_sleep_day">GEMIDDELDE SLAAP/DAG</string>
+    <string name="ratings">Beoordelingen</string>
+    <string-array name="range_choices">
+        <item>Alles</item>
+        <item>10 dagen</item>
+        <item>30 dagen</item>
+        <item>60 dagen</item>
+        <item>180 dagen</item>
+        <item>360 dagen</item>
+    </string-array>
+    <string name="alarms">Alarmen</string>
+    <string name="alarm_weekends">Weekenden</string>
+    <string name="alarm_status_title">SleepBot-alarm</string>
+    <string name="auto_alarm_set">Alarm ingesteld: %1$s, %2$s</string>
+    <string name="auto_alarm_disabled">Automatisch alarm uitgeschakeld</string>
+    <string name="alarm_scheduled">Alarm gepland: %1$s (%2$s)</string>
+    <string name="snooze">SNOOZE</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="one">SNOOZE\n%d minuut</item>
+        <item quantity="other">SNOOZE\n%d minuten</item>
+    </plurals>
+    <string name="alarm_row_label">Label</string>
+    <!-- Quantity follows %3$d (seconds). -->
+    <plurals name="alarm_fade_summary">
+        <item quantity="one">Van %1$d%% naar %2$d%% in %3$d seconde.</item>
+        <item quantity="other">Van %1$d%% naar %2$d%% in %3$d seconden.</item>
+    </plurals>
+    <string name="alarm_pick_system_tone">Kiezen uit alarmgeluiden</string>
+    <string name="alarm_pick_file">Een audiobestand kiezen</string>
+    <string name="alarm_file_not_chosen">Geen bestand gekozen</string>
+    <string name="alarm_ok">OK</string>
+    <string name="alarm_exact_permission">SleepBot heeft toestemming nodig om exacte alarmen in te plannen, zodat je alarmen op tijd afgaan.</string>
+    <string name="alarm_fsi_permission">Sta SleepBot toe alarmen op volledig scherm te tonen, zodat het alarmscherm verschijnt als je telefoon vergrendeld is.</string>
+    <string name="alarm_grant">Toestaan</string>
+    <!-- Help tab -->
+    <string name="help_section_sleepbot">SleepBot gebruiken</string>
+    <string name="help_section_sleep">Help me slapen…</string>
+    <string name="help_section_wake">Help me wakker te blijven!</string>
+    <string name="help_section_learn">Meer over slaap</string>
+    <string name="help_instructions">Instructies</string>
+    <string name="help_entries_and_graphs">Tabbladen Vermeldingen &amp; Grafieken</string>
+    <string name="help_eat_this">Eet dit!</string>
+    <string name="help_read_this">Lees dit!</string>
+    <string name="help_quick_strategies">Snelle strategieën</string>
+    <string name="help_prepare_bedroom">Je slaapkamer voorbereiden</string>
+    <string name="help_caffeine_chart">Cafeïnetabel</string>
+    <string name="help_do_this">Doe dit!</string>
+    <string name="help_sleep_debt">Wat is slaapschuld?</string>
+    <string name="help_health_problems">Mogelijke gezondheidsproblemen</string>
+    <string name="help_sleep_disorders">Soorten slaapstoornissen</string>
+    <!-- Tutorial overlay -->
+    <string name="tutorial_title_1">Welkom bij de\nvolledig vernieuwde SleepBot!</string>
+    <string name="tutorial_1_1">SleepBot is een mooie slaaptracker &amp;\nslim alarm waarmee je beter wakker wordt!</string>
+    <string name="tutorial_1_2">Stel eerst je alarm(en) in</string>
+    <string name="tutorial_2_1">Kies je volgopties en\ntik op \'ga slapen\'</string>
+    <string name="tutorial_3_1">Leg je telefoon naast je op het bed:</string>
+    <string name="tutorial_3_2">Wekken: 8:00 ~ 8:30</string>
+    <string name="tutorial_3_3">Het slimme alarm wekt je tijdens je lichtste slaap binnen 30 min (of het gekozen bereik) vóór je eerste alarm.\n\n\n(bijv. dit is voor een slim alarm om 8:30!)</string>
+    <string name="tutorial_4_1">Bekijk hier je slaapvermeldingen &amp;\nslaaptrends:</string>
+    <string name="tutorial_4_2">**Tip: tik op geluidsgrafieken om geluiden af te spelen!</string>
+    <string name="get_started">Aan de slag</string>
+    <!-- Widget / integration API -->
+    <string name="widget_label">SleepBot-widget</string>
+    <string name="back">Terug</string>
+    <string name="setting_title_general">Algemeen</string>
+    <string name="agree">Akkoord</string>
+    <string name="pref_reminder_summary">Krijg een herinnering wanneer het tijd is om te gaan slapen</string>
+    <string name="pref_sc_sleep_tracking">Slaap volgen</string>
+    <string name="pref_tracking_summary">Stil, automatisch alarm, slim alarm, beweging- en geluidsopties</string>
+    <string name="pref_sc_look_and_feel">Weergave</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="pref_view_update_notice">Update-melding bekijken.</string>
+    <string name="rate_sleepbot">Beoordeel SleepBot!</string>
+    <!-- Bedtime reminder -->
+    <string name="sleep_reminder">Bedtijdherinnering</string>
+    <string name="sleep_reminder_title">Bedtijdherinnering inschakelen</string>
+    <string name="sleep_reminder_summary">De bedtijdherinnering herinnert je op basis van je alarminstellingen eraan om te gaan slapen als je je dan nog niet hebt aangemeld.</string>
+    <string name="times_before_offset">Verschuiving herinneringstijd</string>
+    <string name="times_before_offset_summary">Volgende alarmtijd - (optimale slaapduur) - (verschuiving herinnering) = herinneringstijd.</string>
+    <string name="sleep_reminder_title_2nd">Tweede herinnering inschakelen</string>
+    <string name="sleep_reminder_summary_2nd">Een tweede herinnering voor als je dan nog steeds niet slaapt.</string>
+    <string name="times_before_offset_2nd">Verschuiving 2e herinnering</string>
+    <string name="times_before_offset_summary_2nd">Volgende alarmtijd - (optimale slaapduur) - (verschuiving 2e herinnering) = tijd 2e herinnering.</string>
+    <string name="no_reminder_snooze">Geen \'later herinneren\'</string>
+    <string name="no_reminder_summary">Het venster \'later herinneren\' niet tonen.</string>
+    <string name="reminder_mute_title">Geen meldingsgeluid</string>
+    <string name="reminder_mute_summary">Geen meldingsgeluid afspelen voor de herinnering.</string>
+    <!-- Sleep tracking -->
+    <string name="options_soundmode_title">Automatisch stil</string>
+    <string name="dnd_access_msg">Om je telefoon stil te zetten terwijl je slaapt, heeft SleepBot toegang tot \"Niet storen\" nodig. Alarmen gaan nog steeds af.</string>
+    <string name="options_auto_alarm_title">Automatisch alarm aan</string>
+    <string name="options_auto_alarm_summary">Maakt een alarm dat automatisch afgaat na het optimale aantal uren (inclusief verschuiving) na het aanmelden.</string>
+    <string name="pref_cat_movement_tracking">Beweging volgen</string>
+    <string name="pref_allow_screen_off_title">Volgen met scherm uit</string>
+    <string name="pref_allow_screen_off_summary">Sommige telefoons ondersteunen het volgen van beweging terwijl het scherm uit staat.</string>
+    <string name="pref_allow_screen_off_warning">Let op: als de bewegingsgrafieken alleen nullen tonen, ondersteunt je telefoon volgen met het scherm uit niet en kun je deze optie beter uitgeschakeld laten.</string>
+    <string name="pref_cat_smart_alarm">Slim alarm</string>
+    <string name="pref_time_alarm_range_title">Alarmbereik</string>
+    <string name="pref_time_alarm_range_summary">Tijdsbereik vóór het eerste alarm om op het optimale moment wakker te worden.</string>
+    <string name="pref_movement_sensitivity_title">Bewegingsgevoeligheid</string>
+    <string name="pref_movement_sensitivity_summary">Pas aan om het slimme alarm af te stemmen op je bed en telefoon.</string>
+    <string name="pref_cat_sound_recording">Geluidsopname</string>
+    <string name="pref_sound_sensitivity_title">Opnamedrempel</string>
+    <string name="pref_sound_sensitivity_summary">De geluidsopname begint wanneer het volume boven de drempel komt</string>
+    <string name="delete_older_sound_files">Oudere bestanden verwijderen</string>
+    <string name="delete_older_sound_files_7">Te weinig ruimte? Verwijder lokale geluidsbestanden die ouder zijn dan 7 dagen.</string>
+    <string name="delete_older_sound_files_message">Het verwijderen van oudere geluidsbestanden kan niet ongedaan worden gemaakt.</string>
+    <plurals name="files_deleted">
+        <item quantity="one">%d bestand verwijderd</item>
+        <item quantity="other">%d bestanden verwijderd</item>
+    </plurals>
+    <!-- Appearance -->
+    <string name="pref_alternate_display_show_title">Alternatieve weergave tonen</string>
+    <string name="pref_alternate_display_show_summary">Schakel uit als je de alternatieve informatie wilt verbergen.</string>
+    <string name="pref_hour_format_title">Urennotatie in lijst</string>
+    <string name="pref_hour_format_summary">Op telefoons met grote schermen kun je een niet-decimale notatie gebruiken voor het totaal aantal uren en de slaapschuld.</string>
+    <string name="pref_default_display_title">Standaardweergave</string>
+    <string name="pref_default_display_summary">Kies wat het hoofdgetal op het tabblad Home toont.</string>
+    <string name="pref_no_warning_title">Geen waarschuwing bij scherm uit</string>
+    <string name="pref_no_warning_summary">Geen oplaadwaarschuwing tonen als \'Volgen met scherm uit\' is ingeschakeld.</string>
+    <string name="pref_notification_mode_title">Statusmelding</string>
+    <string name="pref_notification_mode_summary">Wanneer de aanmeldstatus van SleepBot in de meldingsbalk wordt getoond.</string>
+    <string name="pref_title_show_disconnected_lines">Stippellijnen</string>
+    <string name="pref_summary_show_disconnected_lines">Verbind losse punten in de trendgrafiek met stippellijnen.</string>
+    <!-- Backup -->
+    <string name="pref_android_backup">Android-back-up</string>
+    <string name="pref_android_backup_text">Je slaapvermeldingen en instellingen worden ook automatisch opgenomen in de apparaatback-up van Android (back-up in je Google-account) en teruggezet wanneer je een nieuwe telefoon instelt.</string>
+    <string name="pref_adv_backup_summary">Maak een back-up van je gegevens in een bestand (bijv. op je telefoon of in de cloud).</string>
+    <string name="restore_backup_summary">Herstel vermeldingen uit bestanden die met de back-upfunctie zijn gemaakt. (Aanbevolen)</string>
+    <string name="restore_warning_double">BELANGRIJK: herstellen kan dubbele vermeldingen opleveren als je al vermeldingen in je logboek hebt (wis zo nodig de SleepBot-gegevens via de app-instellingen van Android).</string>
+    <string name="restore_choose_backup_hint">Kies een bestand dat met de back-upfunctie van SleepBot is gemaakt. Vermeldingen die al in je logboek staan, worden overgeslagen.</string>
+    <string name="restore_choose_file_button">Bestand kiezen</string>
+    <plurals name="backup_done_n">
+        <item quantity="one">Back-up voltooid: %d vermelding opgeslagen, inclusief bewegings-/geluidsgegevens.\nLet op: de instellingen van de wekker worden niet meegenomen in de back-up.</item>
+        <item quantity="other">Back-up voltooid: %d vermeldingen opgeslagen, inclusief bewegings-/geluidsgegevens.\nLet op: de instellingen van de wekker worden niet meegenomen in de back-up.</item>
+    </plurals>
+    <string name="backup_failed">Back-up mislukt: %s</string>
+    <!-- Quantity follows %2$d (total entries in the file). -->
+    <plurals name="restore_done">
+        <item quantity="one">%1$d/%2$d vermelding hersteld.\n\nStartdatum van de slaapschuld is teruggezet naar vandaag.</item>
+        <item quantity="other">%1$d/%2$d vermeldingen hersteld.\n\nStartdatum van de slaapschuld is teruggezet naar vandaag.</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="one">%d vermelding hersteld.</item>
+        <item quantity="other">%d vermeldingen hersteld.</item>
+    </plurals>
+    <string name="restore_csv_partial">De rest van het bestand kon niet worden gelezen. Controleer of de datumnotatie overeenkomt met het bestand.</string>
+    <string name="error_export_db_is_too_new">Deze database is te nieuw om te herstellen.</string>
+    <string name="date_format">Datumnotatie</string>
+    <string name="pref_reset_debt_summary">Start de berekening van de slaapschuld opnieuw vanaf vandaag.</string>
+    <string name="alarm_default_settings_summary">Standaard toon, snooze, trillen en volume-fade voor nieuwe alarmen</string>
+    <!-- Notification channels -->
+    <string name="channel_session">Slaapstatus</string>
+    <string name="channel_tracking">Slaap volgen</string>
+    <string name="channel_alarm">Afgaande alarmen</string>
+    <string name="channel_reminder">Bedtijdherinneringen</string>
+    <string name="channel_night">Nachtscherm</string>
+    <string-array name="sleep_reminder_offsets">
+        <item>15 minuten ervoor</item>
+        <item>30 minuten ervoor</item>
+        <item>45 minuten ervoor</item>
+        <item>1 uur ervoor</item>
+        <item>2 uur ervoor</item>
+    </string-array>
+    <string-array name="sleep_reminder_offsets_2nd">
+        <item>15 minuten erna</item>
+        <item>30 minuten erna</item>
+        <item>45 minuten erna</item>
+        <item>1 uur erna</item>
+        <item>2 uur erna</item>
+    </string-array>
+    <string-array name="alarm_range_entries">
+        <item>15 minuten ervoor</item>
+        <item>30 minuten ervoor</item>
+        <item>45 minuten ervoor</item>
+        <item>60 minuten ervoor</item>
+        <item>90 minuten ervoor</item>
+    </string-array>
+    <string-array name="movement_sensitivity_entries">
+        <item>Zeer laag (zacht bed + gevoelige telefoons)</item>
+        <item>Laag</item>
+        <item>Normaal</item>
+        <item>Hoog</item>
+        <item>Zeer hoog (voor zeer harde bedden)</item>
+    </string-array>
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>Zeer laag (alleen zeer harde geluiden opnemen)</item>
+        <item>Laag</item>
+        <item>Normaal</item>
+        <item>Hoog</item>
+        <item>Zeer hoog (bijna alle geluiden opnemen)</item>
+    </string-array>
+    <string-array name="entry_list_hour_format_entries">
+        <item>decimaal (3,5)</item>
+        <item>tijd (03:30)</item>
+    </string-array>
+    <string-array name="default_display_entries">
+        <item>Slaap vandaag</item>
+        <item>Huidige slaapschuld</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>Altijd</item>
+        <item>Alleen tijdens het slapen</item>
+        <item>Nooit</item>
+    </string-array>
+    <!-- Tracking service -->
+    <string name="trk_notification_title">Slaap volgen</string>
+    <string name="trk_notification_motion">Je bewegingen worden gevolgd</string>
+    <string name="trk_notification_sound">Er wordt geluisterd naar geluiden</string>
+    <string name="trk_notification_both">Je bewegingen en geluiden worden gevolgd</string>
+    <!-- Night screen -->
+    <string name="trk_no_alarm_set">Geen alarm ingesteld</string>
+    <string name="trk_phone_is_not_plugged">Laat je telefoon aan de oplader liggen om te voorkomen dat de batterij leegraakt.</string>
+    <string name="trk_screen_dim_soon">Slaap volgen gestart: het scherm wordt over 15 seconden gedimd…</string>
+    <string name="trk_screen_already_dimmed">Druk op de terugknop om het scherm aan te zetten. Druk niet op de aan/uit-knop. Welterusten!</string>
+    <string name="trk_screen_off_toast">SleepBot volgt je slaap. Je kunt je scherm uitzetten of andere dingen doen, maar gebruik liever geen geheugenintensieve apps.</string>
+    <string name="trk_waking_up">wakker worden!</string>
+    <string name="trk_am">AM</string>
+    <string name="trk_pm">PM</string>
+    <!-- Graphs -->
+    <string name="trk_accel_graph_title">Beweging</string>
+    <string name="trk_sound_graph_title">Geluid</string>
+    <string name="trk_label_high">Hoog</string>
+    <string name="trk_label_medium">Gemiddeld</string>
+    <string name="trk_label_low">Laag</string>
+    <string name="trk_no_sensor_data">Geen sensorgegevens opgenomen voor deze vermelding.</string>
+    <!-- Bedtime reminders -->
+    <string name="trk_sleep_reminder_title">Bedtijdherinnering</string>
+    <string name="trk_sleep_reminder_toast">Ga snel slapen om op tijd wakker te worden!</string>
+    <string name="trk_choose_time">Kies een tijd</string>
+    <string name="trk_remind_with_sleep_cycle">Als je nu niet gaat slapen, kun je later opnieuw herinnerd worden in een van de volgende slaapcycli.\n\nDe tijden liggen 90 minuten uit elkaar, gerekend vanaf de volgende alarmtijd min 30 minuten om je voor te bereiden en in slaap te vallen.</string>
+    <string name="trk_you_should_really_go_to_sleep">Je moet nu echt gaan slapen of een powernap doen. Dat verhoogt je productiviteit!</string>
+    <string name="trk_night_screen_open">Tik om het nachtscherm te tonen</string>
+    <string name="pref_night_auto_title">Nachtscherm automatisch tonen</string>
+    <string name="pref_night_auto_summary">Open het nachtscherm als je \'s nachts het scherm aanzet. Vereist de toestemming \"Weergeven vóór andere apps\".</string>
 </resources>

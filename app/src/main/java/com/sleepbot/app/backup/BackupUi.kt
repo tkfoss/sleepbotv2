@@ -64,6 +64,7 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
     val ctx = LocalContext.current
     val res = LocalResources.current
     fun s(id: Int, vararg args: Any) = res.getString(id, *args)
+    fun q(id: Int, n: Int, vararg args: Any) = res.getQuantityString(id, n, *args)
     val scope = rememberCoroutineScope()
     var csvPattern by remember { mutableStateOf("MM/dd/yy") }
 
@@ -73,7 +74,7 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
         show { ProgressDialog(s(R.string.restore_progress_title)) }
         scope.launch {
             val r = withContext(Dispatchers.IO) { Csv.import(ctx, String(bytes, Charsets.UTF_8), pattern) }
-            val msg = s(R.string.restore_csv_done, r.imported) +
+            val msg = q(R.plurals.restore_csv_done, r.imported, r.imported) +
                 if (r.failed) "\n\n" + s(R.string.restore_csv_partial) else ""
             done(s(R.string.restore_old_file_title), msg)
         }
@@ -96,7 +97,7 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
         scope.launch {
             val n = runCatching { Backup.write(ctx, uri) }
             n.onSuccess {
-                done(s(R.string.done_label), s(R.string.backup_done_n, it))
+                done(s(R.string.done_label), q(R.plurals.backup_done_n, it, it))
             }.onFailure { done(s(R.string.error), s(R.string.backup_failed, it.message.orEmpty())) }
         }
     }
@@ -114,7 +115,7 @@ fun BackupSection(show: (@Composable () -> Unit) -> Unit, close: () -> Unit) {
             when (val r = Backup.restore(ctx, bytes)) {
                 is Backup.RestoreResult.Ok -> done(
                     s(R.string.pref_adv_restore_title),
-                    s(R.string.restore_done, r.restored, r.total),
+                    q(R.plurals.restore_done, r.total, r.restored, r.total),
                 )
                 is Backup.RestoreResult.Error -> done(s(R.string.error), s(r.message))
             }

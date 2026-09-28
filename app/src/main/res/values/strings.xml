@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SleepBot</string>
-    <string name="hour_n">%d hour</string>
-    <string name="hours_n">%d hours</string>
-    <string name="minute_n">%d minute</string>
-    <string name="minutes_n">%d minutes</string>
-    <string name="day_n">%d day</string>
-    <string name="days_n">%d days</string>
+    <plurals name="n_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
     <string name="alarm_has_occurred">Alarm has occurred</string>
     <string name="punched_in_since">Punched in since %s</string>
     <string name="status_set_sleep">Status set to sleep</string>
@@ -39,7 +45,8 @@
     <string name="future_no_record_toast">Status changed to awake without inserting a new entry.</string>
     <string name="current_session_title">Current Sleep Session</string>
     <string name="current_session_msg">You punched in at %1$s, %2$s ago.</string>
-    <string name="awake_since">You have been awake since %1$d hours %2$d minutes ago.</string>
+    <!-- %s: a duration such as "5 hours 12 minutes" (n_hours + n_minutes) -->
+    <string name="awake_for">You have been awake for %s.</string>
     <string name="edit_data">Edit Data</string>
     <string name="reset_debt_q">Do you want to reset your debt?</string>
     <string name="reset_debt_title">Reset Debt</string>

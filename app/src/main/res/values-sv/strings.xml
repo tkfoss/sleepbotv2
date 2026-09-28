@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hour_n">%d timme</string>
-    <string name="hours_n">%d timmar</string>
-    <string name="minute_n">%d minut</string>
-    <string name="minutes_n">%d minuter</string>
-    <string name="day_n">%d dag</string>
-    <string name="days_n">%d dagar</string>
     <string name="alarm_has_occurred">Alarmet har ringt</string>
     <string name="punched_in_since">Instämplad sedan %s</string>
     <string name="status_set_sleep">Status satt till att sova</string>
@@ -22,7 +16,7 @@
     <string name="auto_alarm_prompt">Du har inga alarm för nästa dygn. Vill du stämpla in nu för att sätta på auto-alarm och Intelligent Alarm?</string>
     <string name="mode_smart">Intelligent Alarm-läge. Rörelsedetektering startar inom det valda tidsintervallet för ditt första alarm.</string>
     <string name="mode_smart_motion">Rörelsespårning på hela natten + SleepBot kommer väcka dig vid en optimal tidpunkt.</string>
-    <string name="mode_complete">Fullständigt läge. SleepBot kommer spåra dina rörelser och ljud, samt väcka dig vid den bästa tidpunkten inom det valde tidsintervallet för ditt första alarm.</string>
+    <string name="mode_complete">Fullständigt läge. SleepBot kommer spåra dina rörelser och ljud, samt väcka dig vid den bästa tidpunkten inom det valda tidsintervallet för ditt första alarm.</string>
     <string name="mode_motion">Rörelsespårningsläge.</string>
     <string name="mode_motion_sound">SleepBot kommer spåra dina rörelser och ljud under natten</string>
     <string name="mode_classic">SleepBot klassiskt läge.</string>
@@ -33,18 +27,17 @@
     <string name="future_no_record">Ingen post</string>
     <string name="future_zero_record">\'0\'-post</string>
     <string name="future_no_offset">Ingen offset</string>
-    <string name="future_no_record_toast">Status ändrad till vaken utan att lagt till en post.</string>
+    <string name="future_no_record_toast">Status ändrad till vaken utan att lägga till en post.</string>
     <string name="current_session_title">Nuvarande sömnsession</string>
-    <string name="awake_since">Du har varit vaken i %1$d timmar och %2$d minuter.</string>
     <string name="reset_debt_q">Vill du återställa din skuld?</string>
     <string name="reset_debt_title">Återställ skuld</string>
-    <string name="reset_debt_msg">Att återställa skulden kommer att ta bort din nuvarande sömnskuld och starta om räkningen från och med dagens datum. \n\n*Detta kommer bara att ändra datumet från när skulden räknas på Startsidan – inga inlägg kommer att ändras.n\n*Detta kommer bara att ändra datumet från när skulden räknas på Startsidan – inga inlägg kommer att ändras. \n\n*Skuld för idag kommer fortfarande bli medräknad, som dagens sömn subtraherad från den optimala \n\n*Skuld för idag kommer fortfarande bli medräknad, som dagens sömn subtraherad från den optimala sömntiden.</string>
+    <string name="reset_debt_msg">Att återställa skulden kommer att ta bort din nuvarande sömnskuld och starta om räkningen från och med dagens datum. \n\n*Detta kommer bara att ändra datumet från när skulden räknas på Startsidan – inga poster kommer att ändras. \n\n*Skuld för idag kommer fortfarande bli medräknad, som dagens sömn subtraherad från den optimala sömntiden.</string>
     <string name="reset_debt_done">Skulden är nu återställd! Nästa gång du visar Startsidan kommer den visa den nya skulden.</string>
     <string name="confirm">Bekräfta</string>
     <string name="cancel">Avbryt</string>
     <string name="reset">Återställ</string>
     <string name="edit">Redigera</string>
-    <string name="delete">Ta bort…</string>
+    <string name="delete">Ta bort</string>
     <string name="save">Spara</string>
     <string name="share">Dela</string>
     <string name="view">Visa</string>
@@ -75,9 +68,9 @@
     <string name="sleep_time">Sovtid :</string>
     <string name="wake_time">Uppvakning :</string>
     <string name="invalid_time">Ogiltig tidsinställning, sovtid måste vara före uppvakningstid.</string>
-    <string name="cancel_caps">Avbryt</string>
-    <string name="delete_caps">Ta bort…</string>
-    <string name="save_caps">Spara</string>
+    <string name="cancel_caps">AVBRYT</string>
+    <string name="delete_caps">TA BORT</string>
+    <string name="save_caps">SPARA</string>
     <string name="share_entry">Dela denna post</string>
     <string name="movement">Rörelse</string>
     <string name="sound">Ljud</string>
@@ -94,8 +87,8 @@
     <string name="ratings">Betyg</string>
     <string name="title_trend">Sovtidstrend</string>
     <string name="title_length">Längdsumma</string>
-    <string name="title_pattern">Sovtidssumma</string>
-    <string name="title_sleep">Sovtidsssumma</string>
+    <string name="title_pattern">Sovtidsfördelning</string>
+    <string name="title_sleep">Sovtidssumma</string>
     <string name="title_wake">Uppvakningssumma</string>
     <string name="alarm_clock_label">Alarm</string>
     <string name="alarms">Alarm</string>
@@ -106,13 +99,12 @@
     <string name="alarm_weekends">Helger</string>
     <string name="alarm_status_text">Nästa alarm: %1$s (%2$s)</string>
     <string name="auto_alarm_set">Alarm satt till: %1$s, %2$s</string>
-    <string name="auto_alarm_disabled">Autoalam avaktiverat</string>
+    <string name="auto_alarm_disabled">Autoalarm avaktiverat</string>
     <string name="alarm_scheduled">Alarm inställt: %1$s (%2$s)</string>
     <string name="dismiss_slider">DRA FÖR ATT AVFÄRDA</string>
     <string name="alarm_time_out">Väntetid på alarm</string>
-    <string name="time_out_error">VARNING: Detta alarm väntar på bekräftelse.</string>
+    <string name="time_out_error">VARNING: Detta alarm har gått ut i väntan på bekräftelse.</string>
     <string name="snooze">SUSSA</string>
-    <string name="snooze_n_minutes">SUSSA\n%d minuter</string>
     <string name="alarm_edit">Redigera</string>
     <string name="alarm_delete_ellipsis">Ta bort…</string>
     <string name="alarm_delete_all">Ta bort alla…</string>
@@ -153,7 +145,7 @@
     <string name="help_health_problems">Eventuella hälsoproblem</string>
     <string name="help_sleep_disorders">Typer av sömnproblem</string>
     <string name="tutorial_title_1">Välkommen till den\nhelt nya SleepBot!</string>
-    <string name="tutorial_1_1">SleepBot är en vacker sömnspårare &amp;\n med Intelligent Alarm som hjälper dig att vakna bättre!</string>
+    <string name="tutorial_1_1">SleepBot är en vacker sömnspårare &amp;\nIntelligent Alarm som hjälper dig att vakna bättre!</string>
     <string name="tutorial_1_2">Först, ställ in ditt/dina alarm</string>
     <string name="tutorial_2_1">Välj dina spårningsinställningar och \nsedan tryck på \'gå och sov\'</string>
     <string name="tutorial_3_1">Placera din telefon bredvid dig på sängen:</string>
@@ -167,7 +159,7 @@
     <string name="settings">Inställningar</string>
     <string name="setting_title_general">GENERELLT</string>
     <string name="setting_title_app">App</string>
-    <string name="about">Omkring</string>
+    <string name="about">Om</string>
     <string name="agree">Acceptera</string>
     <string name="next">Nästa</string>
     <string name="done_label">Färdig</string>
@@ -204,7 +196,7 @@
     <string name="options_auto_alarm_summary">Skapar ett alarm som automatiskt ringer för \"optimala antalet sovtimmar\" (inklusive offset) efter du stämplat in.</string>
     <string name="pref_cat_movement_tracking">Rörelsespårning</string>
     <string name="pref_allow_screen_off_title">Spårning med avstängd skärm</string>
-    <string name="pref_allow_screen_off_summary">Visa telefoner kan stödja rörelsespårning med skärmen avstängd.</string>
+    <string name="pref_allow_screen_off_summary">Vissa telefoner kan stödja rörelsespårning med skärmen avstängd.</string>
     <string name="pref_cat_smart_alarm">Intelligent alarm</string>
     <string name="pref_time_alarm_range_title">Alarmintervall</string>
     <string name="pref_time_alarm_range_summary">Tidsintervallet före ditt första alarm för bästa väckning.</string>
@@ -223,7 +215,7 @@
     <string name="options_default_graph_title">Standarddiagram</string>
     <string name="options_default_graph_summary">Välj de diagram som visas som standard på spårningsfliken.</string>
     <string name="pref_no_warning_title">Ingen varning i läge med avstängd skärm</string>
-    <string name="pref_no_warning_summary">Visa inte uppladdningsvarning om skärmläget av avstängt.</string>
+    <string name="pref_no_warning_summary">Visa inte laddningsvarning om läget Avstängd skärm är aktiverat.</string>
     <string name="options_notification_sleep_title">Text för sovpåminnelse</string>
     <string name="options_notification_sleep_summary">Anpassa meddelandet som visas i notifikationer.</string>
     <string name="options_notification_awake_title">Text för väckningspåminnelse</string>
@@ -235,7 +227,7 @@
     <string name="restore_backup_title">Återställa från backup-fil</string>
     <string name="restore_old_file_title">Återställ från en exportfil</string>
     <string name="restore_old_file_summary">Återställ poster från en fil skapad av Export-funktionen.</string>
-    <string name="restore_old_file_body">Eftersom exportfilerna inte är urspringligen skapade för backup- och återställningssyften, var god välj samma datumformat i nästa steg för att matcha den som används i texten. Var god välj samma datumformat som den när du exporterar filen för att all data importeras korrekt (Om en annan applikation på Market försöker importera SleepBot-data och inte frågar om datumformat, borde du verifiera att datan importerades korrekt).</string>
+    <string name="restore_old_file_body">Eftersom exportfilerna inte är ursprungligen skapade för backup- och återställningssyften, var god välj samma datumformat i nästa steg för att matcha den som används i texten. Var god välj samma datumformat som den när du exporterar filen för att all data importeras korrekt (Om en annan applikation på Market försöker importera SleepBot-data och inte frågar om datumformat, borde du verifiera att datan importerades korrekt).</string>
     <string name="restore_confirm_title">Bekräfta för att återställa</string>
     <string name="restore_warning_double">VIKTIGT: Återställningar kan skapa dubbletter av poster om du redan har poster i din logg (nollställ SleepBot-data i Android Applikationsinställningar om nödvändigt).</string>
     <string name="restore_progress_title">Återställa SleepBot</string>
@@ -261,7 +253,7 @@
     <string name="summary_avg_record">Genomsnittlig sömn/post:</string>
     <string name="summary_cum">Ihopsamlad skuld:</string>
     <string name="hours_ori">timmar</string>
-    <string name="channel_alarm_status">Nästa alarm:</string>
+    <string name="channel_alarm_status">Nästa alarm</string>
     <string name="trk_no_alarm_set">Inget alarm inställt</string>
     <string name="trk_phone_is_not_plugged">Var god lämna din telefon på laddning för att undvika urladdning.</string>
     <string name="trk_screen_dim_soon">Börjar sömnspårning: Skärmen kommer släckas inom 15 sekunder…</string>
@@ -308,7 +300,7 @@
         <item>11 timmar</item>
     </string-array>
     <string-array name="delay_min_entries">
-        <item>Ingen offest (0)</item>
+        <item>Ingen offset (0)</item>
         <item>+5 minuter</item>
         <item>+10 minuter</item>
         <item>+15 minuter</item>
@@ -369,4 +361,105 @@
         <item>Dag/Månad/År</item>
         <item>År/Månad/Dag</item>
     </string-array>
+    <plurals name="n_hours">
+        <item quantity="one">%d timme</item>
+        <item quantity="other">%d timmar</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuter</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagar</item>
+    </plurals>
+    <string name="current_session_msg">Du stämplade in %1$s, för %2$s sedan.</string>
+    <string name="awake_for">Du har varit vaken i %s.</string>
+    <string name="edit_data">Redigera data</string>
+    <string name="ok">OK</string>
+    <string name="trend">TREND</string>
+    <string name="alarm_status_title">SleepBot-alarm</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="one">SUSSA\n%d minut</item>
+        <item quantity="other">SUSSA\n%d minuter</item>
+    </plurals>
+    <plurals name="alarm_fade_summary">
+        <item quantity="one">Från %1$d%% till %2$d%% under %3$d sekund.</item>
+        <item quantity="other">Från %1$d%% till %2$d%% under %3$d sekunder.</item>
+    </plurals>
+    <string name="alarm_pick_system_tone">Välj bland alarmljud</string>
+    <string name="alarm_pick_file">Välj en ljudfil</string>
+    <string name="alarm_file_not_chosen">Ingen fil vald</string>
+    <string name="alarm_ok">OK</string>
+    <string name="alarm_exact_permission">SleepBot behöver behörighet att schemalägga exakta alarm så att dina alarm ringer i tid.</string>
+    <string name="alarm_fsi_permission">Tillåt SleepBot att visa alarm i helskärm så att alarmskärmen visas när telefonen är låst.</string>
+    <string name="alarm_grant">Tillåt</string>
+    <string name="help_caffeine_chart">Koffeintabell</string>
+    <string name="help_do_this">Gör detta!</string>
+    <string name="widget_label">SleepBot-widget</string>
+    <string name="back">Tillbaka</string>
+    <string name="pref_reminder_summary">Bli påmind när det är dags att gå och sova</string>
+    <string name="pref_tracking_summary">Tystnad, autoalarm, Intelligent Alarm, rörelse- och ljudinställningar</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="dnd_access_msg">För att kunna tysta telefonen medan du sover behöver SleepBot åtkomst till \"Stör ej\". Alarm ringer ändå.</string>
+    <string name="pref_allow_screen_off_warning">Observera: om rörelsediagrammen bara visar 0:or stöder din telefon inte spårning med avstängd skärm, och du bör lämna detta alternativ avmarkerat.</string>
+    <string name="delete_older_sound_files_7">Ont om utrymme? Ta bort lokala ljudfiler som är äldre än 7 dagar.</string>
+    <string name="delete_older_sound_files_message">Borttagning av äldre ljudfiler kan inte ångras.</string>
+    <plurals name="files_deleted">
+        <item quantity="one">%d fil borttagen</item>
+        <item quantity="other">%d filer borttagna</item>
+    </plurals>
+    <string name="pref_notification_mode_title">Statusnotifiering</string>
+    <string name="pref_notification_mode_summary">När SleepBots instämplingsstatus ska visas i notifieringsfältet.</string>
+    <string name="pref_android_backup">Android-backup</string>
+    <string name="pref_android_backup_text">Dina sömnposter och inställningar säkerhetskopieras också automatiskt av Androids enhetsbackup (backup till Google-kontot) och återställs när du konfigurerar en ny telefon.</string>
+    <string name="pref_adv_backup_title">Backup</string>
+    <string name="pref_adv_backup_summary">Säkerhetskopiera din data till en fil (t.ex. på telefonen eller i molnet).</string>
+    <string name="restore_backup_summary">Återställ poster från filer skapade av Backup-funktionen. (Rekommenderas)</string>
+    <string name="restore_choose_backup_hint">Välj en fil skapad av SleepBots Backup-funktion. Poster som redan finns i din logg hoppas över.</string>
+    <string name="restore_choose_file_button">Välj fil</string>
+    <plurals name="backup_done_n">
+        <item quantity="one">Backup klar: %d post sparad, inklusive rörelse-/ljuddata.\nObservera att alarminställningar inte säkerhetskopieras.</item>
+        <item quantity="other">Backup klar: %d poster sparade, inklusive rörelse-/ljuddata.\nObservera att alarminställningar inte säkerhetskopieras.</item>
+    </plurals>
+    <string name="backup_failed">Backup misslyckades: %s</string>
+    <!-- Quantity follows %2$d (total entries in the file). -->
+    <plurals name="restore_done">
+        <item quantity="one">%1$d/%2$d post har återställts.\n\nStartdatumet för sömnskulden har återställts till idag.</item>
+        <item quantity="other">%1$d/%2$d poster har återställts.\n\nStartdatumet för sömnskulden har återställts till idag.</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="one">%d post har återställts.</item>
+        <item quantity="other">%d poster har återställts.</item>
+    </plurals>
+    <string name="restore_csv_partial">Resten av filen kunde inte läsas. Kontrollera att datumformatet stämmer med filen.</string>
+    <string name="date_format">Datumformat</string>
+    <string name="pref_reset_debt_summary">Starta om beräkningen av sömnskuld från och med idag.</string>
+    <string name="alarm_default_settings_summary">Standardton, snooze, vibration och volymökning för nya alarm</string>
+    <string name="channel_session">Sömnstatus</string>
+    <string name="channel_tracking">Sömnspårning</string>
+    <string name="channel_alarm">Ringande alarm</string>
+    <string name="channel_reminder">Läggdagspåminnelser</string>
+    <string name="trk_notification_title">Sömnspårning</string>
+    <string name="trk_notification_motion">Spårar dina rörelser</string>
+    <string name="trk_notification_sound">Lyssnar efter ljud</string>
+    <string name="trk_notification_both">Spårar dina rörelser och ljud</string>
+    <string name="trk_waking_up">vaknar!</string>
+    <string name="channel_night">Nattskärm</string>
+    <string name="trk_night_screen_open">Tryck för att visa nattskärmen</string>
+    <string name="trk_no_sensor_data">Ingen sensordata registrerad för denna post.</string>
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>Väldigt låg (spela bara in väldigt höga ljud)</item>
+        <item>Låg</item>
+        <item>Normal</item>
+        <item>Hög</item>
+        <item>Väldigt hög (spela in nästan alla ljud)</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>Alltid</item>
+        <item>Bara när jag sover</item>
+        <item>Aldrig</item>
+    </string-array>
+    <string name="pref_night_auto_title">Visa nattskärmen automatiskt</string>
+    <string name="pref_night_auto_summary">Öppna nattskärmen när du slår på skärmen på natten. Kräver behörigheten \"Visa ovanpå andra appar\".</string>
 </resources>

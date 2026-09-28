@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.LocalTextStyle
@@ -44,6 +45,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -272,7 +274,9 @@ private fun SleepBox(
             Row(Modifier.fillMaxWidth().padding(start = 16.dp, end = 8.dp), verticalAlignment = Alignment.Bottom) {
                 Text(
                     stringResource(if (showDebt) R.string.current_debt else R.string.todays_sleep),
-                    color = Color.White, fontSize = 13.sp, fontFamily = RobotoRegular, maxLines = 1, softWrap = false,
+                    color = Color.White, fontFamily = RobotoRegular, maxLines = 2, lineHeight = 14.sp,
+                    // Translations are longer than "TODAY'S SLEEP": wrap to two lines, then shrink.
+                    autoSize = TextAutoSize.StepBased(minFontSize = 9.sp, maxFontSize = 13.sp),
                     modifier = Modifier.width(112.dp).padding(end = 4.dp, bottom = 14.dp).clickable(onClick = onToggleMode),
                 )
                 Row(Modifier.clickable(onClick = onNumberClick), verticalAlignment = Alignment.Bottom) {
@@ -371,7 +375,9 @@ private fun EditTodayDialog(entries: List<SleepEntry>, onOpenEntry: (Long) -> Un
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.edit_data)) },
-        text = { Text(stringResource(R.string.awake_since, h, m)) },
+        text = {
+            Text(stringResource(R.string.awake_for, pluralStringResource(R.plurals.n_hours, h, h) + " " + pluralStringResource(R.plurals.n_minutes, m, m)))
+        },
         confirmButton = { TextButton(onDismiss) { Text(stringResource(R.string.confirm)) } },
     )
 }

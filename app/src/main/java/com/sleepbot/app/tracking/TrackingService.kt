@@ -1,6 +1,7 @@
 package com.sleepbot.app.tracking
 
 import android.Manifest
+import android.app.KeyguardManager
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -17,6 +18,7 @@ import android.os.HandlerThread
 import android.os.IBinder
 import android.os.Looper
 import android.os.PowerManager
+import android.provider.Settings
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.ServiceCompat
@@ -205,8 +207,14 @@ class SensorService : Service() {
         }
         motion = tracker
         // Legacy workaround: some devices stop delivering sensor events after screen-off; re-register.
+        // Screen-on while locked: bring up the night screen over the lock screen (legacy SensorsActivity).
         screenReceiver = object : BroadcastReceiver() {
             override fun onReceive(c: Context, i: Intent) {
+                if (i.action == Intent.ACTION_SCREEN_ON) {
+                    val locked = getSystemService(KeyguardManager::class.java)?.isKeyguardLocked == true
+                    if (locked && !NightActivity.isShowing && !app.prefs.isAwake) showNightScreen()
+                    return
+                }
                 main.postDelayed({
                     val t = motion ?: return@postDelayed
                     sm.unregisterListener(t)
@@ -214,7 +222,24 @@ class SensorService : Service() {
                 }, 1000)
             }
         }
-        ContextCompat.registerReceiver(this, screenReceiver, IntentFilter(Intent.ACTION_SCREEN_OFF), ContextCompat.RECEIVER_NOT_EXPORTED)
+        val filter = IntentFilter(Intent.ACTION_SCREEN_OFF).apply { addAction(Intent.ACTION_SCREEN_ON) }
+        ContextCompat.registerReceiver(this, screenReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
+    }
+
+    /**
+     * Background activity starts are only allowed with "Display over other apps"; without it, fall back to
+     * a full-screen notification, which the lock screen shows as a tap-to-open notification.
+     */
+    private fun showNightScreen() {
+        if (Settings.canDrawOverlays(this)) {
+            try {
+                startActivity(NightActivity.intent(this).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                return
+            } catch (e: Exception) {
+                Log.w(TAG, "cannot open night screen", e)
+            }
+        }
+        Notifications.showNightScreen(this)
     }
 
     /** Runs on the sensor thread for each ~4 s window. */
@@ -255,6 +280,7 @@ class SensorService : Service() {
             th.quitSafely()
         }
         screenReceiver?.let { runCatching { unregisterReceiver(it) } }
+        Notifications.cancelNightScreen(applicationContext)
         val s = sound
         sound = null
         val ctx = applicationContext

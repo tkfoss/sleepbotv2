@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hour_n">%d Stunde</string>
-    <string name="hours_n">%d Stunden</string>
-    <string name="minute_n">%d Minute</string>
-    <string name="minutes_n">%d Minuten</string>
-    <string name="day_n">%d Tag</string>
-    <string name="days_n">%d Tage</string>
     <string name="alarm_has_occurred">Wecker wurde ausgelöst</string>
     <string name="punched_in_since">Eingestempelt seit %s</string>
     <string name="status_set_sleep">Status auf „schlafend“ geändert</string>
@@ -22,24 +16,23 @@
     <string name="auto_alarm_prompt">Keine Wecker für den nächsten Tag gestellt. Willst du einstempeln und den Auto-Wecker mit schlauem Wecken einschalten?</string>
     <string name="mode_smart">Smart Alarm Modus. Deine Bewegungen werden im eingestellten Zeitbereich, vor dem ersten Alarm, aufgezeichnet.</string>
     <string name="mode_smart_motion">Mit angeschaltetem Bewegungstracking wird dich SleepBot zum idealen Zeitpunkt wecken.</string>
-    <string name="mode_complete">Alles aktiviert. SleepBot wird dich nun ideal wecken, in der von dir vorgegeben Zeit, außerdem wird er Bewegung und Sound aufzeichenen.</string>
+    <string name="mode_complete">Alles aktiviert. SleepBot wird dich nun ideal wecken, in der von dir vorgegebenen Zeit, außerdem wird er Bewegung und Sound aufzeichnen.</string>
     <string name="mode_motion">Bewegungstracking</string>
     <string name="mode_motion_sound">SleepBot zeichnet Bewegungen und Geräusche während der Nacht auf</string>
     <string name="mode_classic">SleepBot klassisch</string>
     <string name="mode_sound">Geräusch-Aufzeichnung.</string>
     <string name="entry_created_title">Schlaf-Eintrag erstellt!</string>
-    <string name="entry_created_msg">Sie haben geschlafen ab:\n%1$s – %2$s\n(%3$s)</string>
+    <string name="entry_created_msg">Du hast geschlafen von:\n%1$s bis %2$s\n(%3$s)</string>
     <string name="future_title">Einschlaf-Uhrzeit liegt in der Zukunft</string>
     <string name="future_no_record">Kein Eintrag</string>
     <string name="future_zero_record">\'0\' Eintrag</string>
     <string name="future_no_offset">Kein Offset</string>
     <string name="future_no_record_toast">Der Status wurde auf wach geändert, es wurde kein Schlafeintrag angelegt.</string>
     <string name="current_session_title">Aktueller Schlaf-Eintrag</string>
-    <string name="awake_since">Du bist seit %1$d Stunden und %2$d Minuten wach.</string>
     <string name="reset_debt_q">Willst du deine Schlafschulden zurücksetzen?</string>
     <string name="reset_debt_title">Schlafschulden zurücksetzen</string>
     <string name="reset_debt_msg">Das Zurücksetzen der Schlafschulden löscht die derzeitigen Schulden und berechnet es ab heute neu. \n\n* Das ändert lediglich das Datum, ab dem die Schlafschulden berechnet werden und verändert die Einträge in keiner Weise. \n\n* Die Schlafschulden von heute werden berechnet, indem die Schlafdauer der idealen Schlafdauer gegenübergestellt wird.</string>
-    <string name="reset_debt_done">Schlafschulen zurückgesetzt! Die Startseite wird nächstes Mal den neuen Schlafschulden-Wert zeigen.</string>
+    <string name="reset_debt_done">Schlafschulden zurückgesetzt! Die Startseite wird nächstes Mal den neuen Schlafschulden-Wert zeigen.</string>
     <string name="confirm">OK</string>
     <string name="cancel">Abbrechen</string>
     <string name="reset">Zurücksetzen</string>
@@ -63,7 +56,7 @@
     <string name="delete_confirm_title">Bestätige das Löschen.</string>
     <string name="delete_confirm_msg">Bist du dir sicher, dass das gelöscht werden soll?</string>
     <string name="no_entry_hint">Hallihallo!\n\nNach der ersten Nacht mit SleepBot ist hier was zu sehen. Du kannst auch gleich einen Eintrag unten erstellen.</string>
-    <string name="no_entry_found_hint">Keine Einträge gefunden, die den Suchkritierien entsprechen.</string>
+    <string name="no_entry_found_hint">Keine Einträge gefunden, die den Suchkriterien entsprechen.</string>
     <string name="first_entry_title">Du hast gerade den ersten Schlaf-Eintrag erstellt!</string>
     <string name="first_entry_msg">Berühre eine Zeile um Details zu sehen oder einen Eintrag zu editieren.\n\n (Probiere auch eine Zeile lange zu berühren.)</string>
     <string name="period_stats">Statistiken</string>
@@ -75,9 +68,9 @@
     <string name="sleep_time">Einschlaf-Zeit :</string>
     <string name="wake_time">Aufwach-Zeit :</string>
     <string name="invalid_time">Fehler: Aufwach-Uhrzeit muss nach Einschlaf-Uhrzeit sein.</string>
-    <string name="cancel_caps">Abbrechen</string>
-    <string name="delete_caps">Löschen</string>
-    <string name="save_caps">Speichern</string>
+    <string name="cancel_caps">ABBRECHEN</string>
+    <string name="delete_caps">LÖSCHEN</string>
+    <string name="save_caps">SPEICHERN</string>
     <string name="share_entry">Teile diesen Eintrag</string>
     <string name="movement">Bewegung</string>
     <string name="sound">Geräusche</string>
@@ -100,7 +93,7 @@
     <string name="title_wake">Aufwach-Uhrzeit</string>
     <string name="alarm_clock_label">Wecker</string>
     <string name="alarms">Wecker</string>
-    <string name="add_alarm">Wecker hinzufügen</string>
+    <string name="add_alarm">WECKER HINZUFÜGEN</string>
     <string name="alarm_no_repeats">Nur einmal</string>
     <string name="alarm_every_day">Jeden Tag</string>
     <string name="alarm_weekdays">Wochentags</string>
@@ -109,14 +102,13 @@
     <string name="auto_alarm_set">Wecker gestellt: %1$s, %2$s</string>
     <string name="auto_alarm_disabled">Auto-Wecker ausgeschaltet</string>
     <string name="alarm_scheduled">Wecker eingestellt: %1$s (%2$s)</string>
-    <string name="dismiss_slider">Wischen zum schließen</string>
+    <string name="dismiss_slider">Wischen zum Schließen</string>
     <string name="alarm_time_out">Wecker Timeout</string>
     <string name="time_out_error">WARNUNG: Dieser Wecker ist zu lange nicht bestätigt worden und schaltet sich jetzt aus.</string>
     <string name="snooze">SCHLUMMERN</string>
-    <string name="snooze_n_minutes">SCHLUMMERN\n%d Minuten</string>
     <string name="alarm_edit">Ändern</string>
-    <string name="alarm_delete_ellipsis">Löschen</string>
-    <string name="alarm_delete_all">Alle Löschen</string>
+    <string name="alarm_delete_ellipsis">Löschen…</string>
+    <string name="alarm_delete_all">Alle löschen</string>
     <string name="alarm_default_settings">Standard Wecker-Einstellungen</string>
     <string name="alarm_confirm_delete">Wirklich löschen?</string>
     <string name="alarm_settings_header">Einstellungen</string>
@@ -131,11 +123,10 @@
     <string name="alarm_label_title">Wecker Beschriftung</string>
     <string name="alarm_enabled">Angeschaltet</string>
     <string name="alarm_disabled">Ausgeschaltet</string>
-    <string name="alarm_fade_summary">Von %1$d%% zu %2$d%% über %3$d Sekunden.</string>
     <string name="alarm_fade_start">Start Lautstärke (Prozent)</string>
     <string name="alarm_fade_end">End Lautstärke (Prozent)</string>
     <string name="alarm_fade_time">Dauer der Einblendung (Sekunden)</string>
-    <string name="alarm_scheduled_days">Geplannte Tage</string>
+    <string name="alarm_scheduled_days">Geplante Tage</string>
     <string name="alarm_unknown_name">Unbekannter Name</string>
     <string name="alarm_cancel">Abbrechen</string>
     <string name="alarm_default_tone">Standard</string>
@@ -160,7 +151,7 @@
     <string name="tutorial_3_2">Aufwachen: 8:00 vm ~8:30 vm</string>
     <string name="tutorial_3_3">Der schlaue Wecker wird dich innerhalb 30 Minuten (oder der ausgewählten Zeitspanne) vor der ersten eingestellten Weckzeit aufwecken, während du nicht tief schläfst.\n\n\n(dies ist z.B. für einen 8:30 Uhr Wecker)</string>
     <string name="tutorial_4_1">Schau deine Schlaf-Einträge &amp; Diagramme\nhier an:</string>
-    <string name="tutorial_4_2">**TIpp: Berühre das Geräusche-Diagramm zum Abspielen des Geräusches.</string>
+    <string name="tutorial_4_2">**Tipp: Berühre das Geräusche-Diagramm zum Abspielen des Geräusches.</string>
     <string name="get_started">Erste Schritte</string>
     <string name="intent_error_invalid">Ungültiges geheimes Schlüsselpaar wurde übergeben.</string>
     <string name="intent_error_reject">Der Nutzer hat die Integration von anderen Apps ausgeschaltet.</string>
@@ -175,7 +166,7 @@
     <string name="please_wait">Bitte warten…</string>
     <string name="error_intent_empty_msg">Keine Aktion durchgeführt.</string>
     <string name="options_hours_title">Ideale Schlafdauer</string>
-    <string name="options_hours_summary">Wie lange willst du idalerweise schlafen?</string>
+    <string name="options_hours_summary">Wie lange willst du idealerweise schlafen?</string>
     <string name="options_delay_min_title">Einstempel-Offset</string>
     <string name="options_delay_min_summary">Wieviele Minuten nachdem du den \"Ich schlafe jetzt\"-Button gedrückt hast, schläfst du ein? Hier kannst du einstellen, wieviele Minuten von der Schlafdauer fürs Einschlafen abgezogen werden sollen.</string>
     <string name="pref_sc_sleep_tracking">Schlaf-Tracking</string>
@@ -187,11 +178,11 @@
     <string name="rate_sleepbot">Bewerte SleepBot!</string>
     <string name="sleep_reminder">Schlafenszeit! Erinnerung</string>
     <string name="sleep_reminder_title">Aktiviere Erinnerung zum Schlafen</string>
-    <string name="sleep_reminder_summary">Wenn du nicht bereits eingechecket hast, wird dich SleepBot daran erinnern wann du in du dich Schlafen legen sollst, angepasst an deinem Wecker.</string>
+    <string name="sleep_reminder_summary">Wenn du noch nicht eingestempelt hast, erinnert dich SleepBot passend zu deinen Weckern daran, schlafen zu gehen.</string>
     <string name="times_before_offset">Erinnerungszeit Offset</string>
     <string name="times_before_offset_summary">Nächste Weckzeit - (optimale Weckzeit) - (Erinnerungszeit-Ausgleich) = Erinnerungszeit.</string>
     <string name="sleep_reminder_title_2nd">Aktiviere die 2. Erinnerung</string>
-    <string name="sleep_reminder_summary_2nd">Benutze die 2. Erinnerung, wenn du noch nicht aufgewacht bist.</string>
+    <string name="sleep_reminder_summary_2nd">Eine zweite Erinnerung, falls du dann immer noch nicht schläfst.</string>
     <string name="times_before_offset_2nd">2. Erinnerungszeit Offset</string>
     <string name="times_before_offset_summary_2nd">Nächste Weckzeit - (optimale Aufwachzeit) - (Erinnerungszeit-Offset) = Erinnerungszeit.</string>
     <string name="no_reminder_snooze">Erinnere mich nicht später</string>
@@ -201,7 +192,7 @@
     <string name="options_soundmode_title">Auto-Stummschaltung</string>
     <string name="options_soundmode_summary">Stellt das Telefon auf Stumm, wenn du schläfst</string>
     <string name="options_auto_alarm_title">Auto Wecker an</string>
-    <string name="options_auto_alarm_summary">Erstellt einen Wecker, der automatisch nacher \"optimalen Schlafdauer\" (inkl. Offset) nach dem Einstempeln weckt.</string>
+    <string name="options_auto_alarm_summary">Erstellt einen Wecker, der automatisch nach der \"optimalen Schlafdauer\" (inkl. Offset) nach dem Einstempeln weckt.</string>
     <string name="pref_cat_movement_tracking">Bewegungs-Tracking</string>
     <string name="pref_allow_screen_off_title">Tracking mit ausgeschaltetem Bildschirm</string>
     <string name="pref_allow_screen_off_summary">Einige Telefone unterstützen das Tracking mit ausgeschaltetem Bildschirm.</string>
@@ -217,7 +208,7 @@
     <string name="pref_alternate_display_show_title">Alternative Anzeige anzeigen.</string>
     <string name="pref_alternate_display_show_summary">Häkchen entfernen wenn du die zusätzlichen Informationen ausblenden willst.</string>
     <string name="pref_hour_format_title">Einträge-Liste Stundenformat</string>
-    <string name="pref_hour_format_summary">Telefone mit großem Bildschrim können ein nicht-dezimales Format zur Anzeige der Uhrzeiten und Schlafschulden verwenden.</string>
+    <string name="pref_hour_format_summary">Telefone mit großem Bildschirm können ein nicht-dezimales Format zur Anzeige der Uhrzeiten und Schlafschulden verwenden.</string>
     <string name="pref_default_display_title">Standard Anzeige</string>
     <string name="pref_default_display_summary">Was sieht man auf der ersten Seite der App?</string>
     <string name="options_default_graph_title">Standard-Diagramm</string>
@@ -238,7 +229,7 @@
     <string name="restore_old_file_summary">Wiederherstellen von Dateien aus der Export-Funktion</string>
     <string name="restore_old_file_body">Da die Export-Dateien nicht als Backup ausgelegt sind, beachte bitte folgendes: Wähle im nächsten Schritt das selbe Datumsformat wie im Text. Nutze das selbe Datumsformat wie damals, als du die Daten exportiert hast, damit die Daten richtig importiert werden.</string>
     <string name="restore_confirm_title">Wiederherstellung bestätigen</string>
-    <string name="restore_warning_double">WICHTIG: Wiederherstellen kann doppelte Einträge bewirken wenn schon Einträge im Logbuch sind. Lösche die Sleep-Bot-Daten im Bedarfsfall vorher in den Android Anwendungseinstellungen.</string>
+    <string name="restore_warning_double">WICHTIG: Wiederherstellen kann doppelte Einträge bewirken wenn schon Einträge im Logbuch sind. Lösche die SleepBot-Daten im Bedarfsfall vorher in den Android Anwendungseinstellungen.</string>
     <string name="restore_progress_title">Wiederherstellen von SleepBot</string>
     <string name="backup_progress_title">Backup erstellen</string>
     <string name="pref_adv_restore_title">Wiederherstellung</string>
@@ -250,11 +241,11 @@
     <string name="pref_adv_security_third_party_title">Integration einschalten</string>
     <string name="pref_adv_security_third_party_summary">Erlaube anderen Anwendungen, SleepBot auf schlafend bzw. wach zu stellen.</string>
     <string name="pref_adv_variable_block_title">Wächter gegen wiederholtes Einstempeln</string>
-    <string name="pref_adv_variable_block_summary">verhindert versehntliches mehrfaches Einstempeln in einem Zeitraum.</string>
-    <string name="notification_icon_title">Zeige Benachrichtungs-Symbol</string>
-    <string name="notification_icon_on">Zeige das Symbol, wenn es anstehende Weckere gibt</string>
-    <string name="notification_icon_off">Zeige das Symbol NICHT, wennes anstehende Weckere gibt</string>
-    <string name="time_out_summary">Ein unüberhörbarer Wecker wird nach dieser Zeitspanne (Minuten) ausgelöst.</string>
+    <string name="pref_adv_variable_block_summary">Verhindert versehentliches mehrfaches Einstempeln in einem Zeitraum.</string>
+    <string name="notification_icon_title">Zeige Benachrichtigungs-Symbol</string>
+    <string name="notification_icon_on">Zeige das Symbol, wenn es anstehende Wecker gibt</string>
+    <string name="notification_icon_off">Zeige das Symbol NICHT, wenn es anstehende Wecker gibt</string>
+    <string name="time_out_summary">Ein klingelnder Wecker wird nach so vielen Minuten automatisch beendet.</string>
     <string name="summary_num_records">Anzahl der Einträge:</string>
     <string name="summary_num_days">Anzahl der Tage:</string>
     <string name="summary_total_sleep">Insgesamt geschlafen:</string>
@@ -262,11 +253,11 @@
     <string name="summary_avg_record">Durchschnittlich pro Eintrag geschlafen:</string>
     <string name="summary_cum">Summe der Schlafschulden:</string>
     <string name="hours_ori">Stunden</string>
-    <string name="channel_alarm_status">Nächster Wecker:</string>
+    <string name="channel_alarm_status">Nächster Wecker</string>
     <string name="trk_no_alarm_set">Kein Wecker gestellt.</string>
-    <string name="trk_phone_is_not_plugged">Das Telefon bitte am Ladegerät lassen, damit es nicht voll entlädt.</string>
+    <string name="trk_phone_is_not_plugged">Bitte lass dein Telefon am Ladegerät, damit sich der Akku nicht entlädt.</string>
     <string name="trk_screen_dim_soon">Sleep Tracking beginnt. Der Bildschirm dunkelt sich in 15 Sekunden ab...</string>
-    <string name="trk_screen_already_dimmed">Gehe mit \"zurück\" zurück, drücke nicht den An/Aus-Knopf. Gute Nacht!</string>
+    <string name="trk_screen_already_dimmed">Drücke die Zurück-Taste, um den Bildschirm einzuschalten. Drücke nicht den An/Aus-Knopf. Gute Nacht!</string>
     <string name="trk_screen_off_toast">SleepBot zeichnet jetzt deinen Schlaf auf. Du kannst den Bildschirm ausschalten oder andere Apps benutzen (außer solche, die den Arbeitsspeicher sehr belasten).</string>
     <string name="trk_am">vm</string>
     <string name="trk_pm">nm</string>
@@ -279,11 +270,11 @@
     <string name="trk_sleep_reminder_toast">Gehe bald schlafen um rechtzeitig aufgeweckt zu werden!</string>
     <string name="trk_remind_later">Erinnere mich später</string>
     <string name="trk_choose_time">Wähle eine Zeit</string>
-    <string name="trk_remind_with_sleep_cycle">Wenn du jetzt nicht Schlafen gehen willst, kannst du später in den folgenden Zyklen Informiert werden.\n\n Die Zeit wird mit 90 Minuten vor dem ächsten Alarm mit 30 Minuten subtrahiert, um einzuschlafen, berechnet.</string>
-    <string name="trk_you_should_really_go_to_sleep">Du solltest dich jetzt wirklich Schlafen legen, oder einen kurzen PowerNap. Du wirst dich danach viel besser Fühlen!</string>
+    <string name="trk_remind_with_sleep_cycle">Wenn du jetzt nicht schlafen gehst, kannst du in den folgenden Schlafzyklen erneut erinnert werden.\n\nDie Zeiten liegen jeweils 90 Minuten auseinander, ausgehend von der nächsten Weckzeit, abzüglich 30 Minuten zum Vorbereiten und Einschlafen.</string>
+    <string name="trk_you_should_really_go_to_sleep">Du solltest dich jetzt wirklich schlafen legen oder einen kurzen Powernap machen. Du wirst dich danach viel besser fühlen!</string>
     <string-array name="range_choices">
         <item>Alle</item>
-        <item>letzte 10 Tage</item>
+        <item>10 Tage</item>
         <item>30 Tage</item>
         <item>60 Tage</item>
         <item>180 Tage</item>
@@ -318,7 +309,7 @@
         <item>+1 Stunde</item>
         <item>+1 Stunde 20 Minuten</item>
         <item>+1 Stunde 40 Minuten</item>
-        <item>+2 Stunde</item>
+        <item>+2 Stunden</item>
     </string-array>
     <string-array name="sleep_reminder_offsets">
         <item>15 Minuten vorher</item>
@@ -370,4 +361,105 @@
         <item>Tag/Monat/Jahr</item>
         <item>Jahr/Monat/Tag</item>
     </string-array>
+    <string name="alarm_status_title">SleepBot-Wecker</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="one">SCHLUMMERN\n%d Minute</item>
+        <item quantity="other">SCHLUMMERN\n%d Minuten</item>
+    </plurals>
+    <string name="alarm_row_label">Beschriftung</string>
+    <plurals name="alarm_fade_summary">
+        <item quantity="one">Von %1$d%% auf %2$d%% in %3$d Sekunde.</item>
+        <item quantity="other">Von %1$d%% auf %2$d%% in %3$d Sekunden.</item>
+    </plurals>
+    <string name="alarm_pick_system_tone">Aus Wecktönen wählen</string>
+    <string name="alarm_pick_file">Audiodatei wählen</string>
+    <string name="alarm_file_not_chosen">Keine Datei gewählt</string>
+    <string name="alarm_ok">OK</string>
+    <string name="alarm_exact_permission">SleepBot benötigt die Berechtigung für exakte Wecker, damit deine Wecker pünktlich klingeln.</string>
+    <string name="alarm_fsi_permission">Erlaube SleepBot, Wecker im Vollbild anzuzeigen, damit der Weckbildschirm auch bei gesperrtem Telefon erscheint.</string>
+    <string name="alarm_grant">Erlauben</string>
+    <string name="back">Zurück</string>
+    <string name="pref_reminder_summary">Lass dich erinnern, wenn es Zeit zum Schlafengehen ist</string>
+    <string name="pref_tracking_summary">Stummschaltung, Auto-Wecker, schlauer Wecker, Bewegungs- und Geräusch-Optionen</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="dnd_access_msg">Um dein Telefon während des Schlafens stummzuschalten, benötigt SleepBot Zugriff auf \"Bitte nicht stören\". Wecker klingeln trotzdem.</string>
+    <string name="pref_allow_screen_off_warning">Bitte beachte: Wenn die Bewegungsdiagramme nur Nullen zeigen, unterstützt dein Telefon kein Tracking bei ausgeschaltetem Bildschirm und du solltest diese Option deaktiviert lassen.</string>
+    <string name="delete_older_sound_files_7">Wenig Speicherplatz? Lösche lokale Geräuschdateien, die älter als 7 Tage sind.</string>
+    <string name="delete_older_sound_files_message">Das Löschen älterer Geräuschdateien kann nicht rückgängig gemacht werden.</string>
+    <plurals name="files_deleted">
+        <item quantity="one">%d Datei gelöscht</item>
+        <item quantity="other">%d Dateien gelöscht</item>
+    </plurals>
+    <string name="pref_notification_mode_title">Status-Benachrichtigung</string>
+    <string name="pref_notification_mode_summary">Wann der Einstempel-Status von SleepBot in der Benachrichtigungsleiste angezeigt wird.</string>
+    <string name="pref_android_backup">Android-Sicherung</string>
+    <string name="pref_android_backup_text">Deine Schlaf-Einträge und Einstellungen werden außerdem automatisch über die Android-Gerätesicherung (Google-Konto) gesichert und bei der Einrichtung eines neuen Telefons wiederhergestellt.</string>
+    <string name="pref_adv_backup_summary">Sichere deine Daten in einer Datei (z. B. auf deinem Telefon oder in der Cloud).</string>
+    <string name="restore_backup_summary">Einträge aus Dateien der Sicherungsfunktion wiederherstellen. (Empfohlen)</string>
+    <string name="restore_choose_backup_hint">Wähle eine Datei, die mit der Sicherungsfunktion von SleepBot erstellt wurde. Einträge, die schon im Logbuch sind, werden übersprungen.</string>
+    <string name="restore_choose_file_button">Datei wählen</string>
+    <plurals name="backup_done_n">
+        <item quantity="one">Sicherung abgeschlossen: %d Eintrag gespeichert, inklusive Bewegungs-/Geräuschdaten.\nBitte beachte, dass die Wecker-Einstellungen nicht gesichert werden.</item>
+        <item quantity="other">Sicherung abgeschlossen: %d Einträge gespeichert, inklusive Bewegungs-/Geräuschdaten.\nBitte beachte, dass die Wecker-Einstellungen nicht gesichert werden.</item>
+    </plurals>
+    <string name="backup_failed">Sicherung fehlgeschlagen: %s</string>
+    <!-- quantity: %2$d -->
+    <plurals name="restore_done">
+        <item quantity="one">%1$d/%2$d Eintrag erfolgreich wiederhergestellt.\n\nStartdatum der Schlafschulden erfolgreich auf heute zurückgesetzt.</item>
+        <item quantity="other">%1$d/%2$d Einträge erfolgreich wiederhergestellt.\n\nStartdatum der Schlafschulden erfolgreich auf heute zurückgesetzt.</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="one">%d Eintrag erfolgreich wiederhergestellt.</item>
+        <item quantity="other">%d Einträge erfolgreich wiederhergestellt.</item>
+    </plurals>
+    <string name="restore_csv_partial">Der Rest der Datei konnte nicht gelesen werden. Bitte prüfe, ob das Datumsformat zur Datei passt.</string>
+    <string name="date_format">Datumsformat</string>
+    <string name="pref_reset_debt_summary">Berechnung der Schlafschulden ab heute neu starten.</string>
+    <string name="alarm_default_settings_summary">Standard-Ton, Schlummern, Vibrieren und Einblendung für neue Wecker</string>
+    <string name="channel_session">Schlafstatus</string>
+    <string name="channel_tracking">Schlaf-Tracking</string>
+    <string name="channel_alarm">Klingelnde Wecker</string>
+    <string name="channel_reminder">Schlafenszeit-Erinnerungen</string>
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>Sehr niedrig (nur sehr laute Geräusche aufnehmen)</item>
+        <item>Niedrig</item>
+        <item>Normal</item>
+        <item>Hoch</item>
+        <item>Sehr hoch (fast alle Geräusche aufnehmen)</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>Immer</item>
+        <item>Nur während des Schlafens</item>
+        <item>Nie</item>
+    </string-array>
+    <string name="help_support">Support</string>
+    <string name="help_caffeine_chart">Koffein-Tabelle</string>
+    <string name="help_do_this">Machen!</string>
+    <string name="widget_label">SleepBot-Widget</string>
+    <string name="trk_notification_title">Schlaf-Tracking</string>
+    <string name="trk_notification_motion">Bewegungen werden aufgezeichnet</string>
+    <string name="trk_notification_sound">Geräusche werden aufgezeichnet</string>
+    <string name="trk_notification_both">Bewegungen und Geräusche werden aufgezeichnet</string>
+    <string name="trk_waking_up">Aufwachen!</string>
+    <string name="trk_no_sensor_data">Für diesen Eintrag wurden keine Sensordaten aufgezeichnet.</string>
+    <plurals name="n_hours">
+        <item quantity="one">%d Stunde</item>
+        <item quantity="other">%d Stunden</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minuten</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="one">%d Tag</item>
+        <item quantity="other">%d Tage</item>
+    </plurals>
+    <string name="current_session_msg">Du hast dich um %1$s eingestempelt, vor %2$s.</string>
+    <string name="awake_for">Du bist seit %s wach.</string>
+    <string name="edit_data">Daten bearbeiten</string>
+    <string name="ok">OK</string>
+    <string name="trk_night_screen_open">Tippen, um den Nachtbildschirm anzuzeigen</string>
+    <string name="channel_night">Nachtbildschirm</string>
+    <string name="pref_night_auto_title">Nachtbildschirm automatisch anzeigen</string>
+    <string name="pref_night_auto_summary">Öffnet den Nachtbildschirm, wenn du nachts den Bildschirm einschaltest. Benötigt die Berechtigung \"Über anderen Apps einblenden\".</string>
 </resources>

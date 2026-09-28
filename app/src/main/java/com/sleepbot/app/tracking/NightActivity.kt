@@ -73,6 +73,7 @@ import com.sleepbot.app.ui.graph.GraphType
 import com.sleepbot.app.ui.graph.GraphView
 import com.sleepbot.app.ui.theme.RobotoThin
 import com.sleepbot.app.ui.theme.SleepBotTheme
+import com.sleepbot.app.util.Notifications
 import com.sleepbot.app.util.TimeFormat
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -119,12 +120,15 @@ class NightActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
+        isShowing = true
+        Notifications.cancelNightScreen(this)
         if (app.prefs.isAwake) { finish(); return }
         if (!dimmed) scheduleDim(true)
     }
 
     override fun onPause() {
         super.onPause()
+        isShowing = false
         handler.removeCallbacks(dimRunnable)
     }
 
@@ -170,6 +174,10 @@ class NightActivity : ComponentActivity() {
     companion object {
         const val EXTRA_WAKE_DIALOG = "show_wake_dialog_entry_id"
         private const val DIM_DELAY = 15_000L
+
+        /** Resumed right now; TrackingService skips the screen-on launch then. */
+        @Volatile var isShowing = false
+            private set
 
         fun intent(context: Context): Intent =
             Intent(context, NightActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)

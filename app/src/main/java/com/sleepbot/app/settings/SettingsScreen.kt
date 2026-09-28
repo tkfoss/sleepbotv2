@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.padding
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.edit
+import androidx.lifecycle.compose.LifecycleResumeEffect
 import com.sleepbot.app.R
 import com.sleepbot.app.backup.BackupSection
 import com.sleepbot.app.app
@@ -280,6 +281,15 @@ private fun TrackingPage(ui: PrefUi) {
             }
         },
     )
+    // Not a preference: mirrors the "Display over other apps" permission, re-read when returning from Settings.
+    var overlay by remember { mutableStateOf(Settings.canDrawOverlays(ctx)) }
+    LifecycleResumeEffect(Unit) {
+        overlay = Settings.canDrawOverlays(ctx)
+        onPauseOrDispose {}
+    }
+    PrefRow(s(R.string.pref_night_auto_title), s(R.string.pref_night_auto_summary), onClick = {
+        safeStart(ctx, Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + ctx.packageName)))
+    }) { SbCheckbox(overlay, null) }
     CategoryHeader(s(R.string.pref_cat_smart_alarm))
     ListPref(
         ui, "smart_window", s(R.string.pref_time_alarm_range_title), s(R.string.pref_time_alarm_range_summary),
@@ -306,7 +316,7 @@ private fun TrackingPage(ui: PrefUi) {
                         val ts = f.name.substringBefore('.').toLongOrNull() ?: f.lastModified()
                         ts < cutoff && f.delete()
                     } ?: 0
-                    Toast.makeText(ctx, ctx.getString(R.string.files_deleted, n), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(ctx, ctx.resources.getQuantityString(R.plurals.files_deleted, n, n), Toast.LENGTH_SHORT).show()
                 }, dismiss = s(R.string.cancel), onDismiss = ui.close,
             )
         }

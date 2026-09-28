@@ -45,9 +45,8 @@ object TimeFormat {
         var hour = hoursD.toInt()
         var min = ((hoursD - hour) * 60 + 0.5).toInt()
         if (min == 60) { min = 0; hour++ }
-        val h = context.getString(if (hour > 1) R.string.hours_n else R.string.hour_n, hour)
-        val m = context.getString(if (min > 1) R.string.minutes_n else R.string.minute_n, min)
-        return "$h $m"
+        val res = context.resources
+        return res.getQuantityString(R.plurals.n_hours, hour, hour) + " " + res.getQuantityString(R.plurals.n_minutes, min, min)
     }
 
     /** Entry-list hour cell: "#0.0" decimal or "HH:MM". */
@@ -64,9 +63,10 @@ object TimeFormat {
         val h = ((totalMin / 60) % 24).toInt()
         val m = (totalMin % 60).toInt()
         val sb = StringBuilder()
-        if (d > 0) sb.append(context.getString(if (d == 1) R.string.day_n else R.string.days_n, d)).append(' ')
-        if (h > 0) sb.append(context.getString(if (h == 1) R.string.hour_n else R.string.hours_n, h)).append(' ')
-        if (m > 0) sb.append(context.getString(if (m == 1) R.string.minute_n else R.string.minutes_n, m)).append(' ')
+        val res = context.resources
+        if (d > 0) sb.append(res.getQuantityString(R.plurals.n_days, d, d)).append(' ')
+        if (h > 0) sb.append(res.getQuantityString(R.plurals.n_hours, h, h)).append(' ')
+        if (m > 0) sb.append(res.getQuantityString(R.plurals.n_minutes, m, m)).append(' ')
         return sb.toString()
     }
 }

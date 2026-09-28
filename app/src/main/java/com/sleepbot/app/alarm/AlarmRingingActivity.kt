@@ -40,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -137,7 +138,7 @@ class AlarmRingingActivity : ComponentActivity() {
                     shape = shape, colors = btnColors,
                 ) { Text(stringResource(R.string.minus_five), fontSize = 24.sp) }
                 Text(
-                    stringResource(R.string.snooze_n_minutes, snooze), Modifier.weight(1f),
+                    pluralStringResource(R.plurals.snooze_n_minutes, snooze, snooze), Modifier.weight(1f),
                     fontSize = 24.sp, textAlign = TextAlign.Center, color = Color.White, lineHeight = 30.sp,
                 )
                 Button(

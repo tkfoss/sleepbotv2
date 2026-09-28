@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hour_n">%d hora</string>
-    <string name="hours_n">%d horas</string>
-    <string name="minute_n">%d minuto</string>
-    <string name="minutes_n">%d minutos</string>
-    <string name="day_n">%d día</string>
-    <string name="days_n">%d días</string>
     <string name="alarm_has_occurred">Alarma activada</string>
     <string name="punched_in_since">Durmiendo desde %s</string>
     <string name="status_set_sleep">Nuevo estado: dormido</string>
@@ -18,8 +12,8 @@
     <string name="track_motion">Registrar\nMovimiento</string>
     <string name="record_sound">Grabar\nSonido</string>
     <string name="cannot_change_settings_after_punchin">No puedes modificar los ajustes después de haber iniciado el período de sueño.</string>
-    <string name="no_alarm_set_warning">¡No has establecido ninguna alarma para el próxima día aún! La alarma inteligente te despertará en el mejor momento dentro de el radio seleccionado para tu alarma más temprana.</string>
-    <string name="auto_alarm_prompt">No tienes ninguna alarma para el próxima día. ¿Quieres establecer el inicio ahora para activar la alarma automática y la alarma inteligente?</string>
+    <string name="no_alarm_set_warning">¡No has establecido ninguna alarma para el próximo día aún! La alarma inteligente te despertará en el mejor momento dentro del radio seleccionado para tu alarma más temprana.</string>
+    <string name="auto_alarm_prompt">No tienes ninguna alarma para el próximo día. ¿Quieres establecer el inicio ahora para activar la alarma automática y la alarma inteligente?</string>
     <string name="mode_smart">Modo Alarma inteligente. El registro comienza en el período de tiempo seleccionado antes de la primera alarma.</string>
     <string name="mode_smart_motion">Registra el movimiento toda la noche, además SleepBot te levantará en el mejor momento.</string>
     <string name="mode_complete">Modo completo. SleepBot registrará tus movimientos y sonidos y te levantará a una hora adecuada en el período de tiempo seleccionado antes de tu primera alarma.</string>
@@ -35,7 +29,6 @@
     <string name="future_no_offset">Grabar</string>
     <string name="future_no_record_toast">Cambiado a estado despierto sin guardar ningún registro.</string>
     <string name="current_session_title">Sesión actual de sueño</string>
-    <string name="awake_since">Estás despierto desde hace %1$d horas y %2$d minutos.</string>
     <string name="reset_debt_q">¿Realmente quiere resetear la deuda de sueño?</string>
     <string name="reset_debt_title">Reiniciar deuda</string>
     <string name="reset_debt_msg">Eliminará su deuda de sueño actual y empezará a calcularla de nuevo a partir de hoy. \n\n*Este proceso sólo cambiará la fecha en el cálculo de la deuda mostrado en la pestaña inicial (Home). No se modificará ningún registro. \n\n*La deuda de hoy será calculada en base a las horas de sueño de hoy restadas del número de horas óptimas diarias.</string>
@@ -44,7 +37,7 @@
     <string name="cancel">Cancelar</string>
     <string name="reset">Reiniciar</string>
     <string name="edit">Editar</string>
-    <string name="delete">Borrar…</string>
+    <string name="delete">Borrar</string>
     <string name="save">Guardar</string>
     <string name="share">Compartir</string>
     <string name="view">Ver</string>
@@ -55,29 +48,29 @@
     <string name="to">a</string>
     <string name="col_date">Fecha</string>
     <string name="col_sleep">Dormir</string>
-    <string name="col_wake">Erguir</string>
+    <string name="col_wake">Despertar</string>
     <string name="col_hours">horas</string>
     <string name="col_debt">Deuda</string>
     <string name="add_new_entry">AÑADIR NUEVA ENTRADA</string>
     <string name="share_caps">COMPARTIR</string>
     <string name="delete_confirm_title">Confirmación de borrado</string>
     <string name="delete_confirm_msg">¿Realmente desea borrar este registro?</string>
-    <string name="no_entry_hint">¡Buenas!\n\nVuelve tras registrar lo que has dormido esta noche o crea tu primera entrada a continuación!</string>
+    <string name="no_entry_hint">¡Buenas!\n\n¡Vuelve tras registrar lo que has dormido esta noche o crea tu primera entrada a continuación!</string>
     <string name="no_entry_found_hint">No se han encontrado entradas que coincidan con ese criterio.</string>
-    <string name="first_entry_title">¡Has creado tu primera entrada para dormir!</string>
-    <string name="first_entry_msg">Presiona la fila para verla o editarla.\n\n (Consejo: prueba a mantenerlo también)</string>
+    <string name="first_entry_title">¡Has creado tu primera entrada de sueño!</string>
+    <string name="first_entry_msg">Presiona la fila para verla o editarla.\n\n (Consejo: prueba también a mantenerla pulsada)</string>
     <string name="period_stats">Estadísticas del período</string>
     <string name="period_stats_note">Nota: si no se recoge información de algún día, dicho día no contará en el análisis estadístico. Si ese día no durmió nada, por favor, inserte un registro de sueño con duración 0 para que pueda contar.</string>
     <string name="export_title">Exportación realizada con éxito</string>
     <string name="export_to">Exportar a</string>
-    <string name="export_subject">SleepBot: Datos exportados a %s</string>
+    <string name="export_subject">SleepBot: Datos de sueño exportados el %s</string>
     <string name="duration">Duración:</string>
     <string name="sleep_time">Desde :</string>
     <string name="wake_time">Hasta :</string>
     <string name="invalid_time">Hora introducida incorrectamente. La hora de despertarse debe ser posterior a la de irse a dormir.</string>
-    <string name="cancel_caps">Cancelar</string>
-    <string name="delete_caps">Borrar…</string>
-    <string name="save_caps">Guardar</string>
+    <string name="cancel_caps">CANCELAR</string>
+    <string name="delete_caps">BORRAR</string>
+    <string name="save_caps">GUARDAR</string>
     <string name="share_entry">Compartir este registro</string>
     <string name="movement">Movimiento</string>
     <string name="sound">Sonido</string>
@@ -86,42 +79,41 @@
     <string name="low">Bajo</string>
     <string name="current_trend">Tendencia actual</string>
     <string name="current_sleep_records">Registros actuales de sueño</string>
-    <string name="avg_sleep_day">DORMIDO POR DÍA</string>
-    <string name="trend">Moda</string>
-    <string name="length">Horas</string>
-    <string name="pattern">Patrón</string>
-    <string name="sleep_caps">Dormir</string>
-    <string name="wake_caps">Erguir</string>
+    <string name="avg_sleep_day">SUEÑO MEDIO/DÍA</string>
+    <string name="trend">TENDENCIA</string>
+    <string name="length">DURACIÓN</string>
+    <string name="pattern">PATRÓN</string>
+    <string name="sleep_caps">DORMIR</string>
+    <string name="wake_caps">DESPERTAR</string>
     <string name="ratings">Calificaciones</string>
-    <string name="title_trend">Moda de horas de sueño</string>
+    <string name="title_trend">Tendencia de horas de sueño</string>
     <string name="title_length">Gráfica de duración</string>
     <string name="title_pattern">Distribución de las horas de sueño</string>
     <string name="title_sleep">Gráfica de la hora de dormirse</string>
     <string name="title_wake">Gráfica de la hora de despertarse</string>
     <string name="alarm_clock_label">Despertador</string>
     <string name="alarms">Alarmas</string>
-    <string name="add_alarm">Agregar alarma…</string>
+    <string name="add_alarm">AGREGAR ALARMA</string>
     <string name="alarm_no_repeats">Sin repeticiones</string>
     <string name="alarm_every_day">Todos los días</string>
     <string name="alarm_weekdays">Laborables</string>
     <string name="alarm_weekends">Fines de semana</string>
     <string name="alarm_status_text">Próxima alarma: %1$s (%2$s)</string>
-    <string name="auto_alarm_set">Ajustar alarma: %1$s, %2$s</string>
+    <string name="auto_alarm_set">Alarma establecida: %1$s, %2$s</string>
     <string name="auto_alarm_disabled">Alarma automática desactivada</string>
     <string name="alarm_scheduled">Horario de alarma: %1$s (%2$s)</string>
-    <string name="dismiss_slider">GOLPEA PARA RECHAZAR</string>
+    <string name="dismiss_slider">DESLIZA PARA DESCARTAR</string>
     <string name="alarm_time_out">Tiempo de espera de la alarma</string>
     <string name="time_out_error">ATENCIÓN: Esta alarma se ha apagado esperando una respuesta.</string>
     <string name="snooze">POSTERGAR</string>
-    <string name="snooze_n_minutes">POSTERGAR\n%d minutos</string>
     <string name="alarm_edit">Editar</string>
     <string name="alarm_delete_ellipsis">Borrar…</string>
     <string name="alarm_delete_all">Borrar todo…</string>
-    <string name="alarm_default_settings">Ajustes por defecto de Alarma</string>
+    <string name="alarm_default_settings">Ajustes por defecto de Alarma…</string>
     <string name="alarm_confirm_delete">¿Confirmar borrado?</string>
     <string name="alarm_settings_header">Ajustes</string>
     <string name="alarm_default_settings_header">Ajustes por defecto de Alarma</string>
-    <string name="alarm_row_time">Horas</string>
+    <string name="alarm_row_time">Hora</string>
     <string name="alarm_row_label">Etiqueta</string>
     <string name="alarm_row_repeat">Repetir</string>
     <string name="alarm_row_tone">Tono</string>
@@ -132,10 +124,9 @@
     <string name="alarm_label_title">Nombre de alarma</string>
     <string name="alarm_enabled">Habilitado</string>
     <string name="alarm_disabled">Deshabilitado</string>
-    <string name="alarm_fade_summary">De %1$d%% a %2$d%% sobre %3$d segundos.</string>
     <string name="alarm_fade_start">Volumen inicial (porcentaje)</string>
     <string name="alarm_fade_end">Volumen final (porcentaje)</string>
-    <string name="alarm_fade_time">Tiempo (segundos)</string>
+    <string name="alarm_fade_time">Duración de la transición (segundos)</string>
     <string name="alarm_scheduled_days">Días programados</string>
     <string name="alarm_unknown_name">Nombre desconocido</string>
     <string name="alarm_ok">Aceptar</string>
@@ -143,7 +134,7 @@
     <string name="alarm_default_tone">Predeterminado</string>
     <string name="help_section_sleepbot">Utilizando SleepBot</string>
     <string name="help_section_sleep">Ayuda a dormir…</string>
-    <string name="help_section_wake">¡Ayuda a despertarse!</string>
+    <string name="help_section_wake">¡Ayuda para mantenerse despierto!</string>
     <string name="help_section_learn">Más información acerca de dormir</string>
     <string name="help_instructions">Instrucciones</string>
     <string name="help_entries_and_graphs">Entradas y gráficos</string>
@@ -154,17 +145,17 @@
     <string name="help_prepare_bedroom">Prepare su cuarto</string>
     <string name="help_sleep_debt">¿Qué es una deuda de sueño?</string>
     <string name="help_health_problems">Problemas de salud potenciales</string>
-    <string name="help_sleep_disorders">Tipos de desordenes del sueño</string>
+    <string name="help_sleep_disorders">Tipos de trastornos del sueño</string>
     <string name="tutorial_title_1">¡Bienvenido al\nnovedoso SleepBot!</string>
     <string name="tutorial_1_1">¡SleepBot tiene un hermoso registro de sueño y\nsu alarma inteligente te ayuda a levantarte mejor!</string>
     <string name="tutorial_1_2">Primero pon tu(s) alarma(s)</string>
     <string name="tutorial_2_1">Elige tus opciones de registro y\ntoca \'irse a dormir\'</string>
     <string name="tutorial_3_1">Pon tu móvil a tu lado, en la cama:</string>
-    <string name="tutorial_3_2">Lenvatarse: 8:00 AM ~ 8:30 AM</string>
+    <string name="tutorial_3_2">Levantarse: 8:00 AM ~ 8:30 AM</string>
     <string name="tutorial_3_3">La alarma inteligente te despertará en los 30 minutos dentro del radio elegido, antes de tu alarma, durante el sueño más ligero.\n\n\n(ej. ¡este es para una de las 8:30 AM!)</string>
     <string name="tutorial_4_1">Mira tus entradas y tendencias de sueño aquí:</string>
     <string name="tutorial_4_2">**Consejo: ¡Toca los gráficos de sonido para reproducirlos!</string>
-    <string name="get_started">Empieze</string>
+    <string name="get_started">Empezar</string>
     <string name="intent_error_invalid">Par secreto de llave inválido pasado.</string>
     <string name="intent_error_reject">El usuario ha deshabilitado la integración con programas de terceros.</string>
     <string name="settings">Ajustes</string>
@@ -190,11 +181,11 @@
     <string name="sleep_reminder_title">Activar recordatorio de la hora de acostarse</string>
     <string name="sleep_reminder_summary">El recordatorio de la hora de acostarse te recordará que te vayas a dormir basándose en los ajustes de tu alarma.</string>
     <string name="times_before_offset">Recordar hora de dormir</string>
-    <string name="times_before_offset_summary">Próxima hora de alarma - (hora de levantamiento ópitma) - (recordar hora de dormir) = hora de recuerdo.</string>
+    <string name="times_before_offset_summary">Próxima hora de alarma - (hora de levantamiento óptima) - (recordar hora de dormir) = hora de recuerdo.</string>
     <string name="sleep_reminder_title_2nd">Activar segundo recordatorio</string>
-    <string name="sleep_reminder_summary_2nd">Se trata de un segundo recordatorio, por si aún no te has despertado.</string>
+    <string name="sleep_reminder_summary_2nd">Se trata de un segundo recordatorio, por si aún no te has dormido.</string>
     <string name="times_before_offset_2nd">Recordar segunda hora de dormir</string>
-    <string name="times_before_offset_summary_2nd">Próxima hora de alarma - (hora de levantamiento ópitma) - (recordar segunda hora de dormir) = hora de recuerdo.</string>
+    <string name="times_before_offset_summary_2nd">Próxima hora de alarma - (hora de levantamiento óptima) - (recordar segunda hora de dormir) = hora de recuerdo.</string>
     <string name="no_reminder_snooze">No recordar después</string>
     <string name="no_reminder_summary">No mostrar diálogo de recuerdo.</string>
     <string name="reminder_mute_title">Notificaciones sin sonido</string>
@@ -206,7 +197,7 @@
     <string name="pref_cat_movement_tracking">Registro de movimiento</string>
     <string name="pref_allow_screen_off_title">Rastreo con Pantalla Apagada</string>
     <string name="pref_allow_screen_off_summary">Algunos teléfonos soportan el rastreo de movimiento con la pantalla apagada.</string>
-    <string name="pref_cat_smart_alarm">Alarma\nInteligente</string>
+    <string name="pref_cat_smart_alarm">Alarma inteligente</string>
     <string name="pref_time_alarm_range_title">Radio de la alarma</string>
     <string name="pref_time_alarm_range_summary">Intervalo de tiempo antes de la primera alarma para un levantamiento óptimo.</string>
     <string name="pref_movement_sensitivity_title">Sensibilidad de movimiento</string>
@@ -216,15 +207,15 @@
     <string name="pref_sound_sensitivity_summary">La grabación de sonido empieza cuando el volumen es superior al umbral.</string>
     <string name="delete_older_sound_files">Eliminar archivos antiguos</string>
     <string name="pref_alternate_display_show_title">Muestre imagen alterna</string>
-    <string name="pref_alternate_display_show_summary">De-Seleccióne lo que quiera esconder de la información alterna.</string>
+    <string name="pref_alternate_display_show_summary">Desmarque esta opción si quiere ocultar la información alterna.</string>
     <string name="pref_hour_format_title">Formato de horas de listado de entradas</string>
-    <string name="pref_hour_format_summary">Para teléfonos con grandes pantallas, used puee usar el formato no-decimal para mostrar números de horas totales y de deuda.</string>
+    <string name="pref_hour_format_summary">Para teléfonos con grandes pantallas, usted puede usar el formato no-decimal para mostrar números de horas totales y de deuda.</string>
     <string name="pref_default_display_title">Visualización Predeterminada</string>
-    <string name="pref_default_display_summary">Establezca que mostrar en el numero de muestra de la viñeta de hogar.</string>
+    <string name="pref_default_display_summary">Establezca qué número se muestra en la pantalla principal de la pestaña de inicio.</string>
     <string name="options_default_graph_title">Gráfica por defecto</string>
     <string name="options_default_graph_summary">Elija la gráfica que se muestra en la pestaña de seguimiento (Tracker).</string>
     <string name="pref_no_warning_title">No advertencia en el modo fuera de pantalla</string>
-    <string name="pref_no_warning_summary">No muestre advertencia de carga si el modo fuera de pantalla esta selecciónado.</string>
+    <string name="pref_no_warning_summary">No muestre advertencia de carga si el modo fuera de pantalla está seleccionado.</string>
     <string name="options_notification_sleep_title">Notificación de dormir</string>
     <string name="options_notification_sleep_summary">Personalizar el mensaje de dormir en las notificaciones.</string>
     <string name="options_notification_awake_title">Notificación de despertar.</string>
@@ -239,7 +230,7 @@
     <string name="restore_old_file_summary">Restaurar registros a partir de ficheros generados por la función de exportación.</string>
     <string name="restore_old_file_body">Debido a que los archivos de exportacion no están diseñados para servir de copias de seguridad, por favor, indique el formato de fecha utilizado en el fichero de exportación para evitar cualquier problema. Si alguna otra aplicación intenta importar datos de Sleepbot y no le pide el formato, compruebe que la importación se haya efectuado correctamente.</string>
     <string name="restore_confirm_title">Confirma para restaurar</string>
-    <string name="restore_warning_double">IMPORTANTE: Restaurando puedes crear entradas duplicadas si ya tienes las entradas en el registro (es necesario limpiar los datos de SleepBot en los ajustes de aplicación Android).</string>
+    <string name="restore_warning_double">IMPORTANTE: Restaurando puedes crear entradas duplicadas si ya tienes las entradas en el registro (si es necesario, borra los datos de SleepBot en los ajustes de aplicaciones de Android).</string>
     <string name="restore_progress_title">Restaurando SleepBot</string>
     <string name="backup_progress_title">Haciendo copia de seguridad de SleepBot</string>
     <string name="pref_adv_restore_title">Restaurar</string>
@@ -255,7 +246,7 @@
     <string name="notification_icon_title">Mostrar icono de notificación</string>
     <string name="notification_icon_on">Mostrar icono cuando hay alarmas pendientes</string>
     <string name="notification_icon_off">No mostrar icono cuando hay alarmas pendientes</string>
-    <string name="time_out_summary">Las alarmas serán automáticamente desactivadas después de la aparición de este mensaje.</string>
+    <string name="time_out_summary">Una alarma que esté sonando se desactivará automáticamente tras este número de minutos.</string>
     <string name="summary_num_records">Número de registros:</string>
     <string name="summary_num_days">Número de días:</string>
     <string name="summary_total_sleep">Tiempo total de sueño:</string>
@@ -263,10 +254,10 @@
     <string name="summary_avg_record">Media de sueño por registro:</string>
     <string name="summary_cum">Deuda acumulada:</string>
     <string name="hours_ori">horas</string>
-    <string name="channel_alarm_status">Próxima alarma:</string>
+    <string name="channel_alarm_status">Próxima alarma</string>
     <string name="trk_no_alarm_set">No hay alarmas puestas</string>
     <string name="trk_phone_is_not_plugged">Por favor, deja el móvil cargando para evitar quedarte sin batería.</string>
-    <string name="trk_screen_dim_soon">Registro de sueño inicial: la pantalla se apaga en 15 segundos…</string>
+    <string name="trk_screen_dim_soon">Iniciando registro de sueño: la pantalla se atenuará en 15 segundos…</string>
     <string name="trk_screen_already_dimmed">Pulsa el botón de retroceso para encender la pantalla. No pulses el botón de encendido. ¡Buenas noches!</string>
     <string name="trk_screen_off_toast">SleepBot registrará tus períodos de sueño, puedes apagar la pantalla o hacer otras cosas, pero procura no utilizar aplicaciones muy potentes.</string>
     <string name="trk_accel_graph_title">Movimiento</string>
@@ -346,10 +337,10 @@
         <item>90 minutos antes</item>
     </string-array>
     <string-array name="movement_sensitivity_entries">
-        <item>Muy baja (cama blanda + móvil sesible)</item>
-        <item>Bajo</item>
+        <item>Muy baja (cama blanda + móvil sensible)</item>
+        <item>Baja</item>
         <item>Normal</item>
-        <item>Alto</item>
+        <item>Alta</item>
         <item>Muy alta (para camas duras)</item>
     </string-array>
     <string-array name="entry_list_hour_format_entries">
@@ -361,7 +352,7 @@
         <item>Deuda actual</item>
     </string-array>
     <string-array name="default_graph_entries">
-        <item>Moda de horas de sueño</item>
+        <item>Tendencia de horas de sueño</item>
         <item>Patrón de la distribución del sueño</item>
     </string-array>
     <string-array name="date_entries">
@@ -369,4 +360,115 @@
         <item>Día/Mes/Año</item>
         <item>Año/Mes/Día</item>
     </string-array>
+    <plurals name="n_hours">
+        <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
+        <item quantity="other">%d horas</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
+        <item quantity="other">%d minutos</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="one">%d día</item>
+        <item quantity="many">%d días</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <string name="current_session_msg">Empezaste a dormir a las %1$s, hace %2$s.</string>
+    <string name="awake_for">Llevas despierto %s.</string>
+    <string name="edit_data">Editar datos</string>
+    <string name="no">No</string>
+    <string name="alarm_status_title">Alarma de SleepBot</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="one">POSTERGAR\n%d minuto</item>
+        <item quantity="many">POSTERGAR\n%d minutos</item>
+        <item quantity="other">POSTERGAR\n%d minutos</item>
+    </plurals>
+    <plurals name="alarm_fade_summary">
+        <item quantity="one">Del %1$d%% al %2$d%% en %3$d segundo.</item>
+        <item quantity="many">Del %1$d%% al %2$d%% en %3$d segundos.</item>
+        <item quantity="other">Del %1$d%% al %2$d%% en %3$d segundos.</item>
+    </plurals>
+    <string name="alarm_pick_system_tone">Elegir entre los sonidos de alarma</string>
+    <string name="alarm_pick_file">Elegir un archivo de audio</string>
+    <string name="alarm_file_not_chosen">Ningún archivo seleccionado</string>
+    <string name="alarm_exact_permission">SleepBot necesita permiso para programar alarmas exactas para que tus alarmas suenen a la hora.</string>
+    <string name="alarm_fsi_permission">Permite que SleepBot muestre alarmas a pantalla completa para que la pantalla de la alarma aparezca con el móvil bloqueado.</string>
+    <string name="alarm_grant">Conceder</string>
+    <string name="help_caffeine_chart">Tabla de cafeína</string>
+    <string name="help_do_this">¡Haga esto!</string>
+    <string name="widget_label">Widget de SleepBot</string>
+    <string name="back">Atrás</string>
+    <string name="setting_title_general">General</string>
+    <string name="error">Error</string>
+    <string name="pref_reminder_summary">Recibe un aviso cuando sea hora de irte a dormir</string>
+    <string name="pref_tracking_summary">Opciones de silencio, alarma automática, alarma inteligente, movimiento y sonido</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="dnd_access_msg">Para silenciar tu móvil mientras duermes, SleepBot necesita acceso a \"No molestar\". Las alarmas seguirán sonando.</string>
+    <string name="pref_allow_screen_off_warning">Ten en cuenta que si los gráficos de movimiento muestran solo ceros, tu móvil no admite el rastreo con la pantalla apagada y deberías dejar esta opción desmarcada.</string>
+    <string name="delete_older_sound_files_7">¿Te quedas sin espacio? Elimina los archivos de sonido locales de más de 7 días.</string>
+    <string name="delete_older_sound_files_message">La eliminación de archivos de sonido antiguos no se puede deshacer.</string>
+    <plurals name="files_deleted">
+        <item quantity="one">%d archivo eliminado</item>
+        <item quantity="many">%d archivos eliminados</item>
+        <item quantity="other">%d archivos eliminados</item>
+    </plurals>
+    <string name="pref_notification_mode_title">Notificación de estado</string>
+    <string name="pref_notification_mode_summary">Cuándo mostrar el estado de sueño de SleepBot en la barra de notificaciones.</string>
+    <string name="pref_android_backup">Copia de seguridad de Android</string>
+    <string name="pref_android_backup_text">Tus registros de sueño y ajustes también se guardan automáticamente con la copia de seguridad del dispositivo de Android (copia de seguridad de la cuenta de Google) y se restauran al configurar un móvil nuevo.</string>
+    <string name="pref_adv_backup_summary">Guarda tus datos en un archivo (p. ej., en tu móvil o en la nube).</string>
+    <string name="restore_backup_summary">Restaura registros desde archivos creados con la función de copia de seguridad. (Recomendado)</string>
+    <string name="restore_choose_backup_hint">Elige un archivo creado con la función de copia de seguridad de SleepBot. Los registros que ya estén en tu historial se omitirán.</string>
+    <string name="restore_choose_file_button">Elegir archivo</string>
+    <plurals name="backup_done_n">
+        <item quantity="one">Copia de seguridad finalizada: %d registro guardado, incluidos los datos de movimiento y sonido.\nTen en cuenta que los ajustes del despertador no se incluyen en la copia.</item>
+        <item quantity="many">Copia de seguridad finalizada: %d registros guardados, incluidos los datos de movimiento y sonido.\nTen en cuenta que los ajustes del despertador no se incluyen en la copia.</item>
+        <item quantity="other">Copia de seguridad finalizada: %d registros guardados, incluidos los datos de movimiento y sonido.\nTen en cuenta que los ajustes del despertador no se incluyen en la copia.</item>
+    </plurals>
+    <string name="backup_failed">Error en la copia de seguridad: %s</string>
+    <!-- Quantity follows %2$d (total entries in the file). -->
+    <plurals name="restore_done">
+        <item quantity="one">%1$d/%2$d registro restaurado correctamente.\n\nLa fecha de inicio de la deuda de sueño se ha reiniciado a hoy.</item>
+        <item quantity="many">%1$d/%2$d registros restaurados correctamente.\n\nLa fecha de inicio de la deuda de sueño se ha reiniciado a hoy.</item>
+        <item quantity="other">%1$d/%2$d registros restaurados correctamente.\n\nLa fecha de inicio de la deuda de sueño se ha reiniciado a hoy.</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="one">%d registro restaurado correctamente.</item>
+        <item quantity="many">%d registros restaurados correctamente.</item>
+        <item quantity="other">%d registros restaurados correctamente.</item>
+    </plurals>
+    <string name="restore_csv_partial">No se pudo leer el resto del archivo. Comprueba que el formato de fecha coincida con el del archivo.</string>
+    <string name="date_format">Formato de fecha</string>
+    <string name="pref_reset_debt_summary">Reinicia el cálculo de la deuda de sueño a partir de hoy.</string>
+    <string name="alarm_default_settings_summary">Tono, postergar, vibración y alarma progresiva predeterminados para las alarmas nuevas</string>
+    <string name="channel_session">Estado del sueño</string>
+    <string name="channel_tracking">Registro de sueño</string>
+    <string name="channel_alarm">Alarmas sonando</string>
+    <string name="channel_reminder">Recordatorios de la hora de acostarse</string>
+    <string name="channel_night">Pantalla nocturna</string>
+    <string name="trk_night_screen_open">Toca para mostrar la pantalla nocturna</string>
+    <string name="trk_notification_title">Registro de sueño</string>
+    <string name="trk_notification_motion">Registrando tus movimientos</string>
+    <string name="trk_notification_sound">Escuchando sonidos</string>
+    <string name="trk_notification_both">Registrando tus movimientos y sonidos</string>
+    <string name="trk_waking_up">¡despertando!</string>
+    <string name="trk_am">AM</string>
+    <string name="trk_pm">PM</string>
+    <string name="trk_no_sensor_data">No se registraron datos de sensores para este registro.</string>
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>Muy baja (graba solo sonidos muy fuertes)</item>
+        <item>Baja</item>
+        <item>Normal</item>
+        <item>Alta</item>
+        <item>Muy alta (graba casi todos los sonidos)</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>Siempre</item>
+        <item>Solo mientras duermes</item>
+        <item>Nunca</item>
+    </string-array>
+    <string name="pref_night_auto_title">Mostrar pantalla nocturna automáticamente</string>
+    <string name="pref_night_auto_summary">Abre la pantalla nocturna al encender la pantalla por la noche. Requiere el permiso \"Mostrar sobre otras apps\".</string>
 </resources>

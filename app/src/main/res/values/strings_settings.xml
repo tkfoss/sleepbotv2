@@ -53,6 +53,8 @@
     <string name="pref_allow_screen_off_title">Screen Off Tracking</string>
     <string name="pref_allow_screen_off_summary">Some phones may support movement tracking with screen turned off.</string>
     <string name="pref_allow_screen_off_warning">Please note that if movement graphs shows all 0\'s, it means that your phone does not support screen off tracking and you should leave this option unchecked.</string>
+    <string name="pref_night_auto_title">Show night screen automatically</string>
+    <string name="pref_night_auto_summary">Open the night screen when you turn the screen on at night. Needs the \"Display over other apps\" permission.</string>
     <string name="pref_cat_smart_alarm">Smart Alarm</string>
     <string name="pref_time_alarm_range_title">Alarm Range</string>
     <string name="pref_time_alarm_range_summary">Time range before first alarm for optimal wake-up.</string>
@@ -64,7 +66,10 @@
     <string name="delete_older_sound_files">Delete Older Files</string>
     <string name="delete_older_sound_files_7">Running out of space? Delete local sound files that are older than 7 days.</string>
     <string name="delete_older_sound_files_message">Deleting older sound files is irreversible.</string>
-    <string name="files_deleted">%d files deleted</string>
+    <plurals name="files_deleted">
+        <item quantity="one">%d file deleted</item>
+        <item quantity="other">%d files deleted</item>
+    </plurals>
 
     <!-- Appearance -->
     <string name="pref_alternate_display_show_title">Show alternate display</string>
@@ -104,11 +109,21 @@
     <string name="restore_choose_file_button">Choose file</string>
     <string name="restore_progress_title">Restoring SleepBot</string>
     <string name="backup_progress_title">Backing up SleepBot</string>
-    <string name="backup_done_n">Backup finished: %d entries saved, including movement/sound data.\nPlease note that alarm clock settings are not backed up.</string>
+    <plurals name="backup_done_n">
+        <item quantity="one">Backup finished: %d entry saved, including movement/sound data.\nPlease note that alarm clock settings are not backed up.</item>
+        <item quantity="other">Backup finished: %d entries saved, including movement/sound data.\nPlease note that alarm clock settings are not backed up.</item>
+    </plurals>
     <string name="backup_failed">Backup failed: %s</string>
     <string name="pref_adv_restore_title">Restore</string>
-    <string name="restore_done">%1$d/%2$d entries successfully restored.\n\nSleep debt start date successfully reset to today.</string>
-    <string name="restore_csv_done">%d entries successfully restored.</string>
+    <!-- Quantity follows %2$d (total entries in the file). -->
+    <plurals name="restore_done">
+        <item quantity="one">%1$d/%2$d entry successfully restored.\n\nSleep debt start date successfully reset to today.</item>
+        <item quantity="other">%1$d/%2$d entries successfully restored.\n\nSleep debt start date successfully reset to today.</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="one">%d entry successfully restored.</item>
+        <item quantity="other">%d entries successfully restored.</item>
+    </plurals>
     <string name="restore_csv_partial">The rest of the file could not be read. Please check that the date format matches the file.</string>
     <string name="error_restore_file_malformatted">Restore file does not have a valid format or it is corrupted, restore canceled.</string>
     <string name="error_export_db_is_too_new">The given database is too new to be restored.</string>
@@ -146,6 +161,7 @@
     <string name="channel_alarm">Ringing alarms</string>
     <string name="channel_reminder">Bedtime reminders</string>
     <string name="channel_alarm_status">Next alarm</string>
+    <string name="channel_night">Night screen</string>
 
     <!-- Header icons -->
     <string name="cd_logo">SleepBot</string>

@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hour_n">%d time</string>
-    <string name="hours_n">%d timer</string>
-    <string name="minute_n">%d minut</string>
-    <string name="minutes_n">%d minutter</string>
-    <string name="day_n">%d dag</string>
-    <string name="days_n">%d dage</string>
     <string name="alarm_has_occurred">Vækkeuret har lydt</string>
     <string name="punched_in_since">Stemplet ind siden %s</string>
     <string name="status_set_sleep">Status sat til at sove</string>
     <string name="status_set_wake">Status sat til vågn op</string>
     <string name="not_punched_in">Ikke stemplet ind</string>
-    <string name="todays_sleep">I DAGS SØVN</string>
+    <string name="todays_sleep">DAGENS SØVN</string>
     <string name="current_debt">NUVÆRENDE UNDERSKUD</string>
     <string name="wake_up">Vågn op:</string>
     <string name="smart_alarm">Intelligent vækkeur</string>
     <string name="track_motion">Track bevægelse</string>
     <string name="record_sound">Optag lyd</string>
-    <string name="cannot_change_settings_after_punchin">Du kan ikke indstillingerne efter du har stemplet ind.</string>
-    <string name="no_alarm_set_warning">Du har ikke nogen vækkeure sat indenfor det næste døgn! Det intelligente vækkeuret vil vække dig når du har sovet det optimale antal timer indenfor den valgte interval af det tidligst indstillede vækkeur.</string>
+    <string name="cannot_change_settings_after_punchin">Du kan ikke ændre indstillingerne efter du har stemplet ind.</string>
+    <string name="no_alarm_set_warning">Du har ikke nogen vækkeure sat indenfor det næste døgn! Det intelligente vækkeur vil vække dig når du har sovet det optimale antal timer indenfor det valgte interval af det tidligst indstillede vækkeur.</string>
     <string name="auto_alarm_prompt">Du har ikke nogen vækkeure sat indenfor det næste døgn. Vil du stemple ind nu for at sætte et auto-vækkeur eller et intelligent vækkeur?</string>
     <string name="mode_smart">Intelligent vækkeurstilstand. Bevægelsestracking starter på et valgt tidsinterval før første vækkeur.</string>
     <string name="mode_smart_motion">Bevægelsestracker på hele natten + SleepBot vil vække dig på det bedste tidspunkt.</string>
@@ -33,10 +27,9 @@
     <string name="future_no_record">Ingen optagelse</string>
     <string name="future_zero_record">\'0\' optagelse</string>
     <string name="future_no_offset">Ingen modregning</string>
-    <string name="future_no_record_toast">Status ændret til vågen uden at tiføje nyt indlæg.</string>
+    <string name="future_no_record_toast">Status ændret til vågen uden at tilføje nyt indlæg.</string>
     <string name="current_session_title">Nuværende søvnsession</string>
-    <string name="awake_since">Du har været vågen siden %1$d timer %2$d minutter.</string>
-    <string name="reset_debt_q">Ville du nulstille dit underskud?</string>
+    <string name="reset_debt_q">Vil du nulstille dit underskud?</string>
     <string name="reset_debt_title">Nulstil underskud</string>
     <string name="reset_debt_msg">Nulstilning af underskud vil rydde nuværende søvnunderskud og genstarte udregningen fra dags dato. \n\n*Dette vil kun ændre datoen fra hvornår, underskuddet er beregnet fra på Hjemmefanen - ingen indlæg vil blive ændret. \n\n*Underskud fra i dag vil stadig blive beregnet, lige med søvn fra i dag fratrukket den optimale søvnmængde.</string>
     <string name="reset_debt_done">Nulstil underskud færdig! Hjemfanen vil nu vise den nye underskudsværdi.</string>
@@ -44,7 +37,7 @@
     <string name="cancel">Annullér</string>
     <string name="reset">Nulstil</string>
     <string name="edit">Rediger</string>
-    <string name="delete">Slet...</string>
+    <string name="delete">Slet</string>
     <string name="save">Gem</string>
     <string name="share">Del</string>
     <string name="view">Vis</string>
@@ -61,7 +54,7 @@
     <string name="share_caps">DEL</string>
     <string name="delete_confirm_title">Slet bekræftelse</string>
     <string name="delete_confirm_msg">Er du sikker på du vil slette dette indlæg?</string>
-    <string name="no_entry_hint">Hejsa!\n\n Kom tilbage efter du har tracket din søvn i aften, eller når du har oprettet dit først indlæg nedenfor!</string>
+    <string name="no_entry_hint">Hejsa!\n\n Kom tilbage efter du har tracket din søvn i aften, eller når du har oprettet dit første indlæg nedenfor!</string>
     <string name="no_entry_found_hint">Der er ingen indlæg der matcher dine søgekriterier.</string>
     <string name="first_entry_title">Du har oprettet dit første søvnindlæg!</string>
     <string name="first_entry_msg">Tryk på rækken for at vise eller redigere den.\n\n (Tip: prøv også at trykke på den i længere tid)</string>
@@ -74,9 +67,9 @@
     <string name="sleep_time">Sovetid:</string>
     <string name="wake_time">Vækningstid:</string>
     <string name="invalid_time">Ugyldig tidsindstilling, sovetidspunktet skal være før opvågningstidspunktet.</string>
-    <string name="cancel_caps">Annullér</string>
-    <string name="delete_caps">Slet...</string>
-    <string name="save_caps">Gem</string>
+    <string name="cancel_caps">ANNULLÉR</string>
+    <string name="delete_caps">SLET</string>
+    <string name="save_caps">GEM</string>
     <string name="share_entry">Del dette indlæg</string>
     <string name="movement">Bevægelse</string>
     <string name="sound">Lyd</string>
@@ -111,7 +104,6 @@
     <string name="alarm_time_out">Vækkeur på pause</string>
     <string name="time_out_error">ADVARSEL: Dette vækkeur er på pause indtil videre tilbagemelding.</string>
     <string name="snooze">UDSKYD</string>
-    <string name="snooze_n_minutes">UDSKYD\n%d minutter</string>
     <string name="alarm_edit">Rediger</string>
     <string name="alarm_delete_ellipsis">Slet...</string>
     <string name="alarm_delete_all">Slet alt...</string>
@@ -127,9 +119,8 @@
     <string name="alarm_row_fade">Vækkeursvolume faldende</string>
     <string name="alarm_label_none">Ingen</string>
     <string name="alarm_label_title">Vækkeursnavn</string>
-    <string name="alarm_enabled">Aktivér</string>
-    <string name="alarm_disabled">Deaktivér</string>
-    <string name="alarm_fade_summary">Fra %1$d%% til %2$d%% over %3$d sekunder.</string>
+    <string name="alarm_enabled">Aktiveret</string>
+    <string name="alarm_disabled">Deaktiveret</string>
     <string name="alarm_fade_start">Startvolume (procent)</string>
     <string name="alarm_fade_end">Slutvolume (procent)</string>
     <string name="alarm_fade_time">Faldende varighed (sekunder)</string>
@@ -160,12 +151,12 @@
     <string name="tutorial_4_1">Vis dine søvnindlæg &amp; søvnudvikling\n her:</string>
     <string name="tutorial_4_2">**Tip: Tryk på en lydgraf for at afspille lyde!</string>
     <string name="get_started">Kom i gang</string>
-    <string name="intent_error_invalid">Ugyldige legetimationsoplysninger.</string>
+    <string name="intent_error_invalid">Ugyldige legitimationsoplysninger.</string>
     <string name="intent_error_reject">Brugeren har deaktiveret tredjeparts integrering.</string>
     <string name="settings">Indstillinger</string>
     <string name="setting_title_general">GENERELT</string>
     <string name="setting_title_app">Applikation</string>
-    <string name="about">Omkring</string>
+    <string name="about">Om</string>
     <string name="agree">Enig</string>
     <string name="next">Næste</string>
     <string name="done_label">Færdig</string>
@@ -224,7 +215,7 @@
     <string name="options_notification_sleep_title">Søvn påmindelse</string>
     <string name="options_notification_sleep_summary">Indstil godnatbeskeden vist i notifikationer.</string>
     <string name="options_notification_awake_title">Vågn op påmindelse</string>
-    <string name="options_notification_awake_summary">Indtil godmorgenbeskeden vist i notifikationer.</string>
+    <string name="options_notification_awake_summary">Indstil godmorgenbeskeden vist i notifikationer.</string>
     <string name="pref_sleep_notification_default">Tryk for at stemple ud.</string>
     <string name="pref_awake_notification_default">Tryk for at stemple ind.</string>
     <string name="pref_title_show_disconnected_lines">Stiplede linjer</string>
@@ -235,23 +226,23 @@
     <string name="restore_old_file_summary">Gendan indlæg fra filer oprettet af Eksportfunktionen.</string>
     <string name="restore_old_file_body">Fordi eksportfilerne ikke originalt er designet til sikkerhedskopiering- og gendannelsesformål, vær venligst sikker på, at du vælger den samme Datoformat i det næste trin for at matche den samme datoformat brugt i teksten. Vælg venligt den samme datoformat som den du eksporterer filerne til for at sikre, at alle data er korrekt importeret. (Hvis en anden applikation på markedet forsøger at importere SleepBot data og ikke spørger dig om datoformat, skal du sikre dig, at alle data er importeret korrekt).</string>
     <string name="restore_confirm_title">Bekræft for at gendanne</string>
-    <string name="restore_warning_double">VIGTIGT: Gendannelse kan oprette dobbelte indlæg, hvis du allerede har indlæg i din journal (nulstil SleepBot data i Andriod Applikationsindstillinger hvis nødvendigt).</string>
+    <string name="restore_warning_double">VIGTIGT: Gendannelse kan oprette dobbelte indlæg, hvis du allerede har indlæg i din journal (nulstil SleepBot data i Androids applikationsindstillinger hvis nødvendigt).</string>
     <string name="restore_progress_title">Gendannelse af SleepBot</string>
     <string name="backup_progress_title">Foretager sikkerhedskopiering af SleepBot</string>
     <string name="pref_adv_restore_title">Gendan</string>
-    <string name="error_restore_file_malformatted">Gendan fil har ikke et gyldigt format eller er beskadigt. Gendannelse afbrudt.</string>
+    <string name="error_restore_file_malformatted">Gendan fil har ikke et gyldigt format eller er beskadiget. Gendannelse afbrudt.</string>
     <string name="error_export_db_is_too_new">Den angivne database er for ny til at blive gendannet.</string>
     <string name="pref_adv_cat_others">Andre indstillinger</string>
     <string name="pref_adv_length_title">Nuværende underskudsperiode</string>
     <string name="pref_adv_length_summary">Vælg 7, 10 eller 14 dage for den periode der bruges til at udregne dit \"Nuværende underskud\" vist på hjemfanen.</string>
     <string name="pref_adv_security_third_party_title">Aktivér integrering</string>
-    <string name="pref_adv_security_third_party_summary">Tillad tredjepart applikationer for sov/vågn SleepBot.</string>
-    <string name="pref_adv_variable_block_title">Genindstemplingsskærm</string>
-    <string name="pref_adv_variable_block_summary">Undgå tilfældig indstemplinger ved at blokere nogen forsøg indenfor en vis tidsperiode.</string>
+    <string name="pref_adv_security_third_party_summary">Tillad tredjepartsapplikationer at sætte SleepBot til sov/vågen.</string>
+    <string name="pref_adv_variable_block_title">Genindstemplingsbeskyttelse</string>
+    <string name="pref_adv_variable_block_summary">Undgå utilsigtede indstemplinger ved at blokere gentagne forsøg indenfor en vis tidsperiode.</string>
     <string name="notification_icon_title">Vis notifikationsikon</string>
     <string name="notification_icon_on">Vis et ikon når der er kommende vækkeursalarmer</string>
     <string name="notification_icon_off">Vis ikke et ikon når der er kommende vækkeursalarmer</string>
-    <string name="time_out_summary">En tænding af vækkeuret vil automatisk blive afvist efter dette tidspunkt.</string>
+    <string name="time_out_summary">Et ringende vækkeur afvises automatisk efter dette antal minutter.</string>
     <string name="summary_num_records">Antal af optagelser:</string>
     <string name="summary_num_days">Antal af dage:</string>
     <string name="summary_total_sleep">Totale søvntid:</string>
@@ -264,16 +255,16 @@
     <string name="trk_phone_is_not_plugged">Lad venligst din telefon oplade for at undgå, at batteriet løber tør for strøm.</string>
     <string name="trk_screen_dim_soon">Starter søvn tracking: Skærmen vil slukke om 15 sekunder...</string>
     <string name="trk_screen_already_dimmed">Tryk på tilbageknappen for at tænde skærmen. Tryk ikke på strømknappen. Godnat!</string>
-    <string name="trk_screen_off_toast">SleepBot vil tracke din søvn. Du kan slukke skærmen eller gøre andre ting, men prøv ikke at lade være med at bruge nogle hukommelseskrævende applikationer.</string>
-    <string name="trk_am">Morgen (ante meridiem)</string>
-    <string name="trk_pm">Middag (post meridiem)</string>
+    <string name="trk_screen_off_toast">SleepBot vil tracke din søvn. Du kan slukke skærmen eller gøre andre ting, men prøv at undgå hukommelseskrævende applikationer.</string>
+    <string name="trk_am">AM</string>
+    <string name="trk_pm">PM</string>
     <string name="trk_accel_graph_title">Bevægelse</string>
     <string name="trk_sound_graph_title">Lyd</string>
     <string name="trk_label_high">Høj</string>
     <string name="trk_label_medium">Mellem</string>
     <string name="trk_label_low">Lav</string>
     <string name="trk_sleep_reminder_title">Sengetidspåmindelse</string>
-    <string name="trk_sleep_reminder_toast">Fald i søvn snart så du vågne op til tiden!</string>
+    <string name="trk_sleep_reminder_toast">Fald i søvn snart så du vågner op til tiden!</string>
     <string name="trk_remind_later">Påmind senere</string>
     <string name="trk_choose_time">Vælg et tidspunkt</string>
     <string name="trk_remind_with_sleep_cycle">Hvis du ikke falder i søvn nu, kan du blive påmindet senere i følgende cykli.\n\n Tidspunkterne vil blive udregnet til at være 90 minutter fra hinanden, startende med det næste vækkeur med 30 minutter fratrukket, så du kan forberede og falde i søvn.</string>
@@ -367,4 +358,109 @@
         <item>Dag/Måned/År</item>
         <item>År/Måned/Dag</item>
     </string-array>
+    <plurals name="n_hours">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
+    </plurals>
+    <plurals name="n_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minutter</item>
+    </plurals>
+    <plurals name="n_days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dage</item>
+    </plurals>
+    <string name="current_session_msg">Du stemplede ind kl. %1$s, for %2$s siden.</string>
+    <string name="awake_for">Du har været vågen i %s.</string>
+    <string name="edit_data">Rediger data</string>
+    <string name="ok">OK</string>
+    <string name="note">Bemærk:</string>
+    <string name="alarm_status_title">SleepBot-vækkeur</string>
+    <string name="dismiss_slider">STRYG FOR AT AFVISE</string>
+    <plurals name="snooze_n_minutes">
+        <item quantity="one">UDSKYD\n%d minut</item>
+        <item quantity="other">UDSKYD\n%d minutter</item>
+    </plurals>
+    <string name="alarm_row_tone">Ringetone</string>
+    <!-- quantity: %3$d (seconds) -->
+    <plurals name="alarm_fade_summary">
+        <item quantity="one">Fra %1$d%% til %2$d%% over %3$d sekund.</item>
+        <item quantity="other">Fra %1$d%% til %2$d%% over %3$d sekunder.</item>
+    </plurals>
+    <string name="alarm_pick_system_tone">Vælg blandt alarmlyde</string>
+    <string name="alarm_pick_file">Vælg en lydfil</string>
+    <string name="alarm_file_not_chosen">Ingen fil valgt</string>
+    <string name="alarm_ok">OK</string>
+    <string name="alarm_exact_permission">SleepBot skal have tilladelse til at planlægge præcise alarmer, så dine vækkeure ringer til tiden.</string>
+    <string name="alarm_fsi_permission">Tillad SleepBot at vise alarmer i fuld skærm, så vækkeursskærmen vises, når telefonen er låst.</string>
+    <string name="alarm_grant">Tillad</string>
+    <string name="help_support">Support</string>
+    <string name="help_caffeine_chart">Koffeinoversigt</string>
+    <string name="help_do_this">Gør dette!</string>
+    <string name="widget_label">SleepBot-widget</string>
+    <string name="back">Tilbage</string>
+    <string name="pref_reminder_summary">Få en påmindelse, når det er tid til at gå i seng</string>
+    <string name="pref_tracking_summary">Lydløs, auto vækkeur, intelligent vækkeur, bevægelses- og lydindstillinger</string>
+    <string name="pref_version">SleepBot %s</string>
+    <string name="dnd_access_msg">For at gøre din telefon lydløs, mens du sover, skal SleepBot have adgang til \"Forstyr ikke\". Vækkeure vil stadig ringe.</string>
+    <string name="pref_allow_screen_off_warning">Bemærk: Hvis bevægelsesgraferne kun viser 0, understøtter din telefon ikke tracking med slukket skærm, og du bør lade denne indstilling være slået fra.</string>
+    <string name="delete_older_sound_files">Slet ældre filer</string>
+    <string name="delete_older_sound_files_7">Løber du tør for plads? Slet lokale lydfiler, der er ældre end 7 dage.</string>
+    <string name="delete_older_sound_files_message">Sletning af ældre lydfiler kan ikke fortrydes.</string>
+    <plurals name="files_deleted">
+        <item quantity="one">%d fil slettet</item>
+        <item quantity="other">%d filer slettet</item>
+    </plurals>
+    <string name="pref_notification_mode_title">Statusnotifikation</string>
+    <string name="pref_notification_mode_summary">Hvornår SleepBots indstemplingsstatus skal vises i notifikationslinjen.</string>
+    <string name="pref_android_backup">Android-sikkerhedskopiering</string>
+    <string name="pref_android_backup_text">Dine søvnindlæg og indstillinger sikkerhedskopieres også automatisk af Androids enhedsbackup (Google-kontobackup) og gendannes, når du sætter en ny telefon op.</string>
+    <string name="pref_adv_backup_summary">Sikkerhedskopiér dine data til en fil (fx på din telefon eller i skyen).</string>
+    <string name="restore_backup_summary">Gendan indlæg fra filer oprettet af Sikkerhedskopieringsfunktionen. (Anbefalet)</string>
+    <string name="restore_choose_backup_hint">Vælg en fil oprettet af SleepBots sikkerhedskopieringsfunktion. Indlæg, der allerede er i din journal, springes over.</string>
+    <string name="restore_choose_file_button">Vælg fil</string>
+    <plurals name="backup_done_n">
+        <item quantity="one">Sikkerhedskopiering færdig: %d indlæg gemt, inklusive bevægelses-/lyddata.\nBemærk, at vækkeursindstillinger ikke sikkerhedskopieres.</item>
+        <item quantity="other">Sikkerhedskopiering færdig: %d indlæg gemt, inklusive bevægelses-/lyddata.\nBemærk, at vækkeursindstillinger ikke sikkerhedskopieres.</item>
+    </plurals>
+    <string name="backup_failed">Sikkerhedskopiering mislykkedes: %s</string>
+    <!-- quantity: %2$d (total entries) -->
+    <plurals name="restore_done">
+        <item quantity="one">%1$d/%2$d indlæg gendannet.\n\nStartdatoen for underskud er nulstillet til i dag.</item>
+        <item quantity="other">%1$d/%2$d indlæg gendannet.\n\nStartdatoen for underskud er nulstillet til i dag.</item>
+    </plurals>
+    <plurals name="restore_csv_done">
+        <item quantity="one">%d indlæg gendannet.</item>
+        <item quantity="other">%d indlæg gendannet.</item>
+    </plurals>
+    <string name="restore_csv_partial">Resten af filen kunne ikke læses. Kontrollér, at datoformatet passer til filen.</string>
+    <string name="date_format">Datoformat</string>
+    <string name="pref_reset_debt_summary">Genstart udregningen af underskud fra i dag.</string>
+    <string name="alarm_default_settings_summary">Standard ringetone, udsættelse, vibration og volumenstigning for nye vækkeure</string>
+    <string name="channel_session">Søvnstatus</string>
+    <string name="channel_tracking">Søvntracking</string>
+    <string name="channel_alarm">Ringende vækkeure</string>
+    <string name="channel_reminder">Sengetidspåmindelser</string>
+    <string-array name="sound_sensitivity_entries_v4">
+        <item>Meget lav (optag kun meget høje lyde)</item>
+        <item>Lav</item>
+        <item>Normal</item>
+        <item>Høj</item>
+        <item>Meget høj (optag næsten alle lyde)</item>
+    </string-array>
+    <string-array name="notification_mode_entries">
+        <item>Altid</item>
+        <item>Kun mens jeg sover</item>
+        <item>Aldrig</item>
+    </string-array>
+    <string name="trk_notification_title">Søvntracking</string>
+    <string name="trk_notification_motion">Tracker dine bevægelser</string>
+    <string name="trk_notification_sound">Lytter efter lyde</string>
+    <string name="trk_notification_both">Tracker dine bevægelser og lyde</string>
+    <string name="trk_waking_up">vågner op!</string>
+    <string name="trk_no_sensor_data">Ingen sensordata optaget for dette indlæg.</string>
+    <string name="channel_night">Natskærm</string>
+    <string name="trk_night_screen_open">Tryk for at vise natskærmen</string>
+    <string name="pref_night_auto_title">Vis natskærm automatisk</string>
+    <string name="pref_night_auto_summary">Åbn natskærmen, når du tænder skærmen om natten. Kræver tilladelsen \"Vis oven på andre apps\".</string>
 </resources>

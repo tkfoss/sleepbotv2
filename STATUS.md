@@ -79,16 +79,17 @@ Real sleep tracking, sound recording and alarm reliability can only be judged on
 - Original bugs fixed: last sound record never saved, reset orphaning sensor data, empty "Punched in since" time, unselectable optimal hours.
 
 ### Known gaps / next steps
-- Translations: 3.2.8 really had 10 languages (the other ~30 `values-*` folders only held Facebook SDK /
-  date-picker library strings). All 10 are ported: da, de, es, it, pl, sv, zh-CN, zh-TW cover ~83% of strings;
-  fr and nl ~47% (their 3.2.8 translations were already incomplete). Strings new in v2 (permissions, backup
-  to file, notification channels, …) are English in every language. Missing strings fall back to English.
-  Test with `adb shell cmd locale set-app-locales com.sleepbot.app --locales de`. The "going to sleep…" /
+- Translations: all 10 languages of 3.2.8 (da, de, es, fr, it, nl, pl, sv, zh-CN, zh-TW) are complete. They were
+  ported from 3.2.8, then gaps and strings new in v2 were machine-translated and many old errors fixed; a
+  native-speaker review would still be worthwhile, especially fr/nl (~60% new text). Count strings use
+  `<plurals>` (Polish has one/few/many/other). Test with
+  `adb shell cmd locale set-app-locales com.sleepbot.app --locales de`. The "going to sleep…" /
   "waking up!" buttons are images with English text, as in 3.2.8.
 - Help pages (`assets/kb/*.html`) are English only, as in 3.2.8. The FAQ "Support" section still links to the
   old Play Store listing, Facebook, Twitter and support@mysleepbot.com.
-- Many count strings ("%d minutes", "%d entries restored") should become `<plurals>` for languages like Polish.
 - Debug-signed APK only; a release keystore + `assembleRelease` is needed for Play Store.
-- Night screen can't auto-open on screen-on (Android background-launch limits); opening the app while asleep does show it.
+- Night screen on screen-on (motion tracking only): opens by itself over the lock screen when the user grants
+  "Display over other apps" (Settings → Sleep Tracking → Show night screen automatically). Without it, Android
+  only allows a tap-to-open notification on the lock screen. Verified on the API 36 emulator.
 - Help "Read this!"/exercise videos pages need internet and YouTube embeds may refuse to play in a WebView.
 - Old 3.2.8 `backup.bak` restore is implemented but untested against a real old backup file.
