@@ -49,9 +49,10 @@ class Prefs(context: Context) {
     val optimalHours: Float get() = str("optimal_hours", "8").toFloatOrNull() ?: 8f
     /** "41" */
     val debtRangeDays: Int get() = str("debt_range", "10").toIntOrNull() ?: 10
-    /** "25" */
+    /** "25". Defaults to install day so pre-install days don't count as zero sleep. */
     var debtResetTime: Long
-        get() = sp.getLong("debt_reset_time", 0)
+        get() = if (sp.contains("debt_reset_time")) sp.getLong("debt_reset_time", 0)
+            else Debt.todayStart().also { debtResetTime = it }
         set(v) = sp.edit { putLong("debt_reset_time", v) }
     /** "75": smart alarm window, minutes. */
     val smartWindowMin: Int get() = str("smart_window", "30").toIntOrNull() ?: 30
