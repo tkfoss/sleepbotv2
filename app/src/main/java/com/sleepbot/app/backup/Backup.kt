@@ -118,7 +118,10 @@ object Backup {
         return String(b, Charsets.UTF_8)
     }
 
-    private fun startOfToday() = Calendar.getInstance().apply {
+    private fun startOfToday() = dayStart(System.currentTimeMillis())
+
+    private fun dayStart(ms: Long) = Calendar.getInstance().apply {
+        timeInMillis = ms
         set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0); set(Calendar.SECOND, 0); set(Calendar.MILLISECOND, 0)
     }.timeInMillis
 
@@ -187,7 +190,13 @@ object Backup {
                 // Skip malformed rows, keep going.
             }
         }
-        context.app.prefs.debtResetTime = startOfToday()
+        // Keep the backup's reset point, but never count days before the first entry as zero sleep.
+        val firstAwake = db.openHelper.readableDatabase.query("SELECT MIN(awake) FROM hours WHERE deleted = 0")
+            .use { c -> if (c.moveToFirst() && !c.isNull(0)) c.getLong(0) else null }
+        context.app.prefs.debtResetTime = if (firstAwake == null) startOfToday() else maxOf(
+            root.optJSONObject("softwareSettings")?.l("lastReset")?.times(1000) ?: 0L,
+            dayStart(firstAwake),
+        )
         RestoreResult.Ok(restored, arr.length())
     }
 }
