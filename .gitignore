@@ -8,3 +8,4 @@ local.properties
 .kotlin/
 
 /dist/*.apk
+keystore.properties
